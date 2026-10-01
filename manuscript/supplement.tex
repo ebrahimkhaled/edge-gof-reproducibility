@@ -1,0 +1,476 @@
+% Supporting Information for EDGE paper 3 (Statistics in Medicine).
+% The material moved out of the main text in the restructure of 2026-09-30, unchanged in substance.
+% Build: pdflatex supplement -> bibtex supplement -> pdflatex supplement x2
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,multirow,adjustbox}
+\usepackage[table]{xcolor}
+\usepackage[round]{natbib}
+% the natbib.sty in this folder is Wiley's copy, whose \bibsection calls the USG class's \bmsection
+\renewcommand{\bibsection}{\section*{References}}
+\makeatletter
+\def\input@path{{tables/}}
+\makeatother
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thesection}{S\arabic{section}}
+\setcounter{section}{-1}
+\newcommand{\EFname}{\textsf{HL}$_F$}
+\newcommand{\pibar}{\overline{\hat{\pi}}}
+\providecommand{\qed}{\ensuremath{\square}}
+
+\title{Supporting Information for\\ ``A grouped calibration test for logistic regression that tolerates a few corrupted records''}
+\author{Ebrahim Khaled Ebrahim, Osama Abd El-Aziz Hussein and Ahmed El-Kotory}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{The comparisons specified before the study was run}\label{si:hyp}
+
+Before any scenario was computed, seven comparisons were written down with their scenarios, their
+statistic, a threshold and a rule for what would count against EDGE, and the document
+was fixed by its SHA-256 hash. Table~\ref{tab:hypotheses} lists them with their outcomes. Three went
+against the test: H1 and H3, where the GiViTI belt is the better test when events are scarce or the
+curve bends once, and H4, where EDGE at ten groups led or tied the best of four partition
+tests in $17$ of the $19$ selected scenarios, where all $19$ were required; at the default partition it
+did so in all $21$. The main text reports each of them as a finding in Section~5.2 and as
+a usage boundary in Section~8.3. The hash-fixed documents are in the reproducibility archive.
+
+The main study re-ran, under these documents, a battery that had been run before them. The comparison
+with robust tests (Section~6.6), the external-validation, streaming and what-protects studies were
+added after the main results had been read, each fixed by its own hash before any of its replicates
+ran. Its rule was that the Mallows form of the robust Stukel test
+would be said to match EDGE's protection if its false-alarm rate stayed at or below $0.10$
+with ten corrupted records in $1000$ under both errors. It did not: $0.168$ and $0.789$.
+
+\input{tab_hypotheses}
+
+\section{The choice of weighting}\label{si:weighting}
+
+Which risk groups carry the test depends on the weighting, and the right weighting depends on the
+basis. For the symmetric basis the score weighting is what makes the test work at high
+discrimination. It leads the unit form in $21$ of the $32$ power scenarios, and against a probit truth
+the difference is large: power rises from $0.096$ to $0.598$ at $n=3500$, and from $0.506$ to $0.834$
+at $n=5900$, at nominal size in both forms. These are the two scenarios in which this basis, in its
+unit form, falls behind Stukel's joint score test by $0.352$ and $0.214$. With the score weighting the
+order reverses and EDGE leads by $0.150$ and $0.114$.
+
+Scaling by $\sqrt{V_g}$ moves weight towards the extreme risk groups, and the symmetric shape
+$\eta|\eta|$ is carried by exactly those groups. The cubic basis already reaches them through its own
+columns, so the same rescaling buys it nothing and costs it variance: for the cubic basis the score
+form is behind in $24$ of the $32$ scenarios and ahead in one, by a mean of $0.039$.
+
+One regime overrides both rules. The score weighting leans on the extreme groups, and those are the
+groups a corrupted record occupies: with $25$ of $1000$ covariates corrupted, the cubic basis in its
+score form reached a false-alarm rate of $0.894$ where its unit form reached $0.344$. When the
+predictors may contain corrupted records, the unit form is required whatever the basis.
+
+\section{The three further corruptions}\label{si:c2}
+
+When the $k$ highest-risk records have their outcome set to zero (C2), every test rises together, 
+EDGE included: at ten such records in a thousand it reads $0.667$ against Stukel's $0.718$
+and the cubic test's $0.837$. A missed event at the top of the risk scale is the pattern a
+calibration test is built to find.
+
+A unit error that makes a prediction milder rather than extreme (C3) moves no test under the logistic
+truth, as the mechanism of Section~3 of the main text predicts, since such a record lands in a crowded
+middle group rather than a sparse extreme one. Under the two misfit truths it costs some power:
+sixteen of the $168$ test-by-scenario readings move by more than three nominal standard errors, ten
+under the complementary log--log truth and six under the probit, and EDGE is among them.
+The largest move is its own, $0.818$ falling to $0.770$ at ten corrupted records under the
+complementary log--log truth. These moves are losses of power against a real misfit, not false
+alarms. Duplicated high-risk records (C4) leave every test between $0.054$ and $0.071$, and the
+Hosmer--Lemeshow variants between $0.040$ and $0.057$.
+
+\section{The resampling tests under corruption}\label{si:rivals}
+
+The two resampling tests are too slow for the main contamination design, so a separate study put them
+on a smaller one: three records in five hundred with their covariate multiplied by four or by eight,
+$100$ replicates a scenario, and every test on the same data sets. With $100$ replicates the Monte
+Carlo standard error of a rate of $0.05$ is $0.022$, so a rise of a few points cannot be seen. Multiplying by eight carries a
+corrupted record's linear predictor to a median of $11$ and at most $16.5$.
+Table~\ref{tab:rivals-contam} gives the result.
+
+BAGofT and EDGE with the cubic basis gave no sign of moving: $0.06$, $0.01$ and $0.05$ for
+the first in the clean, $\times4$ and $\times8$ scenarios, and $0.08$, $0.02$ and $0.05$ for the second;
+with $100$ replicates a rise of a few points could not be seen. Le Cessie's smoothed test reads $0.07$, $0.04$ and $0.07$. The Liu projection test holds at
+$\times4$ and breaks at $\times8$, where it reads $0.22$; on the same replicates it raised $18$ false
+alarms that EDGE did not, against one the other way (Holm-corrected McNemar $p<0.001$).
+The record-level score and calibration tests sit between $0.29$ and $0.49$ in both corrupted
+scenarios. The symmetric basis reads $0.20$ at $\times8$. This is consistent with the main text: the
+cubic basis, here at the default partition (twenty groups), did not move, while the symmetric basis
+did at $\times8$.
+
+\input{tab_rivals_contam}
+
+\section{The robust fit}\label{si:robust}
+
+Every data set of this study was fitted twice, by maximum likelihood and by the Huber-type
+quasi-likelihood estimator of \citet{cantoni2001robust} (Huber's $\psi$ on the Pearson residual at
+$1.345$, no weight on the covariates, \textsf{robustbase}'s default), which bounds the influence of the
+residual but not of the covariates, and every
+test was applied to each fit. Table~\ref{tab:robust} gives the result.
+
+Five of the ten tests fail to hold their level after a robust fit on uncontaminated data: Stukel's two
+score tests, at $0.199$ and $0.223$, and three of EDGE's four forms, the symmetric basis
+in its unit form ($0.164$) and both score-weighted forms ($0.619$ and $0.225$). The rule fixed in
+advance was that a failed level check leaves the study measuring that mismatch rather than the
+contamination; we depart from it in one restricted way by reading the contaminated columns for the five
+tests whose level survives. A robust fit does not bring the record-level tests back to the nominal
+level.
+
+Of those five, none has its false alarms reduced. At ten corrupted records the GiViTI belt reads $0.379$
+under maximum likelihood and $0.400$ under the robust fit, the cubic calibration test $0.465$ and
+$0.466$, and EDGE $0.089$ and $0.087$. Several are worse at twenty-five: the
+Hosmer--Lemeshow statistic rises from $0.114$ to $0.171$ and the belt from $0.639$ to $0.678$.
+A corrupted record's prediction is formed at its corrupted covariate, so refitting does not reach it;
+restoring the slope, if anything, makes that prediction more extreme. Two further arms change nothing: at $n=5000$ with twenty-five corrupted
+records EDGE reads $0.144$ under both fits, and against a weak probit departure the
+robust fit does not pay for itself either. That a robust fit does not repair a non-robust test is the
+observation on which robust testing was founded \citep{hampel1986robust,heritier1994robust}, and
+\citet{cantoni2001robust} pair their estimator with robust quasi-deviance tests for that reason.
+
+\input{tab_robust}
+
+\section{Partitions that pool the extreme groups}\label{si:remedies}
+
+Corrupted covariates produce extreme predictions, so they collect in the two extreme groups. A partition
+that pools only those groups, and keeps the default partition in the middle where most of the power
+lies, was studied as an alternative to ten groups: \textsf{EDGE-FR}$(c)$ puts the outer $5c$ of the
+records at each end of the risk scale into one group. It does not have equal-frequency groups, so its
+level was checked by simulation; it reads $0.039$ and $0.050$ on clean data at the two sample sizes,
+and $0.041$ and $0.054$ on a fresh set of replicates. Table~\ref{tab:edgefr} gives the result. At
+$c=1\%$ it matches ten groups up to ten corrupted records in $1000$ and fifty in $5000$ ($0.081$ against
+$0.085$, and $0.111$ against $0.107$), is less protected beyond ($0.140$ against $0.101$ at twenty in
+$1000$, $0.431$ against $0.328$ at a hundred in $5000$), and has the same power: a size-adjusted mean of
+$0.490$ against $0.483$ over the six link and tail scenarios at $n=1000$, where the default partition has $0.500$.
+A wider tail costs power, a mean of $0.449$ at $c=2\%$ and $0.408$ at $c=4\%$, without protection in
+proportion: at $c=2\%$ it
+reads $0.104$ with twenty corrupted records in $1000$ but $0.338$ with a hundred in $5000$, the same
+rate. The main text therefore recommends the simpler ten-group partition.
+
+\input{tab_edgefr}
+
+Sharper remedies were considered first. Dropping the outer one or two per
+cent of records, or dropping the outer groups outright, protects almost completely, between $0.047$
+and $0.059$ at $n=5000$ with twenty-five and with fifty corrupted records, and costs almost all the
+power, a mean raw rejection rate of $0.046$ to $0.059$ over the six link and tail scenarios against
+the default's $0.508$. Pooling a tail of $1\%$ rather than $5\%$ keeps the power ($0.503$) and does not protect
+($0.271$ at fifty corrupted records in $5000$). The extremes carry the signal, so a remedy that
+removes them removes the departure with the corruption.
+
+\section{False alarms of every test under the exaggerated covariate}\label{si:contamination}
+
+Table~\ref{tab:contamination} gives, for every test of the main comparison, the false-alarm rate under
+corruption C1 of the main text: $k$ records whose covariate is multiplied by four, in a sample for which
+the model is otherwise correct. Section~6.1 of the main text reads it.
+
+\input{tab_contamination}
+
+\section{External validation against the usual tests}\label{si:external}
+
+When a published model is checked on new patients, the usual tests are Cox's recalibration test,
+Spiegelhalter's $z$ and the GiViTI belt in its external mode. Table~\ref{tab:external} compares 
+EDGE in external mode with them, on a design fixed and hashed before it was run. All seven
+tests hold their level. Over the ten departures EDGE at ten groups has a mean size-adjusted
+power of $0.415$, against $0.420$ for the belt, $0.410$ for Cox's test, $0.335$ for the Hosmer--Lemeshow
+statistic, $0.327$ for Stukel's test and $0.271$ for Spiegelhalter's $z$. The averages hide the shape of
+the departure. Paired on the same replicates, EDGE at ten groups minus Cox's test is $-0.079$ and
+$-0.042$ (Monte Carlo standard errors $0.011$ and $0.007$) on the two shifts, $-0.021$ and $-0.015$ on
+the slopes, $-0.068$ and $-0.141$ on the threshold terms, $+0.045$ and $+0.118$ on the U-shaped terms
+and $+0.053$ and $+0.206$ on the interactions, with standard errors between $0.004$ and $0.015$; the
+differences from the belt are within $0.07$ of these. The mean difference is $+0.006$ against Cox's test
+and $-0.005$ against the belt, and without the two interactions $-0.025$ and $-0.030$.
+
+The specification wrote three expectations in advance. That Cox's test, Spiegelhalter's $z$ and the belt
+would lead on calibration in the large and the slope held for Cox's test and the belt, and for
+Spiegelhalter's $z$ only on the slope; on calibration in the large it is last ($0.107$ and $0.303$). That
+EDGE would be competitive on the U-shaped and threshold terms held for the U-shape and failed for the
+threshold, where it trails by up to $0.141$. That no test would detect the interaction well failed:
+EDGE has a size-adjusted power of $0.459$ against it at the stronger setting at the default partition,
+and $0.424$ at ten groups.
+
+Under corrupted records EDGE at ten groups keeps every rate at or below $0.082$, below the bar of
+$0.10$ though above the nominal level. Cox's test reads $0.088$ with five reversed records and $0.158$
+with ten, the belt $0.192$ and $0.347$, and Stukel's test $0.610$ with ten. The Hosmer--Lemeshow
+statistic and Spiegelhalter's $z$ stay below $0.10$ in every setting, with less power. Cox's test and the
+belt are not two independent comparators: the belt fits a polynomial of the logit of the prediction
+whose degree it selects by forward tests at its default threshold of $0.95$, and at degree one its model is Cox's
+recalibration model, so in about $95\%$ of null replicates, and in $57\%$ to $96\%$ under the
+alternatives, it returns Cox's $p$-value. Its extra false alarms arise when corrupted records push the
+selected degree above one.
+
+\input{tab_external}
+
+\section{EDGE on streaming data}\label{si:stream}
+
+\paragraph{Setting.} A frozen model gives each patient a prediction $p_i\in(0,1)$ before the outcome
+$y_i\in\{0,1\}$ is seen. Cut points $0<c_1<\dots<c_{G-1}<1$ are fixed in advance, from reference
+predictions or by the analyst, and do not depend on any outcome; patient $i$ falls in group
+$g(i)=1+\#\{j:c_j<p_i\}$. After $n$ patients the monitor holds, for each group,
+\[
+O_g=\sum_{g(i)=g}y_i,\qquad E_g=\sum_{g(i)=g}p_i,\qquad V_g=\sum_{g(i)=g}p_i(1-p_i),\qquad m_g=\#\{i:g(i)=g\},
+\]
+and computes the external-mode statistic of Section~2 of the main text from them alone:
+$r_g=(O_g-E_g)/\sqrt{V_g}$ and $\pibar_g=E_g/m_g$ over the non-empty groups, $Z$ the chosen basis evaluated
+at $\pibar_g$ with a constant column, reduced to full column rank $k$, and $S_n=r^\top P_Z r$.
+
+\paragraph{Proposition.} (a) $S_n$ is the same for every order and every division into batches in
+which the $n$ patients are added, and equals the one-shot external statistic computed on all $n$
+patients with the same groups. (b) Suppose that, given all the predictions, past and future, the outcomes
+are independent with $\Pr(y_i=1)=p_i$ (the model is calibrated), that $G$ is fixed, and that
+$V_g\to\infty$ in every group that is non-empty. Let $k_n$ be the rank of $Z$, which equals $d+1$ once
+$d+1$ groups with distinct mean risks are non-empty. Then
+$\sup_x|\Pr(S_n\le x\mid p_1,\dots,p_n)-F_{\chi^2_{k_n}}(x)|\to0$, for any sequence of predictions under
+which every non-empty group's variance grows, however unequal the groups. (c) Adding a patient costs
+$O(\log G)$ operations and computing $S_n$ costs $O(Gk^2)$, independently of $n$.
+
+\paragraph{Proof.} (a) Each of $O_g,E_g,V_g,m_g$ is a sum over patients of a quantity that depends on
+that patient alone, so it does not depend on the order of the terms or on how they are grouped, and
+$S_n$ is a function of these sums only.
+
+(b) Condition on the predictions, so that the groups, the $\pibar_g$, the column scaling and rank
+reduction of $Z$, and hence $Z$, are fixed at each $n$; this uses that the cut points depend on
+predictions only. $Z$ still changes with $n$ through the group means, so let $Q_n$ be a $G\times k_n$
+matrix whose orthonormal columns span the columns of $Z$; then $S_n=\lVert Q_n^\top r\rVert^2$ and
+\[
+Q_n^\top r=\sum_{i=1}^n q_{g(i)}\,\frac{y_i-p_i}{\sqrt{V_{g(i)}}},
+\]
+where $q_g$ is the $g$th row of $Q_n$. Given the predictions this is a sum of independent, mean-zero
+vectors whose covariance is exactly $Q_n^\top Q_n=I_{k_n}$, and each summand is bounded in norm by
+$\max_g V_g^{-1/2}\to0$. For any fixed unit vector $a$, the scalar sums $a^\top Q_n^\top r$ therefore
+satisfy Lindeberg's condition, and by the Cram\'er--Wold device $Q_n^\top r$ is asymptotically
+$N(0,I_{k_n})$, uniformly over the rotation $Q_n$ because the bound does not involve it. Hence $S_n$ is
+asymptotically $\chi^2_{k_n}$, in the uniform sense stated. Nothing in the argument uses equal group sizes
+or a particular distribution of the $p_i$: every non-empty group need only keep growing. The condition
+on the outcomes fails if the deployed model changes the care patients receive, or if who arrives
+depends on earlier outcomes; cut points taken from the predictions of a first batch are allowed, since
+they use predictions only. Under drift in the risk distribution the conclusion stands, although small groups weaken
+the protection against corrupted records that equal-frequency groups give (Proposition~1 of the main
+text bounds a record's influence by the variance of its groupmates).
+
+(c) Finding the group of a new patient is a binary search among $G-1$ cut points, and updating four sums
+is constant work. The statistic needs the $G$ residuals, the basis at $G$ points and a QR decomposition of
+a $G\times k$ matrix. \hfill$\square$
+
+\paragraph{Repeated looks.} Part (b) concerns one look. The statistics at successive looks share their
+patients and are dependent, so acting on the first rejection over several looks does not have level
+$\alpha$ at each look's $\chi^2_k$ critical value; splitting the level, $\alpha/L$ at each of $L$ looks
+fixed in advance, keeps the overall false-alarm rate at most $\alpha$ in large samples; looks added
+after the start break this bound. With fixed groups and stable group means the vector $r$ has
+approximately independent increments between looks, so group-sequential boundaries for chi-squared
+statistics \citep[chapter 15]{jennison2000group} apply and would be less conservative than splitting
+the level.
+
+\paragraph{Simulation.} The specification was fixed and hashed before any replicate was run. Reference
+predictions were $10{,}000$ draws with $\mathrm{logit}\,p\sim N(-1.5,1)$, and their deciles gave the cut
+points; patients then arrived in batches of $100$, $2000$ replicates a cell. Under a calibrated model the
+level at $5\%$ was $0.047$ after $10{,}000$ patients and $0.054$ after $100{,}000$; when every monitored
+patient had $\mathrm{logit}\,p\sim N(-0.5,1.3)$, a distribution different from the reference, so that the
+smallest group held about $3900$ of $100{,}000$, it was $0.050$ and $0.052$. Testing after each of ten blocks of $1000$ patients and stopping at the first
+rejection gave a false-alarm rate of $0.214$ at $5\%$ a look and $0.030$ at $0.5\%$ a look; the last
+look alone read $0.057$. Against an overfitted model, $\mathrm{logit}\,\Pr(y=1)=0.8\,\mathrm{logit}\,p$,
+the test rejected in $0.993$ of replicates after $2000$ patients and in all after $10{,}000$. The median time to add a hundred patients was about $0.5$
+milliseconds and to compute the test about $1.5$ milliseconds, on one core of an AMD Ryzen~9 3900X; both
+are independent of the number of patients already added, which was a million when they were timed.
+
+\section{Power by departure family}\label{si:pairedfam}
+
+Table~\ref{tab:pairedfam} replaces the counts of scenarios in which EDGE leads or ties a comparator by the
+mean difference in size-adjusted power over each departure family, with a Monte Carlo interval. The counts
+in Figures~1 and~2 of the main text use a margin of $0.01$, which is close to the Monte Carlo standard error
+of a single difference, so they do not separate a small loss from a tie; the means do. The last column is
+what ten groups cost against the default partition on clean data.
+
+\input{tab_pairedfam}
+
+\section{What protects a test}\label{si:tw}
+
+\paragraph{Design.} The study was specified and hashed before any replicate ran, with two addenda written
+before their replicates: one adding a milder diagnostics rule after a smoke run of three replicates showed
+that the declared rule removes about $3.5\%$ of a clean data set, the other adding the tests of Hosmer and
+Hjort. Every test runs on the same data sets, $1000$ replicates a cell, so all comparisons are paired. The
+two-covariate design is that of the corruption study of the main text; the twelve-covariate design has
+eight standard normal and four Bernoulli($0.3$) covariates at $n=2000$, with the error applied to the first
+covariate. The ungrouped twin is the score test for adding the orthogonal cubic polynomial in the fitted
+risk to the model, on three degrees of freedom. The tests of Hosmer and Hjort use their general-purpose
+weight $\hat\pi\log\hat\pi$ at ten groups, in their Hosmer--Lemeshow form on $G-2$ degrees of freedom and
+their full-covariance form; their implementation, written from the paper, held its level within
+$0.05\pm0.02$ at $n=1000$ and $5000$ before the study.
+
+\paragraph{Results.} Table~\ref{tab:tw} gives the rates. The grouped tests at ten groups, EDGE in its unit form and the Hosmer--Lemeshow statistic, stay below
+$0.10$ in every setting with exaggerated covariates. Under sign errors EDGE at ten groups holds with one
+reversed record and with ten among twelve covariates, and reads $0.210$ with ten reversed records in
+$1000$ and $0.236$ with twenty-five in $5000$; the Hosmer--Lemeshow statistic reads $0.093$ and $0.120$
+there. Every ungrouped test, whatever the scale of its directions, fails at one or two
+corrupted records once the model is refitted. On frozen predictions (Table~\ref{tab:twext}) the ungrouped
+twin holds against exaggerated covariates but not against five or more reversed records, and
+Spiegelhalter's $z$ holds throughout. This frozen-prediction arm was added by a third addendum, hashed
+before it ran, on the data sets of the external-validation study (S7), which it regenerates and checks
+against that study's Spiegelhalter $p$-values.
+Spiegelhalter's $z$ rejects in none of the $25{,}000$ replicates at its nominal level, because its normal
+reference ignores the fitted coefficients; at its own realised level it is as fragile as Stukel's test. The
+tests of Hosmer and Hjort group the records but weight each within its group by a function of its
+covariates, and fail at about five reversed records in $1000$. EDGE's $p$-values from the
+Satterthwaite and the Imhof reference gave identical rejections at $5\%$ in every cell.
+
+\paragraph{Influence diagnostics.} Removing every record with Pregibon's $\Delta X^2>4$ or $\Delta\beta>1$,
+the declared rule, removed $3.7\%$ of the records of a clean data set at $n=1000$ and every test then
+rejected a correct model in more than $0.95$ of replicates, because the records removed are those whose
+outcome is least likely under the model. Removing only the records with $\Delta\beta>1$, the addendum's
+rule, removed none in any cell, so it changed nothing.
+
+\paragraph{The Pulkstenis--Robinson test.} It was run in every scenario of the main battery and is reported
+here. Its mean size-adjusted power over the $158$ alternatives is $0.16$, against $0.54$ for EDGE at the
+default partition and $0.48$ for the Hosmer--Lemeshow statistic at ten groups. It groups on covariate
+patterns \citep{pulkstenis2002two}; against exaggerated covariates it stays below $0.10$ up to ten records
+in $1000$ and twenty-five in $5000$ and reaches $0.121$ at fifty in $5000$, and it is not protected against
+sign errors: $0.224$ with ten reversed records in $1000$ and
+$0.888$ with fifty in $5000$.
+
+\input{tab_tw}
+
+\input{tab_twext}
+
+\section{Proof of Theorem 2}\label{si:proof2}
+
+Notation and assumptions are those of Appendix A of the main text: $\varphi$ are the shape functions of
+Theorem~2, $M=\int_0^1\varphi\varphi^\top dq$, $K=\int_0^1\varphi\,\kappa^\top dq$, and the limit to be
+shown is (A1) of the main text.
+
+\paragraph{Step 0: the bases} Because $P_Z$ depends on $Z$ only through its column space, and
+(Step~6) so do the weights, the columns may be taken as $Z_{gj}=\varphi_j(q_g)$ once the bases of
+Section~2.2 of the main text are shown to span that space up to a uniform $o(1)$. They evaluate their
+shapes at $\pibar_g$ or $\bar\eta_g=\mathrm{logit}\,\pibar_g$ rather than at $q_g$. Under (A3) and
+(A4$'$) the empirical quantile function of the fitted risk satisfies
+$\sup_q|\hat Q_{\hat\pi}(q)-Q_\pi(q)|=O_p(n^{-1/2})$ and $Q_\pi$ is Lipschitz, so averaging over a
+group of width $1/G$ gives $\pibar_g=Q_\pi(q_g)+O(1/G)+O_p(n^{-1/2})$ uniformly in $g$; with shape
+functions continuously differentiable this gives $z_{gj}=\varphi_j(q_g)+\delta_{gj}$ with
+$\sup_g\|\delta_g\|=O(1/G)+O_p(n^{-1/2})$, where $\varphi_j$ is the shape composed with $Q_\pi$ (or
+with $Q_\eta$ for the Stukel columns). The contribution of $\delta$ to $\zeta_n$ below is a sum whose
+summands are bounded by $Cn^{-1/2}\sup_g\|\delta_g\|$, handled as replacement (a) of Step~4, and its
+contribution to $G^{-1}Z^\top Z$ and to Step~5 is $O(1/G)+O_p(n^{-1/2})$ by the same bound.
+Orthonormalising the columns on the observed $\{\pibar_g\}$ multiplies $Z$ by an invertible matrix
+that converges at the same rate, and $S$ and the weights are invariant to it. For the Stukel basis
+linear independence needs $0$ interior to the support of $\eta$; otherwise one sign-split column
+vanishes identically and is dropped.
+
+\paragraph{Step 1: the statistic as a smooth-weighted sum} Put $\zeta_n=G^{-1/2}Z^\top r$, so that
+$S=\zeta_n^\top(G^{-1}Z^\top Z)^{-1}\zeta_n$ with $G^{-1}Z^\top Z\to M$, a Riemann sum, and $M$
+invertible because the $\varphi_j$ are linearly independent. By Step~1 of the proof of
+Theorem~1 of the main text, $r=\tilde r-U(X^\top WX)^{-1}s+\rho$, hence
+\begin{equation}\label{si:zeta}
+\zeta_n=\sum_{i=1}^n w_i\varepsilon_i\;-\;\big[G^{-1/2}Z^\top U(X^\top WX)^{-1/2}\big]
+\big[(X^\top WX)^{-1/2}s\big]\;+\;G^{-1/2}Z^\top\rho,
+\qquad w_i=\frac{G^{-1/2}z_{g(i)}}{\sqrt{V_{g(i)}}}\in\mathbb{R}^d .
+\end{equation}
+Under (A3) the true linear predictor has compact support and $v_i\ge c_0>0$ for every $i$. Since
+$\mathbb{E}\|x\|^2<\infty$ gives $\max_{i\le n}\|x_i\|=o_p(\sqrt n)$, and $\mathrm{expit}$ is
+$\tfrac14$-Lipschitz, $\sup_i|\hat\pi_i-\pi_i|\le\tfrac14\max_i\|x_i\|\,\|\hat\beta-\beta\|=o_p(1)$,
+so $\sup_i|\hat v_i/v_i-1|=o_p(1)$. On an event of probability tending to one, therefore,
+$V_g\ge\tfrac12c_0|g|$ simultaneously in $g$, whatever the group sizes and including $|g|=1$, and
+the normalisation computed from $\hat\pi$ differs from the same sum with $\pi$ by a factor
+$1+o_p(1)$ uniformly in $g$. Since $\varphi$ is bounded and $|g|=n/G$,
+$\|w_i\|\le C\,G^{-1/2}(n/G)^{-1/2}=C\,n^{-1/2}$ for every $i$, whatever the group size.
+
+\paragraph{Step 2: the remainder} The second-order term of the expansion of $\hat\pi_i$ gives
+$|\rho_g|\le C\,V_g^{-1/2}\sum_{i\in g}\|x_i\|^2\|\hat\beta-\beta\|^2$, so
+$\|G^{-1/2}Z^\top\rho\|\le C\,n^{-1/2}\|\hat\beta-\beta\|^2\sum_i\|x_i\|^2=O_p(n^{-1/2})$. Only
+$\sum_i\|x_i\|^2=O_p(n)$, which (A2) supplies, is used; no bound within a single group is needed.
+The $o_p(n^{-1/2})$ of the expansion in (A2) contributes
+$\|G^{-1/2}Z^\top U(X^\top WX)^{-1/2}\|\,O_p(\sqrt n)\,o_p(n^{-1/2})=o_p(1)$ by Step~5, and
+replacing $v_i$ by the $\hat v_i$ carried in $U$ contributes at most
+$\sum_i\|w_i\|\,|\hat v_i-v_i|\,\|x_i\|\,\|\hat\beta-\beta\|\le Cn^{-1/2}\,o_p(1)\,O_p(n)\,
+O_p(n^{-1/2})=o_p(1)$ by Step~1.
+
+\paragraph{Step 3: the central limit theorem with population weights} Let
+$w_i^0=n^{-1/2}\varphi(q_i)/\sqrt{v_i}$ and $\xi_n^0=\sum_iw_i^0\varepsilon_i$. The pairs
+$(w_i^0\varepsilon_i,\ n^{-1/2}J_0^{-1/2}x_i\varepsilon_i)$ are independent and identically
+distributed, $w_i^0$ being a fixed function of $x_i$ through $q_i$, with finite variance by
+$\mathbb{E}\|x\|^2<\infty$, so the Lindeberg--L\'evy theorem and the Cram\'er--Wold device give joint
+asymptotic normality. Ranking by $\hat\pi$ is ranking by $\hat\eta$, and $F_\pi(\pi_i)=F_\eta(\eta_i)$,
+so the quantile position of the predicted risk is $q_i$; by (A4$'$), $v_i=v(q_i)$. By the law of
+large numbers $\mathrm{Var}(\xi_n^0)\to\mathbb{E}[\varphi(q)\varphi(q)^\top]=M$, $q$ being uniform,
+and $\mathrm{Cov}(\xi_n^0,n^{-1/2}J_0^{-1/2}s)\to\mathbb{E}[\varphi(q)\sqrt{v(q)}\,x^\top]J_0^{-1/2}
+=KJ_0^{-1/2}$. Hence $(\xi_n^0,\,n^{-1/2}J_0^{-1/2}s)\rightsquigarrow
+N\big(0,\big(\begin{smallmatrix}M&KJ_0^{-1/2}\\ J_0^{-1/2}K^\top&I\end{smallmatrix}\big)\big)$.
+
+\paragraph{Step 4: from population weights to the weights of the statistic} Three replacements
+separate $\sum_iw_i\varepsilon_i$ from $\xi_n^0$: the position $q_i$ is replaced by the rank fraction
+$R_i/n$; the rank fraction by its group position $q_{g(i)}$; and the ranks and the normalisation are
+computed under $\hat\beta$ rather than $\beta$. (a)~Since $|\varphi(R_i/n)-\varphi(q_{g(i)})|\le C/G$,
+at a fixed $b$ the second replacement changes the sum by a quantity with conditional mean zero and
+conditional variance at most $C/G^2\to0$; its version uniform in $b$ is part of (c). (b)~At fixed $\beta$ the ranks are functions of $X$ alone, and
+$\Delta_i=\varphi(R_i/n)-\varphi(q_i)$ satisfies $|\Delta_i|\le C\sup_t|\hat F_n(t)-F_\eta(t)|=
+O_p(n^{-1/2})$ by the Dvoretzky--Kiefer--Wolfowitz inequality, so the conditional variance of
+$\sum_in^{-1/2}\Delta_i\varepsilon_i/\sqrt{v_i}$ is $n^{-1}\sum_i\Delta_i^2=O_p(n^{-1})$. (c)~These
+bounds hold at a fixed $b$, where the ranks are $X$-measurable; the statistic uses $\hat\beta$, so
+uniformity over $\{\|b-\beta\|\le Cn^{-1/2}\}$ is needed, and $\hat\beta$ lies in that ball with
+probability tending to one by (A2). Write $T_n(b)=\sum_i\{w_i(b)-w_i^0\}\varepsilon_i$. The weight
+$w_i(b)$ depends on $b$ through the group index $g_b(i)$ and through $\hat\pi_i(b)$. The group
+indices depend on $b$ only through the ordering of $\{x_i^\top b\}$, and the number of distinct
+orderings is the number of cells of the arrangement of the $\binom n2$ hyperplanes
+$\{b:x_i^\top b=x_j^\top b\}$ in $\mathbb{R}^{p}$, at most $\sum_{j\le p}\binom{\binom n2}{j}=
+O(n^{2p})$ \citep{cover1965geometrical}: polynomially many, so a union bound replaces any chaining
+argument. Within one cell, fixed at a point $b_0$, the group indices are constant and $b\mapsto
+w_i(b)$ is $C^1$ through $\hat\pi_i(b)$, with first derivative bounded by $Cn^{-1/2}\|x_i\|$ and
+second by $Cn^{-1/2}\|x_i\|^2$, so $T_n(b)-T_n(b_0)$ is a linear term in $b-b_0$ plus
+$O_p(n^{-1/2})$. The coefficient of the linear term is $\sum_i\{\partial w_i(b_0)/\partial b\}\varepsilon_i$,
+whose weights are $X$-measurable within the cell and bounded by $Cn^{-1/2}\|x_i\|$, so the union bound
+below applies to it as well, uniformly over cells; multiplied by $\|b-b_0\|\le Cn^{-1/2}$ it is
+$O_p(\sqrt{\log n}\,n^{-1/2})$. At $b_0$ both the linear term's coefficient and $T_n(b_0)$ are sums of
+$X$-measurable weights times the centred $\varepsilon_i$, with
+$\sum_i\{w_i(b_0)-w_i^0\}^2=O_p(G_n^{-2}+n^{-1})$. The two terms come from the two replacements: the
+group position differs from the rank fraction by at most $1/(2G_n)$, which by (a) contributes
+$O(G_n^{-2})$, and the rank fraction differs from the population position by at most
+$\sup_t|\hat F_{n,b}(t)-F_b(t)|+C\|x_i\|\,\|b-\beta\|$, where the first term is $O_p(n^{-1/2})$ uniformly
+in $b$ because the half-spaces $\{x^\top b\le t\}$ form a Vapnik--\v{C}ervonenkis class
+\citep[Section 2.6]{vandervaartwellner1996}. The second term is $o_p(1)$ uniformly in $i$ under the
+moment condition of (A2) but not $O_p(n^{-1/2})$ uniformly; the bound needs only its sum of squares,
+$n^{-1}\sum_i\|x_i\|^2=O_p(1)$, which (A2) gives. Hoeffding's inequality conditionally on $X$ gives
+sub-Gaussian tails for both at each $b_0$, and a union bound over the $O(n^{2p})$ cells gives
+$\sup_{\|b-\beta\|\le Cn^{-1/2}}|T_n(b)|=O_p\{\sqrt{\log n}\,(G_n^{-1}+n^{-1/2})\}$, which is
+$o_p(1)$ under the rate condition $G_n/\sqrt{\log n}\to\infty$ of Theorem~2 of the main text; the
+same bound covers the normalisation $V_g$ under $\hat\beta$. The group indicators do not form a
+class of fixed complexity as $G\to\infty$, but the ordering they induce does, which is the random-cell
+problem of \citet{Moore1975} in a regime their fixed-cell argument does not cover. Together,
+$\sum_iw_i\varepsilon_i=\xi_n^0+o_p(1)$.
+
+\paragraph{Step 5: the fitting correction} The $g$-th summand of $Z^\top U$ is
+$z_gV_g^{-1/2}\sum_{i\in g}\hat v_ix_i^\top$, so $G^{-1/2}Z^\top U(X^\top WX)^{-1/2}=\sum_iw_i\hat
+v_ix_i^\top(X^\top WX)^{-1/2}$, a sum over all $n$ observations. Write $\psi=\varphi/\sqrt v$,
+uniformly continuous on $[0,1]$. Then $w_i=n^{-1/2}\psi(q_{g(i)})\{1+o_p(1)\}$ uniformly in $i$,
+because $\{V_g/|g|\}^{-1/2}=v(q_g)^{-1/2}+o_p(1)$ uniformly in $g$: every observation in $g$ has a
+position within $1/G$ of $q_g$, $v\circ Q_\eta$ is uniformly continuous by (A3) and (A4$'$), and
+$\sup_i|\hat v_i-v_i|=o_p(1)$. Likewise
+$|q_{g(i)}-q_i|\le1/G+\sup_t|\hat F_n(t)-F_\eta(t)|+C\sup_i|\hat\eta_i-\eta_i|=o_p(1)$ uniformly in
+$i$, so $\delta_n=\sup_i|\psi(q_{g(i)})-\psi(q_i)|=o_p(1)$ and
+\[
+\Big\|\sum_iw_i\hat v_ix_i^\top-n^{-1}\sum_i\varphi(q_i)\sqrt{v_i}\,x_i^\top\Big\|
+\le\{\delta_n+o_p(1)\}\,n^{-1}\sum_i\|x_i\|=o_p(1).
+\]
+Since $n^{-1}\sum_i\varphi(q_i)\sqrt{v_i}x_i^\top\to K$ and $(X^\top WX)^{-1/2}=n^{-1/2}J_0^{-1/2}
+\{1+o_p(1)\}$, the bracket in \eqref{si:zeta} converges to $KJ_0^{-1/2}$. The law of large numbers
+used is across the whole sample and not within a group, which is why the number of observations per
+group need not grow.
+
+\paragraph{Step 6: conclusion} From \eqref{si:zeta} and Steps~2--5,
+$\zeta_n=\xi_n^0-KJ_0^{-1/2}(n^{-1/2}J_0^{-1/2}s)+o_p(1)\rightsquigarrow N(0,\Sigma)$, and by the
+continuous-mapping theorem $S\rightsquigarrow\zeta^\top M^{-1}\zeta$ with $\zeta\sim N(0,\Sigma)$,
+which is $\sum_j\lambda_j\chi^2_{1,j}$ with $\lambda_j$ the eigenvalues of $M^{-1}\Sigma$. These do
+not depend on the basis chosen for $\mathrm{col}(Z)$: for invertible $A$,
+$\{(ZA)^\top ZA\}^{-1}(ZA)^\top\Omega ZA=A^{-1}\{(Z^\top Z)^{-1}Z^\top\Omega Z\}A$ is a similarity
+transformation. The plug-in weights at $G_n$, the eigenvalues of
+$(G^{-1}Z^\top Z)^{-1}(G^{-1}Z^\top\widehat\Omega Z)$, converge to the $\lambda_j$: $G^{-1}Z^\top Z\to
+M$ as a midpoint Riemann sum, and $G^{-1}Z^\top\widehat\Omega Z\to M-KJ_0^{-1}K^\top$ by Step~5. The
+bounds follow: $KJ_0^{-1}K^\top\succeq0$ gives $\Sigma\preceq M$ and hence $\lambda_j\le1$, while
+$\Sigma\succeq0$ as the covariance of the limit of $\zeta_n$. A weight is zero exactly when
+$c^\top\varphi(q)=\sqrt{v(q)}\{a_0+a_1Q_\eta(q)\}$ for some $a_0,a_1$, the population form of the
+level shift and tilt the fit absorbs; a zero weight removes a degree of freedom from the limit and
+changes neither $\sum_j\lambda_j$ nor $\sum_j\lambda_j^2$, so the Satterthwaite and Imhof evaluations
+are unaffected. \qed
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+\end{document}

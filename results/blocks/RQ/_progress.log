@@ -1,0 +1,12 @@
+2026-09-30 21:07:50  block RQ: 10 cells, 1000 replicates, 20 workers (declaration sha256 f7354147) 
+2026-09-30 21:08:19  RQ_logit_clean_n1000     k= 0  RQD.Huber 0.049  RQD.Mallows 0.047  EDGE.default 0.048  EDGE.G10 0.046  missing 0/0  0.5 min 
+2026-09-30 21:08:44  RQ_logit_C1_k1_n1000     k= 1  RQD.Huber 0.071  RQD.Mallows 0.044  EDGE.default 0.045  EDGE.G10 0.050  missing 0/0  0.4 min 
+2026-09-30 21:09:11  RQ_logit_C1_k2_n1000     k= 2  RQD.Huber 0.087  RQD.Mallows 0.047  EDGE.default 0.048  EDGE.G10 0.049  missing 0/0  0.5 min 
+2026-09-30 21:09:38  RQ_logit_C1_k5_n1000     k= 5  RQD.Huber 0.153  RQD.Mallows 0.078  EDGE.default 0.053  EDGE.G10 0.046  missing 0/0  0.5 min 
+2026-09-30 21:10:05  RQ_logit_C1_k10_n1000    k=10  RQD.Huber 0.205  RQD.Mallows 0.168  EDGE.default 0.081  EDGE.G10 0.063  missing 0/0  0.4 min 
+2026-09-30 21:10:30  RQ_logit_C1b_k1_n1000    k= 1  RQD.Huber 0.175  RQD.Mallows 0.048  EDGE.default 0.049  EDGE.G10 0.047  missing 0/0  0.4 min 
+2026-09-30 21:10:56  RQ_logit_C1b_k2_n1000    k= 2  RQD.Huber 0.331  RQD.Mallows 0.075  EDGE.default 0.057  EDGE.G10 0.056  missing 0/0  0.4 min 
+2026-09-30 21:11:22  RQ_logit_C1b_k5_n1000    k= 5  RQD.Huber 0.711  RQD.Mallows 0.322  EDGE.default 0.127  EDGE.G10 0.081  missing 0/0  0.4 min 
+2026-09-30 21:11:49  RQ_logit_C1b_k10_n1000   k=10  RQD.Huber 0.923  RQD.Mallows 0.789  EDGE.default 0.412  EDGE.G10 0.192  missing 0/0  0.4 min 
+2026-09-30 21:12:15  RQ_cloglog_clean_n1000   k= 0  RQD.Huber 0.607  RQD.Mallows 0.607  EDGE.default 0.795  EDGE.G10 0.762  missing 0/0  0.4 min 
+2026-09-30 21:12:15  block RQ: run finished 

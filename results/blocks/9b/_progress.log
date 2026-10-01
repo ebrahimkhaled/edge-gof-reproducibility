@@ -1,0 +1,23 @@
+2026-09-19 17:49:23  block 9b: 3 cells, B = 100, 20 workers, out C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery/9b
+2026-09-19 17:49:24  clean: 100 of 100 replicates to run
+2026-09-19 17:56:23    clean 20/100 replicates; median BAGofT 395 s, projection 20 s; elapsed 7.0 min
+2026-09-19 18:02:58    clean 40/100 replicates; median BAGofT 384 s, projection 20 s; elapsed 13.6 min
+2026-09-19 18:09:32    clean 60/100 replicates; median BAGofT 376 s, projection 19 s; elapsed 20.1 min
+2026-09-19 18:16:04    clean 80/100 replicates; median BAGofT 375 s, projection 18 s; elapsed 26.7 min
+2026-09-19 18:22:37    clean 100/100 replicates; median BAGofT 375 s, projection 17 s; elapsed 33.2 min
+2026-09-19 18:22:37  [1/3] clean written: errors 0, BAGofT missing 0, projection missing 0
+2026-09-19 18:22:37  x4: 100 of 100 replicates to run
+2026-09-19 18:29:07    x4    20/100 replicates; median BAGofT 370 s, projection 17 s; elapsed 39.7 min
+2026-09-19 18:35:37    x4    40/100 replicates; median BAGofT 370 s, projection 17 s; elapsed 46.2 min
+2026-09-19 18:42:05    x4    60/100 replicates; median BAGofT 370 s, projection 17 s; elapsed 52.7 min
+2026-09-19 18:48:34    x4    80/100 replicates; median BAGofT 370 s, projection 16 s; elapsed 59.2 min
+2026-09-19 18:55:03    x4    100/100 replicates; median BAGofT 370 s, projection 16 s; elapsed 65.6 min
+2026-09-19 18:55:03  [2/3] x4 written: errors 0, BAGofT missing 0, projection missing 0
+2026-09-19 18:55:03  x8: 100 of 100 replicates to run
+2026-09-19 19:01:33    x8    20/100 replicates; median BAGofT 371 s, projection 16 s; elapsed 72.2 min
+2026-09-19 19:08:02    x8    40/100 replicates; median BAGofT 370 s, projection 16 s; elapsed 78.6 min
+2026-09-19 19:14:32    x8    60/100 replicates; median BAGofT 371 s, projection 16 s; elapsed 85.1 min
+2026-09-19 19:21:02    x8    80/100 replicates; median BAGofT 370 s, projection 16 s; elapsed 91.6 min
+2026-09-19 19:27:34    x8    100/100 replicates; median BAGofT 371 s, projection 17 s; elapsed 98.2 min
+2026-09-19 19:27:34  [3/3] x8 written: errors 0, BAGofT missing 0, projection missing 0
+2026-09-19 19:27:34  block 9b finished

@@ -1,0 +1,135 @@
+\appendix
+
+\section{Assumptions and proofs}\label{app:proofs}
+
+This appendix proves Theorems~\ref{thm:null} and~\ref{thm:growingG}. The argument specialises two
+standard results, the central limit theorem for the grouped goodness-of-fit score vector
+\citep{Moore1975} and the weighted chi-squared limit of Neyman smooth components
+\citep{raynerthasbest2009}, to the exact grouped logistic covariance
+$\Omega=I_G-U(X^\top WX)^{-1}U^\top$ and the fixed shape basis $Z$.
+
+\paragraph{Assumptions} Theorem~\ref{thm:null} uses (A1)--(A4) and Theorem~\ref{thm:growingG} uses
+(A2), (A3) and (A4$'$). \textbf{(A1)} The number of groups $G$ is fixed and equal-frequency grouping
+gives $n_g/n\to1/G$ for every $g$. \textbf{(A2)} The covariates are independent and identically
+distributed with $\mathbb{E}\|x\|^2<\infty$ and $n^{-1}X^\top WX\to J_0$ positive definite, so that
+the maximum-likelihood expansion $\hat\beta-\beta=(X^\top WX)^{-1}X^\top(y-\pi)+o_p(n^{-1/2})$
+holds. \textbf{(A3)} The true probabilities satisfy $\varepsilon\le\pi_i\le1-\varepsilon$ for a fixed
+$\varepsilon>0$, so that $V_g/n_g$ is bounded away from zero. \textbf{(A4)} The distribution of the
+linear predictor is continuous with positive density at its $G-1$ population quantiles, so that the
+sample group boundaries converge to fixed population boundaries and the grouping map may be treated
+as fixed: each boundary is an empirical quantile fluctuating by $O_p(n^{-1/2})$, so $O_p(\sqrt n)$
+observations change group; they lie in a shrinking neighbourhood of the boundary where the summands
+$y_i-\hat\pi_i$ are centred to first order, so their sum is $O_p(n^{1/4})$ and, after division by
+$\sqrt{V_g}=O(\sqrt n)$, contributes $o_p(1)$ to each coordinate of $r$. This is the random-cell
+argument of \citet{Moore1975} for the equal-frequency partition on the fitted risk. It is used only at
+fixed $G$: once $G$ grows, $\sqrt{V_g}=O(\sqrt{n/G})$ and the count no longer closes, which is why the
+proof of Theorem~\ref{thm:growingG} replaces the group indicator by a smooth weight of the rank and
+(A4) by \textbf{(A4$'$)}: for every $b$ in a neighbourhood of $\beta$ the distribution of $x^\top b$ is
+absolutely continuous with density bounded above uniformly in $b$, and at $b=\beta$ the density of
+$\eta$ is continuous and bounded away from zero on its support, which (A3) makes compact. Then
+$F_\eta$ is a $C^1$ bijection of that support onto $[0,1]$, $q=F_\eta(\eta)$ is uniform, and the
+quantile functions $Q_\eta$ and $Q_\pi=\mathrm{expit}\circ Q_\eta$ are $C^1$ with bounded
+derivative. At fixed $G$, (A4$'$) implies (A4). Assumption (A3) restricts the asymptotic regime and
+not the method; the size study of Section~\ref{sec:size} covers designs outside it.
+
+\paragraph{Notation} Write $\varepsilon_i=y_i-\pi_i$, $v_i=\pi_i(1-\pi_i)$, $s=X^\top(y-\pi)$ for
+the score, $A$ for the $G\times n$ group-membership matrix and $D=\mathrm{diag}(V_1,\dots,V_G)$, so
+that the grouped residual before fitting is $\tilde r=D^{-1/2}A(y-\pi)$. For
+Theorem~\ref{thm:growingG}, $q_i=F_\eta(\eta_i)$ is the population quantile position of observation
+$i$, $R_i$ its rank among the $n$ fitted linear predictors, $g(i)$ its group, $q_g=(g-\tfrac12)/G$
+the position of group $g$, $v(q)$ the value of $\pi(1-\pi)$ at position $q$ and
+$\kappa(q)=\sqrt{v(q)}\,\mathbb{E}[x\mid q]$; $C$ is a constant not depending on $n$ or $G$.
+
+\subsection{Proof of Theorem~\ref{thm:null}}
+
+\paragraph{Step 1: linearisation} A one-term Taylor expansion of $\hat\pi$ about $\pi$, with the
+expansion of (A2), gives $r=\tilde r-U(X^\top WX)^{-1}s+o_p(1)$ with $U=D^{-1/2}AWX$, whose rows
+$U_{g\cdot}=V_g^{-1/2}\sum_{i\in g}\hat\pi_i(1-\hat\pi_i)x_i^\top$ are those of
+\eqref{eq:omega}; by (A4) the grouping map may be treated as fixed.
+
+\paragraph{Step 2: the central limit theorem} The pair $(\tilde r,(X^\top WX)^{-1/2}s)$ is a
+triangular array of independent contributions, one per observation. Under (A1) and (A3) each
+standardised summand is uniformly $O(1/\sqrt{\min_gV_g})=o(1)$, so the Lindeberg condition holds and
+the pair is jointly asymptotically normal with $\mathrm{Cov}(\tilde r,s)=U$, each observation
+belonging to exactly one group. The linear map $(a,b)\mapsto a-U(X^\top WX)^{-1/2}b$ then gives
+$r\rightsquigarrow N(0,\Omega)$, since
+$\mathrm{Var}(r)\to I_G-2U(X^\top WX)^{-1}U^\top+U(X^\top WX)^{-1}U^\top=\Omega$. The intercept score
+equation forces $\sum_g\sqrt{V_g}\,r_g=\sum_i(y_i-\hat\pi_i)=0$ exactly, so $\Omega$ is singular in
+the direction $(\sqrt{V_1},\dots,\sqrt{V_G})^\top$: a pure level shift is absorbed by the intercept.
+
+\paragraph{Step 3: the quadratic form} By the continuous-mapping theorem
+$S=r^\top P_Zr\rightsquigarrow\zeta^\top\Omega^{1/2}P_Z\Omega^{1/2}\zeta$ with $\zeta\sim N(0,I_G)$.
+Let $M_\Omega=\Omega^{1/2}P_Z\Omega^{1/2}=\sum_j\lambda_je_je_j^\top$ with orthonormal $e_j$. Since
+$P_Z$ has rank $d$, $M_\Omega$ has at most $d$ non-zero eigenvalues, and they are the non-zero
+eigenvalues of $(Z^\top Z)^{-1}Z^\top\Omega Z$, because $\Gamma_1\Gamma_2$ and $\Gamma_2\Gamma_1$ share their
+non-zero eigenvalues, with $\Gamma_1=\Omega^{1/2}Z$ and $\Gamma_2=(Z^\top Z)^{-1}Z^\top\Omega^{1/2}$. The weights lie in
+$[0,1]$ because $0\preceq M_\Omega\preceq\Omega\preceq I_G$: the upper bound holds because the term
+subtracted in $\Omega$ is positive semi-definite, and $\Omega\succeq0$ because $U^\top U\preceq
+X^\top WX$, the between-group weighted second moment of the design never exceeding the total, by the
+Cauchy--Schwarz inequality within each group. With $u_j=e_j^\top\zeta\sim N(0,1)$ independent across
+$j$, $S\rightsquigarrow\sum_j\lambda_ju_j^2=\sum_j\lambda_j\chi^2_{1,j}$. The weights reported are
+computed from $\widehat\Omega$; under (A1)--(A3) it differs from $\Omega$ by $O_p(n^{-1/2})$ and
+Slutsky's theorem gives the same limit. \qed
+
+\subsection{Proof of Theorem~\ref{thm:growingG}}
+
+Let $\varphi=(\varphi_1,\dots,\varphi_d)^\top$ be the shape functions of the theorem. We show
+\begin{equation}\label{eq:growingG}
+S\rightsquigarrow\sum_{j=1}^d\lambda_j\chi^2_{1,j},\qquad \{\lambda_j\}=\text{eigenvalues of }
+M^{-1}\Sigma,\quad \Sigma=M-KJ_0^{-1}K^\top,
+\end{equation}
+with $M=\int_0^1\varphi\varphi^\top dq$ and $K=\int_0^1\varphi\,\kappa^\top dq$, which do not depend
+on $G_n$.
+
+The limit is proved in six steps in Supporting Information S11: the bases are reduced to the
+shape functions $\varphi$; the statistic is written as a smooth-weighted sum of the residuals;
+the second-order remainder is bounded; a central limit theorem is applied with population
+weights; the weights of the statistic are shown to be uniformly close to those, which is where
+the rate condition $G_n/\sqrt{\log n}\to\infty$ enters; and the fitting correction gives $\Sigma$.
+\qed
+
+\subsection{Proof of Proposition~\ref{prop:bounded}}
+
+Write $w(\eta)=\pi(\eta)\{1-\pi(\eta)\}$ with $\pi=\operatorname{expit}$. Throughout, the coefficients
+are held at $\hat\beta$, as the proposition states.
+
+\emph{The ungrouped score.} The contaminated record contributes $z(\eta^{*})(y_i-\hat\pi^{*})$ to
+$U$ and $z(\eta^{*})^{2}w(\eta^{*})$ to the information. With $z(\eta)=\eta|\eta|$ and $y_i=0$ the
+first is $-\eta^{*2}\hat\pi^{*}\to-\eta^{*2}$, while the second tends to zero because $w(\eta^{*})$
+decays exponentially in $|\eta^{*}|$. Hence $T\ge(\eta^{*2}-c)^{2}/I_{0}\to\infty$, with $I_{0}$ the
+information of the uncontaminated records and $c$ their score contribution. The same holds for the
+two half-columns of the joint form and, with a higher power of $\eta$, for a polynomial of degree
+four in the logit.
+
+\emph{The grouped statistic, with the record in place.} The record enters its group only through
+$E_g=\sum_{i\in g}\hat\pi_i$ and $V_g=\sum_{i\in g}w_i$, and enters the basis only through the
+group's mean risk. Replacing $\hat\pi_i$ by $\hat\pi^{*}$ changes $E_g$ by $|\hat\pi^{*}-\hat\pi_i|<1$
+and $V_g$ by at most $\sup_p p(1-p)=1/4$, and moves the group's mean risk by at most $1/m$. Write
+$D_g=O_g-E_g$, so that $r_g=D_gV_g^{-1/2}$, and let $D_g'=D_g-\Delta E_g$ and $V_g'=V_g+\Delta V_g$ be
+the values after the change; $O_g$ does not change, because the outcome does not. Then
+\[
+  r_g'-r_g=-\frac{\Delta E_g}{\sqrt{V_g'}}+D_g\Bigl(\frac1{\sqrt{V_g'}}-\frac1{\sqrt{V_g}}\Bigr).
+\]
+For $V_g>1/4$ both $V_g$ and $V_g'$ are at least $V_g-1/4$, and by the mean value theorem
+$|V_g'^{-1/2}-V_g^{-1/2}|\le\tfrac12|\Delta V_g|(V_g-\tfrac14)^{-3/2}\le\tfrac18(V_g-\tfrac14)^{-3/2}$.
+With $|D_g|=|r_g|\sqrt{V_g}$ this gives the bound of the proposition,
+\[
+  |\Delta r_g|\;\le\;\Bigl(V_g-\tfrac14\Bigr)^{-1/2}
+  \Bigl\{1+\frac{|r_g|\sqrt{V_g}}{8\,(V_g-\frac14)}\Bigr\}.
+\]
+The basis columns are scaled to unit length and are Lipschitz in the group mean, with a constant that
+for the logit-based columns depends on the extreme groups' mean risk but not on $\eta^{*}$, so the change they
+contribute to $S=r^\top P_Z r$ is bounded by a constant multiple of $1/m$. No term involves
+$\eta^{*}$.
+
+\emph{The grouped statistic, when the record changes group.} Equal-frequency grouping moves the
+corrupted record into an extreme group and displaces one record across each boundary between. Each
+touched group loses one record and gains one, so $O_g$ changes by at most one, $E_g$ by less than one
+and $V_g$ by at most $1/4$. The argument above, with $|\Delta D_g|\le2$ in place of $|\Delta E_g|<1$,
+gives $|\Delta r_g|\le(V_g-\frac14)^{-1/2}\{2+|r_g|\sqrt{V_g}/(8(V_g-\frac14))\}$ for every touched
+group, again with no dependence on $\eta^{*}$.
+
+At fixed coefficients the influence of one record's covariate on the grouped statistic is therefore
+bounded by a sum, over the groups the record touches, of quantities that do not depend on $\eta^{*}$,
+while its influence on the ungrouped directed score is
+unbounded. \qed

@@ -1,0 +1,223 @@
+\section{Corrupted records}\label{sec:contamination}
+
+\subsection{False alarms from a handful of records}\label{sec:c1}
+
+Table~S5 of the Supporting Information gives the false-alarm rate of every test under corruption C1: $k$ records whose
+covariate has been multiplied by four, in a sample for which the model is otherwise correct. Over the
+$24$ scenarios of C1 the slope on the corrupted covariate moves by less than $5\%$, the slope on the
+second covariate by at most $1.9\%$ and the intercept by at most $0.02$ on the linear-predictor scale,
+so the model under test is effectively the clean one; under the sign error the slope moves by up to
+$14\%$ (Section~\ref{sec:mechanism}). The fitted risks of the clean records do not move either. Their
+mean absolute distance from the true risk, an integrated calibration index \citep{austin2019ici}, is
+$0.0185$ with one exaggerated record in $1000$ and $0.0199$ with ten, against $0.0189$ without
+corruption, which is the estimation error of any fit at this size; the corrupted records
+themselves are mispredicted by about $20$ percentage points. Ten sign errors move it to $0.027$. A test
+that rejects here is reacting to a few records, not to the model that is used for everyone else.
+
+One corrupted record in a thousand moves every record-level test. Stukel's joint score rises from the
+nominal level to $0.121$, its one-parameter form to $0.115$, the cubic calibration test to $0.127$ and
+the GiViTI belt to $0.089$. EDGE reads $0.056$ with the cubic basis and $0.058$ with the
+symmetric basis. At five corrupted records the record-level tests are between $0.25$ and $0.40$ and 
+EDGE is still at $0.057$. At ten, Stukel's joint score reaches $0.627$, rejecting a correct
+model more often than not, while EDGE reads $0.097$. Every test holds its level in the
+same design without corruption (the $k=0$ rows), so the difference is not that one test is
+conservative.
+
+
+The pooled tests are protected, as Section~\ref{sec:mechanism} predicts. Le Cessie's smoothed test
+reads $0.055$, $0.052$, $0.052$ and $0.077$ at one, two, five and ten corrupted records: an isolated
+record adds one term to a sum whose spread is set by all $n$ records. The Hosmer--Lemeshow statistic and
+the Pigeon--Heyse test at ten groups are protected too: under the exaggeration they stay at or below
+$0.058$ up to ten corrupted records in $1000$ and twenty-five in $5000$ (Table~\ref{tab:severity}),
+although the Pigeon--Heyse test is conservative throughout, between $0.019$ and $0.035$ on clean data.
+Other grouped tests are not protected. The equal-width Hosmer--Lemeshow statistic, whose extreme groups hold few
+records, reaches $0.592$ at ten corrupted records in $1000$, and the two tests that group on the
+covariates, whose outlying clusters can be small, reach $0.542$ (Tsiatis) and $0.606$ (Xie). In a smaller study of three corrupted
+records in $500$ with the covariate multiplied by four or by eight, $100$ replicates a scenario, BAGofT
+and EDGE with the cubic basis gave no sign of moving, while the projection test reached
+$0.22$ at $\times8$ and EDGE with the symmetric basis $0.20$; with $100$ replicates a rise
+of a few points could not be seen (Supporting Information S3).
+
+Wrong outcomes are a different matter. When the ten highest-risk records in a
+thousand have their event erased (C2), every test rejects more often, EDGE included, at
+$0.667$ against Stukel's $0.718$ and the cubic test's $0.837$. Missing events at the top of the risk
+scale are a miscalibration of the recorded data, and a calibration test should find them. A unit error
+that makes predictions milder (C3) moves no test under the logistic truth, although under the two
+misfit truths it costs some power, and duplicated records (C4) leave every test between $0.040$ and
+$0.071$ (Supporting Information S2).
+
+\subsection{What protects: pooling with unit weights}\label{sec:whatprotects}
+
+Proposition~\ref{prop:bounded} contrasts a grouped statistic with an ungrouped direction that grows with
+the linear predictor. A direction that is bounded, a polynomial in the predicted risk rather than in the
+logit, might protect without grouping, and the last study of Section~\ref{sec:contamination-design}
+tests this on the same data sets (Supporting Information S10). It does not. With one exaggerated record
+in $1000$ the ungrouped score test for the cubic directions of EDGE rejects a correct model in $0.166$
+of replicates and with ten in $0.641$, against $0.047$ and $0.101$ for EDGE at the default partition and
+$0.051$ and $0.066$ at ten groups; with ten reversed records it rejects in $0.992$. EDGE with one record a
+group behaves like Stukel's test ($0.148$ and $0.594$). Spiegelhalter's $z$ never rejects at $5\%$ on
+development data, because its normal reference ignores the fit, but read at its own realised level it
+rejects in $0.118$ and $0.546$. Grouping alone is not enough either: in the study of
+Section~\ref{sec:c1}, EDGE's score form, which uses the same groups but divides by the information its
+directions keep after the fit, rejects in $0.087$ and $0.463$ at ten groups with one and ten
+exaggerated records, against $0.056$ and $0.085$ for the unit form. The weighted grouped tests of \citet{hosmer2002goodness}, which weight each
+record within its group by a function of its covariates, reach $0.18$ and $0.27$ with ten exaggerated
+records and $0.68$ and $0.82$ with ten reversed ones. On frozen predictions, where nothing is refitted, the picture changes, which locates the damage
+(Supporting Information S10). The same ungrouped twin then reads $0.061$ and $0.096$ with one and ten
+exaggerated records in $1000$, and Spiegelhalter's $z$ holds throughout ($0.090$ with ten reversed
+records), as in Section~\ref{sec:realcorrupt}. Two things therefore make a test fragile: the refit,
+whose effect a score test magnifies by dividing by the information left after it, and, without a refit,
+directions that lean on the few most extreme records, since the twin on frozen predictions still reads
+$0.311$ with ten reversed records, where EDGE at ten groups reads $0.082$. EDGE's unit form avoids both:
+its divisor is the variance of the clean groupmates, which neither the record nor the refit can make
+small. The same holds with twelve
+covariates at $n=2000$: with ten reversed records in one covariate EDGE reads $0.091$ at the default
+partition and $0.048$ at ten groups, against $0.315$ for Stukel's test and $0.292$ for the ungrouped twin.
+
+A routine alternative is to find the corrupted records with influence diagnostics and test on the rest.
+Removing every record whose $\Delta X^2$ exceeds $4$ or whose $\Delta\beta$ exceeds $1$
+\citep{pregibon1981logistic,hosmer2013applied} removed about $3.7\%$ of the records of a clean data set and
+made every test reject a correct model in more than $0.95$ of replicates; removing only the records
+with $\Delta\beta>1$ removed none, corrupted or not, and changed nothing. At an extreme prediction a
+corrupted record's leverage and residual are both small on the fitted scale, so the diagnostics do not
+single it out.
+
+\subsection{The partition, not the contamination rate}\label{sec:partition}
+
+On the same data the Hosmer--Lemeshow statistic reads $0.437$ at fifty corrupted records in $5000$ at
+the default partition, where groups hold twenty-five records, and $0.088$ at ten groups, where they
+hold five hundred; EDGE at the default partition reads $0.740$, and the record-level
+tests between $0.87$ and $0.98$.
+
+A second study varied the number of groups with the data held fixed, so that the same replicate is
+tested at every partition (Figure~\ref{fig:partition}). The contamination \emph{rate} does not decide
+the outcome: twenty-five corrupted records in $5000$ and five in $1000$ are both $0.5\%$, and 
+EDGE reads $0.152$ and $0.048$, whereas the partition changes it: at $n=5000$ with twenty-five corrupted
+records the same data give $0.062$ at ten groups and $0.152$ at two hundred; with fifty they give
+$0.094$ and $0.726$. Without corruption the rate stays between $0.046$ and $0.057$ at every
+partition.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{Fig12_partition}
+\caption{False-alarm rate of EDGE (cubic basis, unit form) under a correct model when $k$
+records carry a corrupted covariate, against the number of risk groups. Each line is a fixed $k$; the
+shaded area lies below $0.10$, where the test is read as holding, the dotted vertical line marks the
+default partition, and the dashed grey line is the uncorrupted control. (a)~$n=1000$; (b)~$n=5000$. The
+same contamination rate, $0.5\%$, gives different false-alarm rates in (a) and (b): the size of the
+group, not the rate, decides.}
+\label{fig:partition}
+\end{figure}
+
+The reason is in \eqref{eq:twomoments}. Corrupted covariates produce the most extreme predictions, so
+they fill the top and bottom groups first; about $0.35k$ to $0.38k$ of them reach the top group at the
+default partition, and about $0.40k$ at ten groups. The shift in that group's residual grows as
+$\theta m_c/\sqrt{(m-m_c)\bar v}$, which rises steeply as $m_c$ approaches $m$. At the default partition
+the group size $m$ stays near twenty-five, so the \emph{count} of corrupted records decides: in the
+partition study ten in $1000$ put an average of $3.7$ into the top group and the test reads $0.079$,
+and fifty in $5000$ put $17.8$ there, leaving about seven clean members, and it reads $0.726$. At ten
+groups $m=n/10$ grows with the sample; the same data put $4.0$ and $19.9$ records into top groups of
+$100$ and $500$, and the test reads $0.053$ and $0.094$. The partition study drew its own data sets, so
+its rates differ from those of Table~S5 by Monte Carlo error.
+
+\subsection{The severity of the error}\label{sec:severity}
+
+A sign error (C1$'$) reverses the prediction instead of exaggerating it: a high-risk patient is placed
+at the bottom of the risk scale with the outcome intact, and $\theta$ in \eqref{eq:twomoments} rises
+from about $0.3$ to about $0.7$. The fit also moves more, by $14\%$ in the slope, and the two channels
+were not separated. Table~\ref{tab:severity} gives both errors. With the cubic basis at
+the default partition EDGE holds to about two corrupted records in $1000$ and five in
+$5000$ under the sign error, against about ten under the exaggeration: at ten records in $1000$ it
+reads $0.381$. Two settings do much better. With ten groups the cubic basis holds to five records in
+$1000$ and ten in $5000$. The symmetric basis at the default partition holds to ten in both, reading
+$0.098$ and $0.058$, although against many exaggerated records it is no better than the cubic basis
+($0.745$ at fifty in $5000$). The symmetric basis at ten groups is the exception to the partition
+lever: under the sign error it is less protected than at the default partition ($0.431$ against
+$0.098$ at ten records in $1000$), which we observe but cannot explain from \eqref{eq:twomoments}.
+Whatever the setting, the ordering of
+the tests is unchanged. At one corrupted record in a thousand EDGE reads $0.054$ against
+Stukel's $0.364$, the cubic test's $0.389$ and the belt's $0.268$; at five, $0.124$ against $0.89$,
+$0.89$ and $0.80$.
+
+\input{tab_severity}
+
+\subsection{Protection when records may be wrong}\label{sec:edgefr}
+
+For the cubic basis the partition sets a trade-off between power and protection, and it is chosen
+before the data are seen. The default partition has more power: on clean data it leads ten groups by
+$0.017$ on average over the $158$ scenarios ($0.016$ to $0.018$), and by much more when the misfit is
+confined to the extreme risks (Supporting Information S10). With the true risk of the top $2\%$ of
+patients $40\%$ below its prediction its size-adjusted power is $0.42$ at $n=1000$, against $0.19$ at ten
+groups; with that risk $20\%$ below its prediction at $n=5000$, $0.62$ against $0.29$; and with the ten
+highest-risk outcomes erased (C2), $0.60$ against $0.26$. Ten groups tolerate more corrupted records: they read $0.085$ with
+ten exaggerated records in $1000$ and $0.107$ with fifty in $5000$, where the default partition reads
+$0.097$ and $0.740$, and under the sign error $0.081$ with five records in $1000$ and $0.077$ with ten in
+$5000$, where the default partition holds to about two in $1000$. The partition is therefore chosen in the
+analysis plan, from what is known about how the data were collected, and not after the results are
+seen: running both and reporting the more convenient would bring back the dependence on $G$ that
+Section~\ref{sec:realpartition} shows for the Hosmer--Lemeshow test. The software reports both; if only
+the default partition rejects, the signal lies in the extreme groups, and their records should be
+checked.
+
+At ten groups the plain Hosmer--Lemeshow statistic holds its level further than EDGE
+once there are more than a few reversed records: $0.099$ against $0.182$ at ten in $1000$, and $0.126$
+against $0.249$ at twenty-five in $5000$. Up to five reversed records in $1000$ both stay below $0.10$
+($0.081$ and $0.056$), although the Hosmer--Lemeshow statistic already rejects less often on the same
+data sets (exact McNemar $p=0.013$).
+The Pigeon--Heyse test holds further still, but it is conservative on clean data. What EDGE
+offers at ten groups is power, $0.411$ against $0.267$ (Section~\ref{sec:census}).
+
+Pooling only the two extreme groups and keeping the default partition in the middle matched ten groups
+up to about ten corrupted records in $1000$ and fifty in $5000$, was less protected beyond, and had the
+same power; removing the extreme records instead removes the signal with them (Supporting Information
+S5).
+
+Section~\ref{sec:whentouse} turns these results into a rule.
+
+\subsection{The cost in power, and robust alternatives}\label{sec:cost}\label{sec:robustest}
+
+Under corruption a rejection can come from the misfit or from the corrupted records. The raw rejection
+rate barely moves within the protected range: against a complementary log--log truth at $n=1000$ EDGE
+rejects in $0.818$ of replicates on clean data, $0.785$ with one corrupted record and $0.802$ with ten.
+Part of that is false alarm, so power is also read at the critical value of the test's own
+\emph{contaminated} null, the logistic truth at the same sample size with the same records corrupted,
+which the analyst cannot know but which isolates the misfit. Read this way EDGE falls from $0.826$
+to $0.771$ at one corrupted record and $0.648$ at ten; against a probit truth at $n=5000$ it falls
+from $0.278$ to $0.233$ at five and $0.207$ at ten. Corrupted records and a real tail misfit occupy the
+same extreme groups, so the averaging that absorbs the first also weakens the second. Neither basis pays
+consistently less: read at the contaminated null, at five corrupted records in $5000$ against the
+probit truth the symmetric basis loses nothing and the cubic basis $0.045$, while against the
+complementary log--log truth at one and two records in $1000$ the symmetric basis loses more ($0.084$
+against $0.055$; $0.153$ against $0.096$). Beyond the protected range the test has
+no power left: at twenty-five corrupted records in $5000$ its raw rejection rate against the probit
+truth, $0.143$, is below its false-alarm rate on a correct model, $0.151$, and read at its
+contaminated null it is $0.045$.
+
+A natural objection is that corrupted records call for a robust fit. We fitted every contaminated data
+set both by maximum likelihood and by the Huber-type quasi-likelihood estimator of
+\citet{cantoni2001robust}, which bounds the Pearson residual (Huber's $\psi$ at $1.345$) but puts no
+weight on the covariates, and applied every test to both fits. After a robust fit, five of ten tests no longer hold their level on clean data: both Stukel
+score tests ($0.199$ and $0.223$) and three of EDGE's four forms, the symmetric basis in
+its unit form ($0.164$) and both score forms. Of the five that do, none has its false alarms reduced: at
+ten corrupted records the GiViTI belt reads $0.379$ after maximum likelihood and $0.400$ after the
+robust fit, the cubic calibration test $0.465$ and $0.466$ (on this study's own data sets), and EDGE $0.089$ and $0.087$.
+A corrupted record's prediction is formed at its corrupted covariate, so refitting does not reach it;
+restoring the slope, if anything, makes that prediction more extreme. Refitting the model robustly is therefore not a substitute for a test
+whose own statistic bounds a record's influence \citep{hampel1986robust,heritier1994robust}
+(Supporting Information S4).
+
+The fair robust competitor is therefore a robust \emph{test}. We compared EDGE with the
+robust quasi-deviance test of \citet{cantoni2001robust} for Stukel's two constructed covariates, on
+$1000$ fresh data sets a scenario at $n=1000$, in two forms: a Huber form, which bounds the Pearson
+residual, and a Mallows form, which also down-weights records of high leverage and is the form meant
+for wrong covariates. Both hold their level on clean data ($0.049$ and $0.047$). The Mallows form holds
+below $0.10$ with one or two corrupted records, although with two reversed records it already rejects
+more often than EDGE on the same data sets ($0.075$ against $0.056$, exact McNemar
+$p=0.004$), and it does not hold beyond: with ten
+exaggerated records it reads $0.168$ and with ten reversed ones $0.789$, where EDGE at ten
+groups reads $0.063$ and $0.192$ on the same data sets (exact McNemar $p<10^{-20}$ in both). The Huber
+form is less protected still ($0.205$ and $0.923$). On clean data the robust tests are also less
+powerful: against a complementary log--log truth their size-adjusted power is $0.610$, against 
+EDGE's $0.779$ at ten groups and $0.795$ at the default partition. Robustifying the
+record-level test protects it against one or two exaggerated records and one reversed one, at a cost
+in power; pooling protects further
+at no such cost.

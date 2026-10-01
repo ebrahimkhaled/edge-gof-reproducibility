@@ -1,0 +1,20 @@
+step,action,block,cells,note
+1,run,0,"","block 0: identity, harness against package, worker timing (E0.8); writes RULE_weighting.txt"
+2,run,1b,"null_base_n9400,null_base_n16000,null_base_n2400,null_base_n4000,null_base_n20000,null_base_n610,null_base_n1000,null_auc_n3500,null_auc_n5900,null_auc_n460,null_auc_n760,null_auc_n4700,null_auc_n7800,null_auc_n380,null_auc_n640,null_e12_n4300,null_e12_n7200,null_e12_n6400,null_e12_n11000,null_e12_n8700,null_e12_n15000,null_e12_n1000,null_e12_n1700",the matched nulls of block 2
+3,run,2,"","block 2, symmetric tails"
+4,run,1a,"","block 1a, size grid"
+5,run,1b,"",the rest of block 1b
+6,run,3,"quad_0.01_n1000,quad_0.02_n1000,quad_0.03_n1000,quad_0.05_n1000,quad_0.1_n1000,quad_0.2_n1000,quad_0.4_n1000,binint_0.1_n1000,binint_0.2_n1000,binint_0.3_n1000,binint_0.5_n1000,binint_0.7_n1000,contint_0.1_n1000,contint_0.3_n1000,contint_0.5_n1000,contint_0.7_n1000,link_probit_n1000,link_cloglog_n1000,link_plateau_upper_n1000,link_plateau_lower_n1000,link_plateau_both_n1000,rough_osc2_n1000,rough_osc4_n1000,rough_sawtooth_n1000,rough_bump_n1000,stk_long_n1000,stk_short_n1000,stk_asym_n1000,cauchit_n1000,t4_n1000,loglog_n1000,census_logx_n1000,census_int_binbin_n1000,census_skew_n1000,census_corr_n1000,census_omit_x2x3_n1000,census_omit_2int_n1000,census_joint_n1000,census_omit_2cov_n1000","block 3, the n = 1000 slice"
+7,run,3,"",the rest of block 3
+8,run,4,"",block 4
+9,run,5,"",block 5
+10,run,6,"",block 6
+11,run,7,"",block 7
+12,summary,1a,"",summary of every finished cell of the block
+13,summary,1b,"",summary of every finished cell of the block
+14,summary,2,"",summary of every finished cell of the block
+15,summary,3,"",summary of every finished cell of the block
+16,summary,4,"",summary of every finished cell of the block
+17,summary,5,"",summary of every finished cell of the block
+18,summary,6,"",summary of every finished cell of the block
+19,summary,7,"",summary of every finished cell of the block

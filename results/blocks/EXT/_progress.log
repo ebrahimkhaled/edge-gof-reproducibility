@@ -1,0 +1,23 @@
+2026-09-30 23:26:08  block EXT: 21 cells x 1000 replicates, 14 workers 
+2026-09-30 23:27:28  cell  1 null   C=0    n= 250 k= 0 | EDGE_auto 0.051  EDGE_G10 0.051  HL 0.048  stukel 0.051  cox 0.053  spiegelhalter 0.050  giviti 0.056 | 1.3 min 
+2026-09-30 23:28:57  cell  2 null   C=0    n= 500 k= 0 | EDGE_auto 0.054  EDGE_G10 0.051  HL 0.052  stukel 0.062  cox 0.055  spiegelhalter 0.057  giviti 0.053 | 1.5 min 
+2026-09-30 23:31:05  cell  3 null   C=0    n=1000 k= 0 | EDGE_auto 0.050  EDGE_G10 0.061  HL 0.048  stukel 0.052  cox 0.061  spiegelhalter 0.061  giviti 0.060 | 2.1 min 
+2026-09-30 23:32:37  cell  4 large  C=0.2  n= 500 k= 0 | EDGE_auto 0.318  EDGE_G10 0.315  HL 0.227  stukel 0.179  cox 0.404  spiegelhalter 0.118  giviti 0.400 | 1.5 min 
+2026-09-30 23:34:08  cell  5 large  C=0.4  n= 500 k= 0 | EDGE_auto 0.904  EDGE_G10 0.917  HL 0.785  stukel 0.536  cox 0.956  spiegelhalter 0.324  giviti 0.954 | 1.5 min 
+2026-09-30 23:35:39  cell  6 slope  C=0.8  n= 500 k= 0 | EDGE_auto 0.413  EDGE_G10 0.399  HL 0.299  stukel 0.353  cox 0.433  spiegelhalter 0.547  giviti 0.429 | 1.5 min 
+2026-09-30 23:37:07  cell  7 slope  C=0.6  n= 500 k= 0 | EDGE_auto 0.972  EDGE_G10 0.973  HL 0.933  stukel 0.964  cox 0.987  spiegelhalter 0.995  giviti 0.987 | 1.5 min 
+2026-09-30 23:38:35  cell  8 ushape C=0.4  n= 500 k= 0 | EDGE_auto 0.144  EDGE_G10 0.126  HL 0.110  stukel 0.102  cox 0.083  spiegelhalter 0.080  giviti 0.088 | 1.5 min 
+2026-09-30 23:40:09  cell  9 ushape C=0.8  n= 500 k= 0 | EDGE_auto 0.491  EDGE_G10 0.468  HL 0.353  stukel 0.354  cox 0.354  spiegelhalter 0.283  giviti 0.370 | 1.6 min 
+2026-09-30 23:41:35  cell 10 thresh C=2    n= 500 k= 0 | EDGE_auto 0.131  EDGE_G10 0.142  HL 0.106  stukel 0.186  cox 0.212  spiegelhalter 0.077  giviti 0.208 | 1.4 min 
+2026-09-30 23:42:55  cell 11 thresh C=4    n= 500 k= 0 | EDGE_auto 0.268  EDGE_G10 0.282  HL 0.179  stukel 0.332  cox 0.430  spiegelhalter 0.097  giviti 0.435 | 1.3 min 
+2026-09-30 23:44:18  cell 12 inter  C=0.6  n= 500 k= 0 | EDGE_auto 0.169  EDGE_G10 0.149  HL 0.128  stukel 0.115  cox 0.095  spiegelhalter 0.076  giviti 0.106 | 1.4 min 
+2026-09-30 23:45:51  cell 13 inter  C=1    n= 500 k= 0 | EDGE_auto 0.481  EDGE_G10 0.426  HL 0.342  stukel 0.420  cox 0.227  spiegelhalter 0.224  giviti 0.287 | 1.5 min 
+2026-09-30 23:47:43  cell 14 exag   C=4    n=1000 k= 1 | EDGE_auto 0.055  EDGE_G10 0.044  HL 0.040  stukel 0.048  cox 0.054  spiegelhalter 0.048  giviti 0.055 | 1.9 min 
+2026-09-30 23:49:36  cell 15 exag   C=4    n=1000 k= 2 | EDGE_auto 0.043  EDGE_G10 0.034  HL 0.046  stukel 0.070  cox 0.046  spiegelhalter 0.043  giviti 0.047 | 1.9 min 
+2026-09-30 23:51:36  cell 16 exag   C=4    n=1000 k= 5 | EDGE_auto 0.072  EDGE_G10 0.059  HL 0.048  stukel 0.123  cox 0.050  spiegelhalter 0.054  giviti 0.063 | 2.0 min 
+2026-09-30 23:54:10  cell 17 exag   C=4    n=1000 k=10 | EDGE_auto 0.077  EDGE_G10 0.055  HL 0.064  stukel 0.173  cox 0.072  spiegelhalter 0.070  giviti 0.089 | 2.6 min 
+2026-09-30 23:56:30  cell 18 sign   C=-4   n=1000 k= 1 | EDGE_auto 0.040  EDGE_G10 0.045  HL 0.050  stukel 0.114  cox 0.043  spiegelhalter 0.047  giviti 0.057 | 2.3 min 
+2026-09-30 23:58:39  cell 19 sign   C=-4   n=1000 k= 2 | EDGE_auto 0.051  EDGE_G10 0.044  HL 0.058  stukel 0.132  cox 0.043  spiegelhalter 0.044  giviti 0.080 | 2.1 min 
+2026-10-01 00:00:55  cell 20 sign   C=-4   n=1000 k= 5 | EDGE_auto 0.104  EDGE_G10 0.065  HL 0.067  stukel 0.349  cox 0.088  spiegelhalter 0.071  giviti 0.192 | 2.3 min 
+2026-10-01 00:04:02  cell 21 sign   C=-4   n=1000 k=10 | EDGE_auto 0.240  EDGE_G10 0.082  HL 0.076  stukel 0.610  cox 0.158  spiegelhalter 0.090  giviti 0.347 | 3.1 min 
+2026-10-01 00:04:02  block EXT: run finished 

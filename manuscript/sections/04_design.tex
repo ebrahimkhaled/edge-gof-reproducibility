@@ -1,0 +1,136 @@
+\section{Simulation study}\label{sec:design}
+
+Every scenario, comparison, threshold and decision rule below was written down and fixed, with a
+cryptographic hash, before any of its results were computed. The specifications, their hashes and
+every per-replicate $p$-value are in the reproducibility archive \citep{edge2_repro_2026}; the
+comparisons that were specified in advance, and their outcomes, are listed in Supporting Information
+S0. Section~\ref{sec:reading} lists where the analysis departs from them.
+
+\subsection{Designs and departures}\label{sec:families}
+
+The working model is a logistic regression for a binary outcome with one to three covariates. Data are
+generated from a truth that departs from it in one of six families:
+\begin{enumerate}
+\item \textbf{Symmetric tails}: the cauchit and $t_4$ latent links, and the symmetric members of
+      Stukel's family, heavier or lighter than the logistic at both ends.
+\item \textbf{Asymmetric links}: the complementary log--log and log--log links and the asymmetric
+      members of Stukel's family, which bend the curve once.
+\item \textbf{The Stukel symmetric family} at its published shape parameters.
+\item \textbf{Omitted terms}: a quadratic term, an interaction, or a covariate left out of the model.
+\item \textbf{Rough misfit}: an oscillating calibration curve, which no smooth basis can follow.
+\item \textbf{Off-index departures}, which do not act through the linear predictor.
+\end{enumerate}
+Sample sizes run from $100$ to $50{,}000$. Each family is crossed with three regimes: a base design
+(area under the curve about $0.77$), a high-discrimination design (about $0.89$), and a design with
+$12\%$ events, the sparse regime in which partition tests are known to struggle. There are $131$ null
+and $158$ alternative scenarios, with between $500$ replicates in the largest samples and $10{,}000$ in the
+smallest.
+
+\subsection{Comparators}\label{sec:comparators}
+
+\begin{itemize}
+\item The Hosmer--Lemeshow statistic and its Osius--Rojek/Farrington correction \EFname{}
+      \citep{hosmer1980goodness,osius1992normal,farrington1996}, at $G=10$ and at the default
+      partition; the Hosmer--Lemeshow statistic with equal-width risk groups
+      \citep{hosmer1980goodness}; the Pigeon--Heyse test \citep{pigeon1999b}; and the tests of
+      \citet{Tsiatis1980} and \citet{xie2008increasing}, which group the records into ten $K$-means
+      clusters in covariate space, Tsiatis's through a score test on the cluster indicators. These four
+      run at ten groups.
+\item Stukel's score test in its joint and one-parameter forms, and its likelihood-ratio refit
+      \citep{stukel1988generalized}. The form distributed in current software \citep{LogisticDx}
+      refers the sum of two correlated score components to a chi-squared distribution on two degrees of
+      freedom; that reference is not correct, with a median size of $0.066$ over the $154$ null settings in which it was run, those of the
+      supplementary studies included
+      (quartiles $0.049$ to $0.070$) against $0.049$ for the joint score, so the joint
+      score form is used throughout.
+\item The GiViTI calibration belt \citep{nattino2014new,nattino2015new}.
+\item The cubic calibration likelihood-ratio test, which adds the square and cube of the fitted
+      linear predictor to a logistic regression of the outcome on it and compares the fits on two
+      degrees of freedom: the polynomial calibration model of the GiViTI belt with its degree fixed at
+      three, which extends Pregibon's goodness-of-link test
+      \citep{pregibon1980goodness,nattino2014new,nattino2015new}.
+\item The kernel-smoothed residual test of \citet{le1991goodness,le1995goodness}, at its default kernel
+      and bandwidth. We use the implementation in \texttt{ebrahim.gof}, because the implementation it
+      was derived from omits a transpose that a weighted fit requires and is mildly liberal as a result
+      \citep{ebrahim2026benchmark}.
+\item The Liu projection test \citep{liu2024comprehensive}, a logistic form of the statistic of
+      \citet{escanciano2006consistent}, with $B=250$ model-based bootstrap draws, from our implementation, which is in the archive and in
+      \texttt{ebrahim.gof} from version 2.8.0.
+\item BAGofT \citep{BAGofT2019} from its published package at its defaults: one hundred splits, one
+      hundred simulations and the random-forest partition. One line of the package fails on models with a
+      single covariate and was repaired; with two or more covariates the repaired function returns
+      identical results.
+\end{itemize}
+The weighted grouped tests of \citet{hosmer2002goodness}, which multiply each record's residual by a
+weight chosen for power against a specified alternative, are the closest earlier directed grouped
+tests. Their weights are the residuals of a weighted regression of the alternative's direction on the
+covariates, so they can grow with a record's covariates and Proposition~\ref{prop:bounded} does not
+cover them; they are compared, with the paper's general-purpose weight, in the study of
+Section~\ref{sec:whatprotects}. Every test in the list except the cubic calibration test is available in \texttt{ebrahim.gof} \citep{ebrahim2025gof}, where one call to
+\texttt{run.all.gof()} fits the model once and returns all of them; \citet{ebrahim2026benchmark}
+benchmark that battery under sparse data. The three tests outside the
+partition family are slow, so they were run on subsets of the scenarios: le Cessie's test on $82$, the
+projection test on $45$ and BAGofT on $32$. Every test sees the same data sets.
+
+\subsection{Corrupted records}\label{sec:contamination-design}
+
+In each replicate $k$ of the $n$ records are corrupted, with $k/n$ from $0.1\%$ to $1\%$ and $n$ equal
+to $1000$ or $5000$:
+\begin{description}
+\item[C1, an exaggerated covariate.] The covariate of $k$ random records is multiplied by four, and
+      their outcome is still drawn from the truth at the original value. The \emph{prediction} is wrong
+      and the outcome is not.
+\item[C1$'$, a sign error.] As C1, with the covariate multiplied by $-4$. The prediction is reversed
+      rather than exaggerated.
+\item[C2, missed events.] The $k$ records of highest true risk have their outcome set to zero. The
+      prediction is right and the \emph{outcome} is wrong.
+\item[C3, a unit error.] The covariate of $k$ records is divided by ten, which makes their
+      predictions milder rather than extreme.
+\item[C4, duplicated records.] The $k$ highest-risk records are copied over $k$ random rows, which
+      checks that the grouped reference survives ties.
+\end{description}
+Formally, the null hypothesis is that the model is calibrated for the patients as they are,
+$\Pr(y=1\mid x)=\pi(x;\beta)$ at the true covariates, while $k$ of the $n$ records are observed with
+covariates $\tilde x\neq x$ and so receive the prediction $\pi(\tilde x;\hat\beta)$. Under a logistic truth
+the model is correct for every uncorrupted record, so a rejection is a false alarm: the test is
+reporting the corrupted records, not a miscalibration of the model for the population. It is not a type-I error in the strict sense, because a contaminated sample is a mixture; what
+is measured is each test's stability of level over a small gross-error neighbourhood of the model
+\citep{huber1964robust,hampel1986robust}. It is not the classical measurement-error problem, in which
+every covariate is observed with error and the fit itself is biased \citep{carroll2006measurement};
+here a few records carry a gross error and the fit moves by the amounts given in
+Section~\ref{sec:mechanism}. Under a probit and a complementary log--log truth the same corruptions are
+applied to a real misfit, to measure the cost in power. A value corrupted this way lies outside the
+range of the clean covariate, and a range check on that variable would find it; the cohort of
+Section~\ref{sec:realdata} shows an error that no range check finds. Wrong outcomes (C2) are treated differently: the recorded data are then miscalibrated, and a
+calibration test should detect them. A further study compares EDGE with robust quasi-deviance versions
+of Stukel's test \citep{cantoni2001robust}, and two others vary the partition with the data held fixed
+and compare partitions that pool the extreme groups at contamination rates up to $4\%$. A last study, added after the main results were read and hashed before it ran, runs on the same data
+sets EDGE, an ungrouped score test for the same
+cubic directions in the predicted risk, EDGE with one record a group, Spiegelhalter's $z$
+\citep{spiegelhalter1986probabilistic}, the weighted grouped tests of \citet{hosmer2002goodness}, and
+each test after the records flagged by Pregibon's diagnostics \citep{pregibon1981logistic} are removed;
+it adds misfit confined to the top $2\%$ of risk, to measure what protection costs, and a design with
+twelve covariates at $n=2000$.
+
+\subsection{Reading the results}\label{sec:reading}
+
+Size is checked before power is reported. Power is size-adjusted: each test is read at the critical
+value from its own matched null scenario, so every test is compared at its own realised level; where
+a table reports raw rejection rates, it says so. Comparisons are paired: two tests are compared on the
+same replicates by an exact McNemar test on the discordant pairs, with Holm's correction within each
+family of comparisons. A test \emph{leads or ties} a rival in a scenario when its size-adjusted power
+is no more than $0.01$ below the rival's; the specification allowed $0.014$, and the stricter margin is
+used everywhere. A replicate on which a test returns no $p$-value counts as a non-rejection. The two
+resampling tests return $p$-values on grids of $1/100$ and $1/250$ and reject at $p<\alpha$; every other
+test rejects at $p\le\alpha$. Under corruption we say a test \emph{holds} while its false-alarm rate
+stays below $0.10$, twice the nominal level; that is the bar the specification set. It is looser than
+the band of three Monte Carlo standard errors used for size, and the tables give every rate so that
+the reader can apply either.
+
+Three readings depart from the specifications. The robust-fit study (Section~\ref{sec:robustest})
+reads the contaminated columns of the tests whose level survived the robust fit, although its rule was
+to read none once any test failed that check. The corruption experiment on the cohort was repeated on
+a second covariate, chosen by a rule fixed before it was run, after the first showed no effect. And
+the cohort analysis of Section~\ref{sec:realdata} keeps one admission per patient and splits by
+patient, where the specification split admissions; the change was made because patients recur across
+admissions.

@@ -1,0 +1,23 @@
+sha256 of sections A-D (text before '## E. Cell list') of PREDECLARATION_restructure_battery.md
+aad03b19c20d393739191f47b587b072708e8e2fef5d497cbad914a9e594f2b7
+written 2026-09-13 22:44, before any battery cell was run
+
+sha256 of sections A-E0..E4 (text before '### E7. Sample sizes') after Section E was written
+554e43b66bb4faac95195db7491303365f8445c02968edbaad0ee2523edc2e06
+written 2026-09-13 late night, before any battery cell was run; A-D hash re-checked unchanged
+
+sha256 of the WHOLE file (A-D, E0-E10) at launch of the main battery
+3c911495bad277c53258ad3344ad825b999ef37562a0161d8dfc597c2187a027
+written 2026-09-14 08:28, immediately before `Rscript run_M_all.R`; A-D and A-E4 hashes re-checked unchanged
+
+sha256 of the WHOLE file after E11 (block 8 analysis) and E12 (how A and H1-H6 are computed) were added
+095d55c1312da613ee3d0472fb12ecfbd7c8d89cc7e403a19d28efe65f47059a
+written 2026-09-14 10:09, while blocks 3-7 were running and before any summary value was read; the text before the blank line preceding '### E11' still hashes to 3c911495... (the launch hash)
+
+sha256 of the WHOLE file after E13 (readings fixed after the analysis review) was added
+57bb8ea5c21df331a6bf7af3a8ab1cd2f25d01122a0517df4574603961e3a168
+written 2026-09-16 01:12, after blocks 0-7 finished and before any summary or per-replicate value was read; the text before the blank line preceding '### E13' still hashes to 095d55c1...
+
+sha256 after E14 (a test that cannot run in a cell is not applicable, not a missing value; disclosed, not blind)
+7d9de6dd4f2d94a5674cbc5d4067a81e0a9d8711f6dc94cf2dfa2c36de779669
+written 2026-09-16 09:54

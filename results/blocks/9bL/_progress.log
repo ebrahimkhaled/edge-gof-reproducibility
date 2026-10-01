@@ -1,0 +1,5 @@
+2026-09-19 20:15:33  block 9bL: le Cessie check passed (package 0.927054998217 = declared 0.927054998217; vendor 0.910099516880)
+2026-09-19 20:15:38  clean  kept 100 of 100, identity failures 0, no p-value 0, le Cessie rejection 0.070, median 0.02 s
+2026-09-19 20:15:42  x4     kept 100 of 100, identity failures 0, no p-value 0, le Cessie rejection 0.040, median 0.02 s
+2026-09-19 20:15:47  x8     kept 100 of 100, identity failures 0, no p-value 0, le Cessie rejection 0.070, median 0.02 s
+2026-09-19 20:15:58  block 9bL: run finished

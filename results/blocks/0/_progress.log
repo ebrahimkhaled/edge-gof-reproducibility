@@ -1,0 +1,17 @@
+2026-09-14 08:28:50  block 0: B = 200, workers 20, ebrahim.gof installed 2.8.0
+2026-09-14 08:28:53  (i) id_null_quad_n1000       200 replicates in 2.0 s
+2026-09-14 08:28:54  (i) id_link_cloglog_n1000    200 replicates in 1.3 s
+2026-09-14 08:28:55  (i) id_crossover_n1000       200 replicates in 1.0 s
+2026-09-14 08:28:55  (i) identity with the stored July p-values (required tests): PASS
+2026-09-14 08:28:58  (ii) behaviour probe of the installed ebrahim.gof: PASS (R2 ok, no event ok, flat fit ok)
+2026-09-14 08:29:01  (ii) id_null_quad_n1000       checked against the package (0 degenerate replicates left out)
+2026-09-14 08:29:04  (ii) id_link_cloglog_n1000    checked against the package (0 degenerate replicates left out)
+2026-09-14 08:29:06  (ii) id_crossover_n1000       checked against the package (0 degenerate replicates left out)
+2026-09-14 08:29:08  (ii) v_sparse49_n300          checked against the package (0 degenerate replicates left out)
+2026-09-14 08:29:13  (ii) v_probit_auc_n2000       checked against the package (0 degenerate replicates left out)
+2026-09-14 08:29:13  (ii) harness against ebrahim.gof 2.8.0 (required tests): PASS
+2026-09-14 08:29:20  (iii) 12 workers: 200 replicates at n = 5000 in 4.6 s (speed-up 11.3)
+2026-09-14 08:29:25  (iii) 16 workers: 200 replicates at n = 5000 in 4.1 s (speed-up 12.5)
+2026-09-14 08:29:31  (iii) 20 workers: 200 replicates at n = 5000 in 3.6 s (speed-up 14.6)
+2026-09-14 08:29:31  (iii) fastest of 12, 16, 20 workers: 20 (written to C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery/0/workers_choice.txt)
+2026-09-14 08:29:31  block 0: PASSED

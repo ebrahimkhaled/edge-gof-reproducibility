@@ -1,0 +1,120 @@
+block 8L: 35 cells in the summary (30 Part A, 5 Part B)
+
+===== data: the identity gate and the p-values =====
+identity failures: 0; largest |EDGE p regenerated - stored| among kept: 6.66e-16; no p-value: 0; degenerate: 0
+
+===== L1 (level): each Part A null cell within 0.05 +/- 3 SE (B = 500: 0.021 to 0.079) =====
+                 cell  reps  rate        band in_band
+               <char> <int> <num>      <char>  <lgcl>
+       null_link_n500   500 0.048 0.021-0.079    TRUE
+      null_link_n1000   500 0.052 0.021-0.079    TRUE
+       null_base_n610   500 0.042 0.021-0.079    TRUE
+      null_base_n1000   500 0.040 0.021-0.079    TRUE
+        null_auc_n460   500 0.064 0.021-0.079    TRUE
+        null_auc_n760   500 0.054 0.021-0.079    TRUE
+        null_auc_n380   500 0.054 0.021-0.079    TRUE
+        null_auc_n640   500 0.048 0.021-0.079    TRUE
+       null_e12_n1000   500 0.052 0.021-0.079    TRUE
+ null_crossover_n1000   500 0.050 0.021-0.079    TRUE
+L1 VERDICT: HOLDS  
+
+===== L2 (reported): size-adjusted power against the twenty Part A alternatives, and the pairing with EDGE-poly3 =====
+              cell                  family lecessie  EDGE   diff lead_or_tie
+            <char>                  <char>    <num> <num>  <num>      <lgcl>
+    stk_long_n1000 Stukel symmetric family    0.098 0.140  0.042        TRUE
+     stk_long_n500 Stukel symmetric family    0.068 0.120  0.052        TRUE
+   stk_short_n1000 Stukel symmetric family    0.296 0.890  0.594        TRUE
+    stk_short_n500 Stukel symmetric family    0.124 0.546  0.422        TRUE
+   loglog_auc_n380        asymmetric links    0.168 0.310  0.142        TRUE
+   loglog_auc_n640        asymmetric links    0.370 0.682  0.312        TRUE
+ loglog_base_n1000        asymmetric links    0.488 0.720  0.232        TRUE
+  loglog_base_n610        asymmetric links    0.286 0.496  0.210        TRUE
+  loglog_e12_n1000        asymmetric links    0.272 0.402  0.130        TRUE
+      loglog_n1000        asymmetric links    0.430 0.686  0.256        TRUE
+       loglog_n500        asymmetric links    0.230 0.402  0.172        TRUE
+    stk_asym_n1000        asymmetric links    0.992 0.998  0.006        TRUE
+     stk_asym_n500        asymmetric links    0.784 0.928  0.144        TRUE
+   crossover_n1000               off-index    0.990 0.066 -0.924       FALSE
+  cauchit_auc_n460         symmetric tails    0.168 0.458  0.290        TRUE
+  cauchit_auc_n760         symmetric tails    0.278 0.642  0.364        TRUE
+     cauchit_n1000         symmetric tails    0.090 0.240  0.150        TRUE
+      cauchit_n500         symmetric tails    0.052 0.148  0.096        TRUE
+          t4_n1000         symmetric tails    0.048 0.076  0.028        TRUE
+           t4_n500         symmetric tails    0.058 0.062  0.004        TRUE
+              cell                  family lecessie  EDGE   diff lead_or_tie
+ lc_only edge_only   holm_p null_in_band
+   <int>     <int>    <num>       <lgcl>
+      30        53  3.0e-01         TRUE
+      19        33  1.0e+00         TRUE
+       3       293  2.3e-81         TRUE
+      22       198  4.4e-35         TRUE
+      23       109  3.7e-13         TRUE
+      14       143  1.2e-26         TRUE
+      14       146  2.1e-27         TRUE
+      26       113  9.9e-13         TRUE
+      32        67  1.2e-02         TRUE
+      10       143  8.4e-30         TRUE
+      24        86  5.1e-08         TRUE
+       0         4  1.0e+00         TRUE
+       7        70  9.2e-13         TRUE
+     459         0 4.7e-137         TRUE
+      20       155  1.3e-25         TRUE
+       4       173  1.4e-44         TRUE
+      20       100  1.3e-12         TRUE
+      15        49  5.4e-04         TRUE
+      18        30  1.0e+00         TRUE
+      21        22  1.0e+00         TRUE
+ lc_only edge_only   holm_p null_in_band
+
+EDGE-poly3 (unit, rule G) leads or ties le Cessie in 19 of 20 cells (margin 0.01, size-adjusted)
+significant after Holm (raw decisions at 0.05, paired): EDGE ahead in 14, le Cessie ahead in 1, neither in 5
+             family_name cells edge_leads_or_ties mean_lecessie mean_EDGE
+                  <char> <int>              <int>         <num>     <num>
+ Stukel symmetric family     4                  4         0.146     0.424
+        asymmetric links     9                  9         0.447     0.625
+         symmetric tails     6                  6         0.116     0.271
+               off-index     1                  0         0.990     0.066
+
+beside the two resampling rivals (block 8, size-adjusted; BAGofT on replicates 1-200):
+              cell             family_name lecessie  EDGE BAGofT  proj
+            <char>                  <char>    <num> <num>  <num> <num>
+    stk_long_n1000 Stukel symmetric family    0.098 0.140  0.060 0.104
+     stk_long_n500 Stukel symmetric family    0.068 0.120  0.055 0.092
+   stk_short_n1000 Stukel symmetric family    0.296 0.890  0.250 0.526
+    stk_short_n500 Stukel symmetric family    0.124 0.546  0.095 0.260
+   loglog_auc_n380        asymmetric links    0.168 0.310  0.130 0.332
+   loglog_auc_n640        asymmetric links    0.370 0.682  0.245 0.544
+ loglog_base_n1000        asymmetric links    0.488 0.720  0.180 0.654
+  loglog_base_n610        asymmetric links    0.286 0.496  0.240 0.420
+  loglog_e12_n1000        asymmetric links    0.272 0.402  0.075 0.388
+      loglog_n1000        asymmetric links    0.430 0.686  0.270 0.536
+       loglog_n500        asymmetric links    0.230 0.402  0.090 0.330
+    stk_asym_n1000        asymmetric links    0.992 0.998  0.910 0.996
+     stk_asym_n500        asymmetric links    0.784 0.928  0.535 0.884
+   crossover_n1000               off-index    0.990 0.066  0.790 0.954
+  cauchit_auc_n460         symmetric tails    0.168 0.458  0.155 0.262
+  cauchit_auc_n760         symmetric tails    0.278 0.642  0.255 0.394
+     cauchit_n1000         symmetric tails    0.090 0.240  0.060 0.116
+      cauchit_n500         symmetric tails    0.052 0.148  0.055 0.084
+          t4_n1000         symmetric tails    0.048 0.076  0.035 0.058
+           t4_n500         symmetric tails    0.058 0.062  0.060 0.064
+              cell             family_name lecessie  EDGE BAGofT  proj
+mean over the 20 cells: le Cessie 0.314, EDGE 0.451, projection 0.400, BAGofT 0.227
+
+===== L3: Part B false-alarm rate of le Cessie above 0.10 at k = 5 and at k = 10 =====
+                cell     k  reps lecessie  EDGE
+              <char> <int> <int>    <num> <num>
+   logit_clean_n1000     0  1000    0.059 0.045
+ logit_C1_r001_n1000     1  1000    0.055 0.056
+ logit_C1_r002_n1000     2  1000    0.052 0.059
+ logit_C1_r005_n1000     5  1000    0.052 0.057
+ logit_C1_r010_n1000    10  1000    0.077 0.097
+L3 VERDICT: FAILS  
+  per L3, le Cessie is reported as robust to this corruption beside the grouped tests, in the same place and type
+
+===== L4 (reported) =====
+clean cell: 0.059 (band at B = 1000: 0.029-0.071, inside)
+k = 1: 0.055   k = 2: 0.052
+median seconds per data set: 0.18 (Part A, n = 380-1000), 0.59 (Part B, n = 1000)
+
+written: C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery/8L  

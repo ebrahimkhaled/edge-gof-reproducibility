@@ -1,0 +1,4 @@
+set,block,cell,test,reason,applicable
+H4,3,census_int_binbin_n1000,PH,no value: the matched null gave no p-value in at least 1 - alpha of its replicates (E13.2) | not applicable: the test cannot run in this cell (E14),FALSE
+H4,3,census_int_binbin_n1000,Tsiatis,no value: the matched null gave no p-value in at least 1 - alpha of its replicates (E13.2) | not applicable: the test cannot run in this cell (E14),FALSE
+H4,3,census_int_binbin_n1000,Xie,no value: the matched null gave no p-value in at least 1 - alpha of its replicates (E13.2) | not applicable: the test cannot run in this cell (E14),FALSE

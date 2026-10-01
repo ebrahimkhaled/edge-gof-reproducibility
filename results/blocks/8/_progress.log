@@ -1,0 +1,470 @@
+2026-09-16 01:11:55  block 8, proj: 30 cells, proj replicates 1-500, 20 workers, root C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery, out C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery/8
+2026-09-16 01:12:47  proj null_link_n500: 500 of 500 replicates to run
+2026-09-16 01:15:49    proj null_link_n500         160/500 replicates written to .part  ETA 2026-09-16 19:05 (17.83 h)
+2026-09-16 01:18:50    proj null_link_n500         320/500 replicates written to .part  ETA 2026-09-16 19:00 (17.69 h)
+2026-09-16 01:21:51    proj null_link_n500         480/500 replicates written to .part  ETA 2026-09-16 18:57 (17.60 h)
+2026-09-16 01:22:13    proj null_link_n500         500/500 replicates written to .part  ETA 2026-09-16 18:57 (17.60 h)
+2026-09-16 01:22:13  [1/30] proj   null_link_n500         n=500   R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 21.9 s per data set, 9.4 min  ETA 2026-09-16 18:57 (17.60 h)
+2026-09-16 01:22:14  proj null_link_n1000: 500 of 500 replicates to run
+2026-09-16 01:59:50    proj null_link_n1000        160/500 replicates written to .part  ETA 2026-09-17 04:48 (26.81 h)
+2026-09-16 02:43:29    proj null_link_n1000        320/500 replicates written to .part  ETA 2026-09-17 08:43 (30.00 h)
+2026-09-16 03:29:53    proj null_link_n1000        480/500 replicates written to .part  ETA 2026-09-17 11:03 (31.56 h)
+2026-09-16 03:36:18    proj null_link_n1000        500/500 replicates written to .part  ETA 2026-09-17 11:24 (31.80 h)
+2026-09-16 03:36:18  [2/30] proj   null_link_n1000        n=1000  R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 293.3 s per data set, 134.1 min  ETA 2026-09-17 11:24 (31.80 h)
+2026-09-16 03:36:19  proj stk_long_n500: 500 of 500 replicates to run
+2026-09-16 03:39:33    proj stk_long_n500          160/500 replicates written to .part  ETA 2026-09-17 10:48 (31.15 h)
+2026-09-16 03:42:49    proj stk_long_n500          320/500 replicates written to .part  ETA 2026-09-17 10:16 (30.56 h)
+2026-09-16 03:46:01    proj stk_long_n500          480/500 replicates written to .part  ETA 2026-09-17 09:45 (29.99 h)
+2026-09-16 03:46:34    proj stk_long_n500          500/500 replicates written to .part  ETA 2026-09-17 09:43 (29.95 h)
+2026-09-16 03:46:34  [3/30] proj   stk_long_n500          n=500   R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 22.0 s per data set, 10.3 min  ETA 2026-09-17 09:43 (29.95 h)
+2026-09-16 03:46:35  proj stk_long_n1000: 500 of 500 replicates to run
+2026-09-16 04:26:16    proj stk_long_n1000         160/500 replicates written to .part  ETA 2026-09-17 09:59 (29.55 h)
+2026-09-16 05:07:42    proj stk_long_n1000         320/500 replicates written to .part  ETA 2026-09-17 10:24 (29.28 h)
+2026-09-16 05:48:51    proj stk_long_n1000         480/500 replicates written to .part  ETA 2026-09-17 10:40 (28.87 h)
+2026-09-16 05:54:24    proj stk_long_n1000         500/500 replicates written to .part  ETA 2026-09-17 10:45 (28.85 h)
+2026-09-16 05:54:24  [4/30] proj   stk_long_n1000         n=1000  R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 289.5 s per data set, 127.8 min  ETA 2026-09-17 10:45 (28.85 h)
+2026-09-16 05:54:24  proj stk_short_n500: 500 of 500 replicates to run
+2026-09-16 05:57:14    proj stk_short_n500         160/500 replicates written to .part  ETA 2026-09-17 10:25 (28.47 h)
+2026-09-16 06:00:02    proj stk_short_n500         320/500 replicates written to .part  ETA 2026-09-17 10:05 (28.09 h)
+2026-09-16 06:02:52    proj stk_short_n500         480/500 replicates written to .part  ETA 2026-09-17 09:46 (27.73 h)
+2026-09-16 06:03:15    proj stk_short_n500         500/500 replicates written to .part  ETA 2026-09-17 09:44 (27.69 h)
+2026-09-16 06:03:15  [5/30] proj   stk_short_n500         n=500   R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 20.1 s per data set, 8.9 min  ETA 2026-09-17 09:44 (27.69 h)
+2026-09-16 06:03:15  proj stk_short_n1000: 500 of 500 replicates to run
+2026-09-16 06:49:04    proj stk_short_n1000        160/500 replicates written to .part  ETA 2026-09-17 10:30 (27.69 h)
+2026-09-16 07:37:16    proj stk_short_n1000        320/500 replicates written to .part  ETA 2026-09-17 11:19 (27.70 h)
+2026-09-16 08:29:05    proj stk_short_n1000        480/500 replicates written to .part  ETA 2026-09-17 12:15 (27.78 h)
+2026-09-16 08:35:46    proj stk_short_n1000        500/500 replicates written to .part  ETA 2026-09-17 12:23 (27.79 h)
+2026-09-16 08:35:46  [6/30] proj   stk_short_n1000        n=1000  R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 324.0 s per data set, 152.5 min  ETA 2026-09-17 12:23 (27.79 h)
+2026-09-16 08:35:47  proj stk_asym_n500: 500 of 500 replicates to run
+2026-09-16 08:38:53    proj stk_asym_n500          160/500 replicates written to .part  ETA 2026-09-17 12:09 (27.52 h)
+2026-09-16 08:42:05    proj stk_asym_n500          320/500 replicates written to .part  ETA 2026-09-17 11:57 (27.25 h)
+2026-09-16 08:45:23    proj stk_asym_n500          480/500 replicates written to .part  ETA 2026-09-17 11:45 (26.99 h)
+2026-09-16 08:45:52    proj stk_asym_n500          500/500 replicates written to .part  ETA 2026-09-17 11:43 (26.97 h)
+2026-09-16 08:45:52  [7/30] proj   stk_asym_n500          n=500   R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 22.8 s per data set, 10.1 min  ETA 2026-09-17 11:43 (26.97 h)
+2026-09-16 08:45:53  proj stk_asym_n1000: 500 of 500 replicates to run
+2026-09-16 09:31:09    proj stk_asym_n1000         160/500 replicates written to .part  ETA 2026-09-17 12:03 (26.55 h)
+2026-09-16 10:15:11    proj stk_asym_n1000         320/500 replicates written to .part  ETA 2026-09-17 12:16 (26.02 h)
+2026-09-16 10:59:17    proj stk_asym_n1000         480/500 replicates written to .part  ETA 2026-09-17 12:26 (25.46 h)
+2026-09-16 11:04:19    proj stk_asym_n1000         500/500 replicates written to .part  ETA 2026-09-17 12:26 (25.37 h)
+2026-09-16 11:04:19  [8/30] proj   stk_asym_n1000         n=1000  R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 308.1 s per data set, 138.4 min  ETA 2026-09-17 12:26 (25.37 h)
+2026-09-16 11:04:19  proj cauchit_n500: 500 of 500 replicates to run
+2026-09-16 11:07:02    proj cauchit_n500           160/500 replicates written to .part  ETA 2026-09-17 12:14 (25.13 h)
+2026-09-16 11:09:47    proj cauchit_n500           320/500 replicates written to .part  ETA 2026-09-17 12:03 (24.90 h)
+2026-09-16 11:12:35    proj cauchit_n500           480/500 replicates written to .part  ETA 2026-09-17 11:52 (24.67 h)
+2026-09-16 11:12:57    proj cauchit_n500           500/500 replicates written to .part  ETA 2026-09-17 11:51 (24.64 h)
+2026-09-16 11:12:57  [9/30] proj   cauchit_n500           n=500   R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 20.0 s per data set, 8.6 min  ETA 2026-09-17 11:51 (24.64 h)
+2026-09-16 11:12:57  proj cauchit_n1000: 500 of 500 replicates to run
+2026-09-16 11:52:50    proj cauchit_n1000          160/500 replicates written to .part  ETA 2026-09-17 11:48 (23.94 h)
+2026-09-16 12:31:25    proj cauchit_n1000          320/500 replicates written to .part  ETA 2026-09-17 11:42 (23.19 h)
+2026-09-16 13:10:44    proj cauchit_n1000          480/500 replicates written to .part  ETA 2026-09-17 11:39 (22.48 h)
+2026-09-16 13:15:59    proj cauchit_n1000          500/500 replicates written to .part  ETA 2026-09-17 11:40 (22.40 h)
+2026-09-16 13:15:59  [10/30] proj   cauchit_n1000          n=1000  R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 288.2 s per data set, 123.0 min  ETA 2026-09-17 11:40 (22.40 h)
+2026-09-16 13:15:59  proj t4_n500: 500 of 500 replicates to run
+2026-09-16 13:18:37    proj t4_n500                160/500 replicates written to .part  ETA 2026-09-17 11:30 (22.20 h)
+2026-09-16 13:21:18    proj t4_n500                320/500 replicates written to .part  ETA 2026-09-17 11:22 (22.01 h)
+2026-09-16 13:23:58    proj t4_n500                480/500 replicates written to .part  ETA 2026-09-17 11:13 (21.82 h)
+2026-09-16 13:24:18    proj t4_n500                500/500 replicates written to .part  ETA 2026-09-17 11:12 (21.80 h)
+2026-09-16 13:24:18  [11/30] proj   t4_n500                n=500   R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 19.3 s per data set, 8.3 min  ETA 2026-09-17 11:12 (21.80 h)
+2026-09-16 13:24:18  proj t4_n1000: 500 of 500 replicates to run
+2026-09-16 14:04:24    proj t4_n1000               160/500 replicates written to .part  ETA 2026-09-17 11:12 (21.14 h)
+2026-09-16 14:45:17    proj t4_n1000               320/500 replicates written to .part  ETA 2026-09-17 11:15 (20.50 h)
+2026-09-16 15:26:15    proj t4_n1000               480/500 replicates written to .part  ETA 2026-09-17 11:17 (19.86 h)
+2026-09-16 15:31:23    proj t4_n1000               500/500 replicates written to .part  ETA 2026-09-17 11:18 (19.78 h)
+2026-09-16 15:31:24  [12/30] proj   t4_n1000               n=1000  R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 291.5 s per data set, 127.1 min  ETA 2026-09-17 11:18 (19.78 h)
+2026-09-16 15:31:24  proj loglog_n500: 500 of 500 replicates to run
+2026-09-16 15:34:12    proj loglog_n500            160/500 replicates written to .part  ETA 2026-09-17 11:11 (19.61 h)
+2026-09-16 15:37:00    proj loglog_n500            320/500 replicates written to .part  ETA 2026-09-17 11:03 (19.45 h)
+2026-09-16 15:39:40    proj loglog_n500            480/500 replicates written to .part  ETA 2026-09-17 10:56 (19.28 h)
+2026-09-16 15:40:00    proj loglog_n500            500/500 replicates written to .part  ETA 2026-09-17 10:55 (19.26 h)
+2026-09-16 15:40:00  [13/30] proj   loglog_n500            n=500   R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 19.9 s per data set, 8.6 min  ETA 2026-09-17 10:55 (19.26 h)
+2026-09-16 15:40:00  proj loglog_n1000: 500 of 500 replicates to run
+2026-09-16 16:19:29    proj loglog_n1000           160/500 replicates written to .part  ETA 2026-09-17 10:55 (18.60 h)
+2026-09-16 16:59:34    proj loglog_n1000           320/500 replicates written to .part  ETA 2026-09-17 10:56 (17.95 h)
+2026-09-16 17:41:17    proj loglog_n1000           480/500 replicates written to .part  ETA 2026-09-17 11:01 (17.33 h)
+2026-09-16 17:46:29    proj loglog_n1000           500/500 replicates written to .part  ETA 2026-09-17 11:01 (17.25 h)
+2026-09-16 17:46:29  [14/30] proj   loglog_n1000           n=1000  R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 291.5 s per data set, 126.5 min  ETA 2026-09-17 11:01 (17.25 h)
+2026-09-16 17:46:29  proj null_base_n610: 500 of 500 replicates to run
+2026-09-16 17:52:07    proj null_base_n610         160/500 replicates written to .part  ETA 2026-09-17 10:53 (17.02 h)
+2026-09-16 17:57:44    proj null_base_n610         320/500 replicates written to .part  ETA 2026-09-17 10:44 (16.79 h)
+2026-09-16 18:03:23    proj null_base_n610         480/500 replicates written to .part  ETA 2026-09-17 10:36 (16.56 h)
+2026-09-16 18:04:05    proj null_base_n610         500/500 replicates written to .part  ETA 2026-09-17 10:35 (16.53 h)
+2026-09-16 18:04:05  [15/30] proj   null_base_n610         n=610   R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 40.8 s per data set, 17.6 min  ETA 2026-09-17 10:35 (16.53 h)
+2026-09-16 18:04:05  proj null_base_n1000: 500 of 500 replicates to run
+2026-09-16 18:45:34    proj null_base_n1000        160/500 replicates written to .part  ETA 2026-09-17 10:40 (15.91 h)
+2026-09-16 19:27:40    proj null_base_n1000        320/500 replicates written to .part  ETA 2026-09-17 10:45 (15.30 h)
+2026-09-16 20:09:54    proj null_base_n1000        480/500 replicates written to .part  ETA 2026-09-17 10:50 (14.68 h)
+2026-09-16 20:15:12    proj null_base_n1000        500/500 replicates written to .part  ETA 2026-09-17 10:51 (14.60 h)
+2026-09-16 20:15:12  [16/30] proj   null_base_n1000        n=1000  R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 307.6 s per data set, 131.1 min  ETA 2026-09-17 10:51 (14.60 h)
+2026-09-16 20:15:12  proj null_auc_n460: 500 of 500 replicates to run
+2026-09-16 20:17:09    proj null_auc_n460          160/500 replicates written to .part  ETA 2026-09-17 10:46 (14.49 h)
+2026-09-16 20:19:08    proj null_auc_n460          320/500 replicates written to .part  ETA 2026-09-17 10:41 (14.38 h)
+2026-09-16 20:21:07    proj null_auc_n460          480/500 replicates written to .part  ETA 2026-09-17 10:37 (14.27 h)
+2026-09-16 20:21:22    proj null_auc_n460          500/500 replicates written to .part  ETA 2026-09-17 10:36 (14.26 h)
+2026-09-16 20:21:22  [17/30] proj   null_auc_n460          n=460   R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 14.1 s per data set, 6.2 min  ETA 2026-09-17 10:36 (14.26 h)
+2026-09-16 20:21:22  proj null_auc_n760: 500 of 500 replicates to run
+2026-09-16 20:36:22    proj null_auc_n760          160/500 replicates written to .part  ETA 2026-09-17 10:31 (13.93 h)
+2026-09-16 20:51:45    proj null_auc_n760          320/500 replicates written to .part  ETA 2026-09-17 10:27 (13.60 h)
+2026-09-16 21:07:29    proj null_auc_n760          480/500 replicates written to .part  ETA 2026-09-17 10:24 (13.28 h)
+2026-09-16 21:09:19    proj null_auc_n760          500/500 replicates written to .part  ETA 2026-09-17 10:23 (13.24 h)
+2026-09-16 21:09:19  [18/30] proj   null_auc_n760          n=760   R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 111.7 s per data set, 48.0 min  ETA 2026-09-17 10:23 (13.24 h)
+2026-09-16 21:09:19  proj null_auc_n380: 500 of 500 replicates to run
+2026-09-16 21:10:23    proj null_auc_n380          160/500 replicates written to .part  ETA 2026-09-17 10:20 (13.17 h)
+2026-09-16 21:11:26    proj null_auc_n380          320/500 replicates written to .part  ETA 2026-09-17 10:17 (13.11 h)
+2026-09-16 21:12:30    proj null_auc_n380          480/500 replicates written to .part  ETA 2026-09-17 10:14 (13.04 h)
+2026-09-16 21:12:39    proj null_auc_n380          500/500 replicates written to .part  ETA 2026-09-17 10:14 (13.03 h)
+2026-09-16 21:12:39  [19/30] proj   null_auc_n380          n=380   R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 7.5 s per data set, 3.3 min  ETA 2026-09-17 10:14 (13.03 h)
+2026-09-16 21:12:39  proj null_auc_n640: 500 of 500 replicates to run
+2026-09-16 21:20:25    proj null_auc_n640          160/500 replicates written to .part  ETA 2026-09-17 10:09 (12.82 h)
+2026-09-16 21:27:55    proj null_auc_n640          320/500 replicates written to .part  ETA 2026-09-17 10:03 (12.60 h)
+2026-09-16 21:35:22    proj null_auc_n640          480/500 replicates written to .part  ETA 2026-09-17 09:58 (12.38 h)
+2026-09-16 21:36:17    proj null_auc_n640          500/500 replicates written to .part  ETA 2026-09-17 09:57 (12.36 h)
+2026-09-16 21:36:17  [20/30] proj   null_auc_n640          n=640   R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 53.7 s per data set, 23.6 min  ETA 2026-09-17 09:57 (12.36 h)
+2026-09-16 21:36:17  proj null_e12_n1000: 500 of 500 replicates to run
+2026-09-16 22:14:51    proj null_e12_n1000         160/500 replicates written to .part  ETA 2026-09-17 09:57 (11.72 h)
+2026-09-16 22:54:22    proj null_e12_n1000         320/500 replicates written to .part  ETA 2026-09-17 09:59 (11.09 h)
+2026-09-16 23:34:28    proj null_e12_n1000         480/500 replicates written to .part  ETA 2026-09-17 10:01 (10.46 h)
+2026-09-16 23:39:43    proj null_e12_n1000         500/500 replicates written to .part  ETA 2026-09-17 10:02 (10.38 h)
+2026-09-16 23:39:43  [21/30] proj   null_e12_n1000         n=1000  R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 277.3 s per data set, 123.4 min  ETA 2026-09-17 10:02 (10.38 h)
+2026-09-16 23:39:43  proj loglog_base_n610: 500 of 500 replicates to run
+2026-09-16 23:45:07    proj loglog_base_n610       160/500 replicates written to .part  ETA 2026-09-17 09:56 (10.19 h)
+2026-09-16 23:50:55    proj loglog_base_n610       320/500 replicates written to .part  ETA 2026-09-17 09:51 (10.01 h)
+2026-09-16 23:56:44    proj loglog_base_n610       480/500 replicates written to .part  ETA 2026-09-17 09:45 (9.82 h)
+2026-09-16 23:57:28    proj loglog_base_n610       500/500 replicates written to .part  ETA 2026-09-17 09:45 (9.80 h)
+2026-09-16 23:57:28  [22/30] proj   loglog_base_n610       n=610   R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 40.6 s per data set, 17.8 min  ETA 2026-09-17 09:45 (9.80 h)
+2026-09-16 23:57:28  proj loglog_base_n1000: 500 of 500 replicates to run
+2026-09-17 00:37:26    proj loglog_base_n1000      160/500 replicates written to .part  ETA 2026-09-17 09:47 (9.17 h)
+2026-09-17 01:17:46    proj loglog_base_n1000      320/500 replicates written to .part  ETA 2026-09-17 09:50 (8.55 h)
+2026-09-17 01:58:04    proj loglog_base_n1000      480/500 replicates written to .part  ETA 2026-09-17 09:53 (7.92 h)
+2026-09-17 02:03:28    proj loglog_base_n1000      500/500 replicates written to .part  ETA 2026-09-17 09:54 (7.85 h)
+2026-09-17 02:03:28  [23/30] proj   loglog_base_n1000      n=1000  R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 290.9 s per data set, 126.0 min  ETA 2026-09-17 09:54 (7.85 h)
+2026-09-17 02:03:28  proj cauchit_auc_n460: 500 of 500 replicates to run
+2026-09-17 02:05:32    proj cauchit_auc_n460       160/500 replicates written to .part  ETA 2026-09-17 09:51 (7.76 h)
+2026-09-17 02:07:39    proj cauchit_auc_n460       320/500 replicates written to .part  ETA 2026-09-17 09:47 (7.67 h)
+2026-09-17 02:09:47    proj cauchit_auc_n460       480/500 replicates written to .part  ETA 2026-09-17 09:44 (7.58 h)
+2026-09-17 02:10:03    proj cauchit_auc_n460       500/500 replicates written to .part  ETA 2026-09-17 09:44 (7.57 h)
+2026-09-17 02:10:03  [24/30] proj   cauchit_auc_n460       n=460   R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 15.1 s per data set, 6.6 min  ETA 2026-09-17 09:44 (7.57 h)
+2026-09-17 02:10:03  proj cauchit_auc_n760: 500 of 500 replicates to run
+2026-09-17 02:25:16    proj cauchit_auc_n760       160/500 replicates written to .part  ETA 2026-09-17 09:41 (7.27 h)
+2026-09-17 02:40:55    proj cauchit_auc_n760       320/500 replicates written to .part  ETA 2026-09-17 09:39 (6.98 h)
+2026-09-17 02:56:17    proj cauchit_auc_n760       480/500 replicates written to .part  ETA 2026-09-17 09:36 (6.68 h)
+2026-09-17 02:58:13    proj cauchit_auc_n760       500/500 replicates written to .part  ETA 2026-09-17 09:36 (6.64 h)
+2026-09-17 02:58:13  [25/30] proj   cauchit_auc_n760       n=760   R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 112.0 s per data set, 48.2 min  ETA 2026-09-17 09:36 (6.64 h)
+2026-09-17 02:58:13  proj loglog_auc_n380: 500 of 500 replicates to run
+2026-09-17 02:59:18    proj loglog_auc_n380        160/500 replicates written to .part  ETA 2026-09-17 09:34 (6.59 h)
+2026-09-17 03:00:24    proj loglog_auc_n380        320/500 replicates written to .part  ETA 2026-09-17 09:32 (6.53 h)
+2026-09-17 03:01:29    proj loglog_auc_n380        480/500 replicates written to .part  ETA 2026-09-17 09:30 (6.48 h)
+2026-09-17 03:01:37    proj loglog_auc_n380        500/500 replicates written to .part  ETA 2026-09-17 09:30 (6.48 h)
+2026-09-17 03:01:37  [26/30] proj   loglog_auc_n380        n=380   R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 7.9 s per data set, 3.4 min  ETA 2026-09-17 09:30 (6.48 h)
+2026-09-17 03:01:37  proj loglog_auc_n640: 500 of 500 replicates to run
+2026-09-17 03:09:23    proj loglog_auc_n640        160/500 replicates written to .part  ETA 2026-09-17 09:26 (6.29 h)
+2026-09-17 03:16:44    proj loglog_auc_n640        320/500 replicates written to .part  ETA 2026-09-17 09:22 (6.09 h)
+2026-09-17 03:24:24    proj loglog_auc_n640        480/500 replicates written to .part  ETA 2026-09-17 09:18 (5.91 h)
+2026-09-17 03:25:21    proj loglog_auc_n640        500/500 replicates written to .part  ETA 2026-09-17 09:18 (5.88 h)
+2026-09-17 03:25:21  [27/30] proj   loglog_auc_n640        n=640   R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 54.6 s per data set, 23.7 min  ETA 2026-09-17 09:18 (5.88 h)
+2026-09-17 03:25:22  proj loglog_e12_n1000: 500 of 500 replicates to run
+2026-09-17 04:05:14    proj loglog_e12_n1000       160/500 replicates written to .part  ETA 2026-09-17 09:20 (5.26 h)
+2026-09-17 04:45:57    proj loglog_e12_n1000       320/500 replicates written to .part  ETA 2026-09-17 09:24 (4.64 h)
+2026-09-17 05:26:30    proj loglog_e12_n1000       480/500 replicates written to .part  ETA 2026-09-17 09:27 (4.02 h)
+2026-09-17 05:31:27    proj loglog_e12_n1000       500/500 replicates written to .part  ETA 2026-09-17 09:27 (3.94 h)
+2026-09-17 05:31:27  [28/30] proj   loglog_e12_n1000       n=1000  R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 285.6 s per data set, 126.1 min  ETA 2026-09-17 09:27 (3.94 h)
+2026-09-17 05:31:27  proj null_crossover_n1000: 500 of 500 replicates to run
+2026-09-17 06:12:17    proj null_crossover_n1000   160/500 replicates written to .part  ETA 2026-09-17 09:31 (3.32 h)
+2026-09-17 06:52:20    proj null_crossover_n1000   320/500 replicates written to .part  ETA 2026-09-17 09:33 (2.69 h)
+2026-09-17 07:33:41    proj null_crossover_n1000   480/500 replicates written to .part  ETA 2026-09-17 09:37 (2.06 h)
+2026-09-17 07:39:04    proj null_crossover_n1000   500/500 replicates written to .part  ETA 2026-09-17 09:37 (1.98 h)
+2026-09-17 07:39:04  [29/30] proj   null_crossover_n1000   n=1000  R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 287.8 s per data set, 127.6 min  ETA 2026-09-17 09:37 (1.98 h)
+2026-09-17 07:39:04  proj crossover_n1000: 500 of 500 replicates to run
+2026-09-17 08:20:18    proj crossover_n1000        160/500 replicates written to .part  ETA 2026-09-17 09:41 (1.35 h)
+2026-09-17 09:01:36    proj crossover_n1000        320/500 replicates written to .part  ETA 2026-09-17 09:44 (0.72 h)
+2026-09-17 09:42:41    proj crossover_n1000        480/500 replicates written to .part  ETA 2026-09-17 09:47 (0.08 h)
+2026-09-17 09:47:57    proj crossover_n1000        500/500 replicates written to .part  ETA 2026-09-17 09:47 (0.00 h)
+2026-09-17 09:47:57  [30/30] proj   crossover_n1000        n=1000  R=500 kept 500, identity failures 0, errors 0, degenerate 0, median 289.1 s per data set, 128.9 min  ETA 2026-09-17 09:47 (0.00 h)
+2026-09-17 09:47:57  block 8: run finished
+2026-09-17 09:48:01  block 8, bagoft: 30 cells, bagoft replicates 1-200, 20 workers, root C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery, out C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery/8
+2026-09-17 09:49:09  a lock left by process 51292, which is no longer running, is replaced
+2026-09-17 09:49:10  bagoft null_link_n500: 200 of 200 replicates to run
+2026-09-17 10:06:17    bagoft null_link_n500         40/200 replicates written to .part  ETA 2026-09-20 01:14 (63.14 h)
+2026-09-17 10:23:29    bagoft null_link_n500         80/200 replicates written to .part  ETA 2026-09-20 01:20 (62.95 h)
+2026-09-17 10:40:19    bagoft null_link_n500         120/200 replicates written to .part  ETA 2026-09-20 00:55 (62.26 h)
+2026-09-17 10:56:52    bagoft null_link_n500         160/200 replicates written to .part  ETA 2026-09-20 00:27 (61.51 h)
+2026-09-17 11:14:05    bagoft null_link_n500         200/200 replicates written to .part  ETA 2026-09-20 00:40 (61.44 h)
+2026-09-17 11:14:05  [1/30] bagoft null_link_n500         n=500   R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 477.2 s per data set, 84.9 min  ETA 2026-09-20 00:40 (61.44 h)
+2026-09-17 11:14:05  bagoft null_link_n1000: 200 of 200 replicates to run
+2026-09-17 11:37:20    bagoft null_link_n1000        40/200 replicates written to .part  ETA 2026-09-19 19:00 (55.38 h)
+2026-09-17 11:55:55    bagoft null_link_n1000        80/200 replicates written to .part  ETA 2026-09-19 13:56 (50.00 h)
+2026-09-17 12:14:26    bagoft null_link_n1000        120/200 replicates written to .part  ETA 2026-09-19 10:41 (46.45 h)
+2026-09-17 12:32:55    bagoft null_link_n1000        160/200 replicates written to .part  ETA 2026-09-19 08:25 (43.88 h)
+2026-09-17 12:51:22    bagoft null_link_n1000        200/200 replicates written to .part  ETA 2026-09-19 06:45 (41.91 h)
+2026-09-17 12:51:22  [2/30] bagoft null_link_n1000        n=1000  R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 550.9 s per data set, 97.3 min  ETA 2026-09-19 06:45 (41.91 h)
+2026-09-17 12:51:22  bagoft stk_long_n500: 200 of 200 replicates to run
+2026-09-17 13:04:14    bagoft stk_long_n500          40/200 replicates written to .part  ETA 2026-09-19 06:55 (41.86 h)
+2026-09-17 13:17:04    bagoft stk_long_n500          80/200 replicates written to .part  ETA 2026-09-19 07:04 (41.79 h)
+2026-09-17 13:29:53    bagoft stk_long_n500          120/200 replicates written to .part  ETA 2026-09-19 07:11 (41.70 h)
+2026-09-17 13:42:43    bagoft stk_long_n500          160/200 replicates written to .part  ETA 2026-09-19 07:18 (41.59 h)
+2026-09-17 13:55:34    bagoft stk_long_n500          200/200 replicates written to .part  ETA 2026-09-19 07:24 (41.48 h)
+2026-09-17 13:55:34  [3/30] bagoft stk_long_n500          n=500   R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 381.2 s per data set, 64.2 min  ETA 2026-09-19 07:24 (41.48 h)
+2026-09-17 13:55:34  bagoft stk_long_n1000: 200 of 200 replicates to run
+2026-09-17 14:13:45    bagoft stk_long_n1000         40/200 replicates written to .part  ETA 2026-09-19 06:19 (40.09 h)
+2026-09-17 14:31:56    bagoft stk_long_n1000         80/200 replicates written to .part  ETA 2026-09-19 05:24 (38.88 h)
+2026-09-17 14:50:09    bagoft stk_long_n1000         120/200 replicates written to .part  ETA 2026-09-19 04:39 (37.82 h)
+2026-09-17 15:08:21    bagoft stk_long_n1000         160/200 replicates written to .part  ETA 2026-09-19 03:59 (36.86 h)
+2026-09-17 15:26:33    bagoft stk_long_n1000         200/200 replicates written to .part  ETA 2026-09-19 03:25 (35.99 h)
+2026-09-17 15:26:33  [4/30] bagoft stk_long_n1000         n=1000  R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 541.7 s per data set, 91.0 min  ETA 2026-09-19 03:25 (35.99 h)
+2026-09-17 15:26:33  bagoft stk_short_n500: 200 of 200 replicates to run
+2026-09-17 15:39:20    bagoft stk_short_n500         40/200 replicates written to .part  ETA 2026-09-19 03:36 (35.96 h)
+2026-09-17 15:52:06    bagoft stk_short_n500         80/200 replicates written to .part  ETA 2026-09-19 03:47 (35.92 h)
+2026-09-17 16:04:57    bagoft stk_short_n500         120/200 replicates written to .part  ETA 2026-09-19 03:57 (35.87 h)
+2026-09-17 16:17:53    bagoft stk_short_n500         160/200 replicates written to .part  ETA 2026-09-19 04:07 (35.83 h)
+2026-09-17 16:30:45    bagoft stk_short_n500         200/200 replicates written to .part  ETA 2026-09-19 04:16 (35.76 h)
+2026-09-17 16:30:45  [5/30] bagoft stk_short_n500         n=500   R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 380.8 s per data set, 64.2 min  ETA 2026-09-19 04:16 (35.76 h)
+2026-09-17 16:30:45  bagoft stk_short_n1000: 200 of 200 replicates to run
+2026-09-17 16:49:14    bagoft stk_short_n1000        40/200 replicates written to .part  ETA 2026-09-19 03:49 (35.01 h)
+2026-09-17 17:07:39    bagoft stk_short_n1000        80/200 replicates written to .part  ETA 2026-09-19 03:25 (34.29 h)
+2026-09-17 17:26:03    bagoft stk_short_n1000        120/200 replicates written to .part  ETA 2026-09-19 03:03 (33.62 h)
+2026-09-17 18:14:13    bagoft stk_short_n1000        160/200 replicates written to .part  ETA 2026-09-19 05:16 (35.04 h)
+2026-09-17 18:32:26    bagoft stk_short_n1000        200/200 replicates written to .part  ETA 2026-09-19 04:50 (34.30 h)
+2026-09-17 18:32:26  [6/30] bagoft stk_short_n1000        n=1000  R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 547.4 s per data set, 121.7 min  ETA 2026-09-19 04:50 (34.30 h)
+2026-09-17 18:32:27  bagoft stk_asym_n500: 200 of 200 replicates to run
+2026-09-17 18:45:00    bagoft stk_asym_n500          40/200 replicates written to .part  ETA 2026-09-19 04:55 (34.17 h)
+2026-09-17 18:57:34    bagoft stk_asym_n500          80/200 replicates written to .part  ETA 2026-09-19 04:59 (34.03 h)
+2026-09-17 19:10:08    bagoft stk_asym_n500          120/200 replicates written to .part  ETA 2026-09-19 05:03 (33.89 h)
+2026-09-17 19:22:42    bagoft stk_asym_n500          160/200 replicates written to .part  ETA 2026-09-19 05:07 (33.75 h)
+2026-09-17 19:35:16    bagoft stk_asym_n500          200/200 replicates written to .part  ETA 2026-09-19 05:11 (33.60 h)
+2026-09-17 19:35:16  [7/30] bagoft stk_asym_n500          n=500   R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 373.3 s per data set, 62.8 min  ETA 2026-09-19 05:11 (33.60 h)
+2026-09-17 19:35:16  bagoft stk_asym_n1000: 200 of 200 replicates to run
+2026-09-17 19:53:19    bagoft stk_asym_n1000         40/200 replicates written to .part  ETA 2026-09-19 04:48 (32.92 h)
+2026-09-17 20:11:21    bagoft stk_asym_n1000         80/200 replicates written to .part  ETA 2026-09-19 04:27 (32.26 h)
+2026-09-17 20:29:27    bagoft stk_asym_n1000         120/200 replicates written to .part  ETA 2026-09-19 04:07 (31.63 h)
+2026-09-17 20:47:31    bagoft stk_asym_n1000         160/200 replicates written to .part  ETA 2026-09-19 03:49 (31.03 h)
+2026-09-17 21:05:36    bagoft stk_asym_n1000         200/200 replicates written to .part  ETA 2026-09-19 03:32 (30.44 h)
+2026-09-17 21:05:36  [8/30] bagoft stk_asym_n1000         n=1000  R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 538.0 s per data set, 90.3 min  ETA 2026-09-19 03:32 (30.44 h)
+2026-09-17 21:05:36  bagoft cauchit_n500: 200 of 200 replicates to run
+2026-09-17 21:18:13    bagoft cauchit_n500           40/200 replicates written to .part  ETA 2026-09-19 03:36 (30.31 h)
+2026-09-17 21:30:45    bagoft cauchit_n500           80/200 replicates written to .part  ETA 2026-09-19 03:41 (30.18 h)
+2026-09-17 21:43:18    bagoft cauchit_n500           120/200 replicates written to .part  ETA 2026-09-19 03:45 (30.04 h)
+2026-09-17 21:55:51    bagoft cauchit_n500           160/200 replicates written to .part  ETA 2026-09-19 03:49 (29.90 h)
+2026-09-17 22:08:24    bagoft cauchit_n500           200/200 replicates written to .part  ETA 2026-09-19 03:53 (29.76 h)
+2026-09-17 22:08:24  [9/30] bagoft cauchit_n500           n=500   R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 372.9 s per data set, 62.8 min  ETA 2026-09-19 03:53 (29.76 h)
+2026-09-17 22:08:24  bagoft cauchit_n1000: 200 of 200 replicates to run
+2026-09-17 22:26:25    bagoft cauchit_n1000          40/200 replicates written to .part  ETA 2026-09-19 03:38 (29.20 h)
+2026-09-17 22:44:28    bagoft cauchit_n1000          80/200 replicates written to .part  ETA 2026-09-19 03:23 (28.65 h)
+2026-09-17 23:02:34    bagoft cauchit_n1000          120/200 replicates written to .part  ETA 2026-09-19 03:10 (28.12 h)
+2026-09-17 23:20:47    bagoft cauchit_n1000          160/200 replicates written to .part  ETA 2026-09-19 02:57 (27.61 h)
+2026-09-17 23:38:57    bagoft cauchit_n1000          200/200 replicates written to .part  ETA 2026-09-19 02:45 (27.11 h)
+2026-09-17 23:38:57  [10/30] bagoft cauchit_n1000          n=1000  R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 538.0 s per data set, 90.6 min  ETA 2026-09-19 02:45 (27.11 h)
+2026-09-17 23:38:58  bagoft t4_n500: 200 of 200 replicates to run
+2026-09-17 23:51:34    bagoft t4_n500                40/200 replicates written to .part  ETA 2026-09-19 02:49 (26.97 h)
+2026-09-18 00:04:13    bagoft t4_n500                80/200 replicates written to .part  ETA 2026-09-19 02:54 (26.84 h)
+2026-09-18 00:16:52    bagoft t4_n500                120/200 replicates written to .part  ETA 2026-09-19 02:58 (26.70 h)
+2026-09-18 00:29:31    bagoft t4_n500                160/200 replicates written to .part  ETA 2026-09-19 03:03 (26.56 h)
+2026-09-18 00:42:10    bagoft t4_n500                200/200 replicates written to .part  ETA 2026-09-19 03:07 (26.42 h)
+2026-09-18 00:42:10  [11/30] bagoft t4_n500                n=500   R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 375.8 s per data set, 63.2 min  ETA 2026-09-19 03:07 (26.42 h)
+2026-09-18 00:42:10  bagoft t4_n1000: 200 of 200 replicates to run
+2026-09-18 01:00:23    bagoft t4_n1000               40/200 replicates written to .part  ETA 2026-09-19 02:56 (25.93 h)
+2026-09-18 01:18:32    bagoft t4_n1000               80/200 replicates written to .part  ETA 2026-09-19 02:45 (25.45 h)
+2026-09-18 01:36:51    bagoft t4_n1000               120/200 replicates written to .part  ETA 2026-09-19 02:35 (24.98 h)
+2026-09-18 01:55:11    bagoft t4_n1000               160/200 replicates written to .part  ETA 2026-09-19 02:26 (24.52 h)
+2026-09-18 02:13:52    bagoft t4_n1000               200/200 replicates written to .part  ETA 2026-09-19 02:18 (24.07 h)
+2026-09-18 02:13:52  [12/30] bagoft t4_n1000               n=1000  R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 543.6 s per data set, 91.7 min  ETA 2026-09-19 02:18 (24.07 h)
+2026-09-18 02:13:55  bagoft loglog_n500: 200 of 200 replicates to run
+2026-09-18 02:26:40    bagoft loglog_n500            40/200 replicates written to .part  ETA 2026-09-19 02:22 (23.93 h)
+2026-09-18 02:39:36    bagoft loglog_n500            80/200 replicates written to .part  ETA 2026-09-19 02:27 (23.80 h)
+2026-09-18 02:52:18    bagoft loglog_n500            120/200 replicates written to .part  ETA 2026-09-19 02:31 (23.65 h)
+2026-09-18 03:05:00    bagoft loglog_n500            160/200 replicates written to .part  ETA 2026-09-19 02:35 (23.51 h)
+2026-09-18 03:17:40    bagoft loglog_n500            200/200 replicates written to .part  ETA 2026-09-19 02:39 (23.36 h)
+2026-09-18 03:17:40  [13/30] bagoft loglog_n500            n=500   R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 377.3 s per data set, 63.8 min  ETA 2026-09-19 02:39 (23.36 h)
+2026-09-18 03:17:40  bagoft loglog_n1000: 200 of 200 replicates to run
+2026-09-18 03:35:54    bagoft loglog_n1000           40/200 replicates written to .part  ETA 2026-09-19 02:30 (22.91 h)
+2026-09-18 03:54:18    bagoft loglog_n1000           80/200 replicates written to .part  ETA 2026-09-19 02:22 (22.47 h)
+2026-09-18 04:12:33    bagoft loglog_n1000           120/200 replicates written to .part  ETA 2026-09-19 02:14 (22.03 h)
+2026-09-18 04:30:48    bagoft loglog_n1000           160/200 replicates written to .part  ETA 2026-09-19 02:06 (21.60 h)
+2026-09-18 04:49:00    bagoft loglog_n1000           200/200 replicates written to .part  ETA 2026-09-19 01:59 (21.17 h)
+2026-09-18 04:49:00  [14/30] bagoft loglog_n1000           n=1000  R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 543.0 s per data set, 91.3 min  ETA 2026-09-19 01:59 (21.17 h)
+2026-09-18 04:49:01  bagoft null_base_n610: 200 of 200 replicates to run
+2026-09-18 05:02:31    bagoft null_base_n610         40/200 replicates written to .part  ETA 2026-09-19 01:59 (20.95 h)
+2026-09-18 05:16:09    bagoft null_base_n610         80/200 replicates written to .part  ETA 2026-09-19 02:00 (20.74 h)
+2026-09-18 05:29:41    bagoft null_base_n610         120/200 replicates written to .part  ETA 2026-09-19 02:01 (20.52 h)
+2026-09-18 05:43:10    bagoft null_base_n610         160/200 replicates written to .part  ETA 2026-09-19 02:01 (20.31 h)
+2026-09-18 05:56:38    bagoft null_base_n610         200/200 replicates written to .part  ETA 2026-09-19 02:01 (20.09 h)
+2026-09-18 05:56:38  [15/30] bagoft null_base_n610         n=610   R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 401.6 s per data set, 67.6 min  ETA 2026-09-19 02:01 (20.09 h)
+2026-09-18 05:56:38  bagoft null_base_n1000: 200 of 200 replicates to run
+2026-09-18 06:14:48    bagoft null_base_n1000        40/200 replicates written to .part  ETA 2026-09-19 01:54 (19.67 h)
+2026-09-18 06:32:57    bagoft null_base_n1000        80/200 replicates written to .part  ETA 2026-09-19 01:48 (19.25 h)
+2026-09-18 06:51:05    bagoft null_base_n1000        120/200 replicates written to .part  ETA 2026-09-19 01:41 (18.84 h)
+2026-09-18 07:09:13    bagoft null_base_n1000        160/200 replicates written to .part  ETA 2026-09-19 01:35 (18.43 h)
+2026-09-18 07:27:20    bagoft null_base_n1000        200/200 replicates written to .part  ETA 2026-09-19 01:28 (18.03 h)
+2026-09-18 07:27:20  [16/30] bagoft null_base_n1000        n=1000  R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 540.0 s per data set, 90.7 min  ETA 2026-09-19 01:28 (18.03 h)
+2026-09-18 07:27:20  bagoft null_auc_n460: 200 of 200 replicates to run
+2026-09-18 07:39:15    bagoft null_auc_n460          40/200 replicates written to .part  ETA 2026-09-19 01:32 (17.89 h)
+2026-09-18 07:51:05    bagoft null_auc_n460          80/200 replicates written to .part  ETA 2026-09-19 01:36 (17.75 h)
+2026-09-18 08:02:56    bagoft null_auc_n460          120/200 replicates written to .part  ETA 2026-09-19 01:39 (17.61 h)
+2026-09-18 08:14:47    bagoft null_auc_n460          160/200 replicates written to .part  ETA 2026-09-19 01:43 (17.47 h)
+2026-09-18 08:26:39    bagoft null_auc_n460          200/200 replicates written to .part  ETA 2026-09-19 01:46 (17.33 h)
+2026-09-18 08:26:39  [17/30] bagoft null_auc_n460          n=460   R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 352.2 s per data set, 59.3 min  ETA 2026-09-19 01:46 (17.33 h)
+2026-09-18 08:26:39  bagoft null_auc_n760: 200 of 200 replicates to run
+2026-09-18 08:42:24    bagoft null_auc_n760          40/200 replicates written to .part  ETA 2026-09-19 01:45 (17.05 h)
+2026-09-18 08:58:40    bagoft null_auc_n760          80/200 replicates written to .part  ETA 2026-09-19 01:45 (16.78 h)
+2026-09-18 09:14:54    bagoft null_auc_n760          120/200 replicates written to .part  ETA 2026-09-19 01:44 (16.50 h)
+2026-09-18 09:30:19    bagoft null_auc_n760          160/200 replicates written to .part  ETA 2026-09-19 01:43 (16.22 h)
+2026-09-18 09:45:44    bagoft null_auc_n760          200/200 replicates written to .part  ETA 2026-09-19 01:41 (15.93 h)
+2026-09-18 09:45:44  [18/30] bagoft null_auc_n760          n=760   R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 460.1 s per data set, 79.1 min  ETA 2026-09-19 01:41 (15.93 h)
+2026-09-18 09:45:44  bagoft null_auc_n380: 200 of 200 replicates to run
+2026-09-18 09:56:52    bagoft null_auc_n380          40/200 replicates written to .part  ETA 2026-09-19 01:46 (15.83 h)
+2026-09-18 10:08:05    bagoft null_auc_n380          80/200 replicates written to .part  ETA 2026-09-19 01:51 (15.72 h)
+2026-09-18 10:19:38    bagoft null_auc_n380          120/200 replicates written to .part  ETA 2026-09-19 01:56 (15.62 h)
+2026-09-18 10:30:50    bagoft null_auc_n380          160/200 replicates written to .part  ETA 2026-09-19 02:01 (15.52 h)
+2026-09-18 10:42:01    bagoft null_auc_n380          200/200 replicates written to .part  ETA 2026-09-19 02:06 (15.41 h)
+2026-09-18 10:42:01  [19/30] bagoft null_auc_n380          n=380   R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 332.3 s per data set, 56.3 min  ETA 2026-09-19 02:06 (15.41 h)
+2026-09-18 10:42:01  bagoft null_auc_n640: 200 of 200 replicates to run
+2026-09-18 10:55:46    bagoft null_auc_n640          40/200 replicates written to .part  ETA 2026-09-19 02:06 (15.17 h)
+2026-09-18 11:09:34    bagoft null_auc_n640          80/200 replicates written to .part  ETA 2026-09-19 02:05 (14.94 h)
+2026-09-18 11:23:19    bagoft null_auc_n640          120/200 replicates written to .part  ETA 2026-09-19 02:05 (14.71 h)
+2026-09-18 11:37:11    bagoft null_auc_n640          160/200 replicates written to .part  ETA 2026-09-19 02:05 (14.47 h)
+2026-09-18 11:51:12    bagoft null_auc_n640          200/200 replicates written to .part  ETA 2026-09-19 02:05 (14.24 h)
+2026-09-18 11:51:12  [20/30] bagoft null_auc_n640          n=640   R=200 kept 200, identity failures 0, errors 1, degenerate 0, median 410.3 s per data set, 69.2 min  ETA 2026-09-19 02:05 (14.24 h)
+2026-09-18 11:51:12  bagoft null_e12_n1000: 200 of 200 replicates to run
+2026-09-18 12:11:57    bagoft null_e12_n1000         40/200 replicates written to .part  ETA 2026-09-19 02:04 (13.87 h)
+2026-09-18 12:30:16    bagoft null_e12_n1000         80/200 replicates written to .part  ETA 2026-09-19 01:58 (13.48 h)
+2026-09-18 12:49:05    bagoft null_e12_n1000         120/200 replicates written to .part  ETA 2026-09-19 01:54 (13.09 h)
+2026-09-18 13:09:15    bagoft null_e12_n1000         160/200 replicates written to .part  ETA 2026-09-19 01:52 (12.72 h)
+2026-09-18 13:28:07    bagoft null_e12_n1000         200/200 replicates written to .part  ETA 2026-09-19 01:48 (12.34 h)
+2026-09-18 13:28:07  [21/30] bagoft null_e12_n1000         n=1000  R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 583.2 s per data set, 96.9 min  ETA 2026-09-19 01:48 (12.34 h)
+2026-09-18 13:28:07  bagoft loglog_base_n610: 200 of 200 replicates to run
+2026-09-18 14:23:05  block 8, bagoft: 30 cells, bagoft replicates 1-200, 20 workers, root C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery, out C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery/8
+2026-09-18 14:24:26  bagoft null_link_n500: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft null_link_n1000: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft stk_long_n500: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft stk_long_n1000: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft stk_short_n500: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft stk_short_n1000: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft stk_asym_n500: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft stk_asym_n1000: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft cauchit_n500: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft cauchit_n1000: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft t4_n500: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft t4_n1000: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft loglog_n500: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft loglog_n1000: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft null_base_n610: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft null_base_n1000: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft null_auc_n460: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft null_auc_n760: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft null_auc_n380: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft null_auc_n640: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft null_e12_n1000: finished file present (200 rows), skipped
+2026-09-18 14:24:26  bagoft loglog_base_n610: 200 of 200 replicates to run
+2026-09-18 14:38:26    bagoft loglog_base_n610       40/200 replicates written to .part  ETA 2026-09-19 03:30 (12.87 h)
+2026-09-18 14:53:06    bagoft loglog_base_n610       80/200 replicates written to .part  ETA 2026-09-19 03:49 (12.94 h)
+2026-09-18 15:07:11    bagoft loglog_base_n610       120/200 replicates written to .part  ETA 2026-09-19 03:44 (12.62 h)
+2026-09-18 15:21:19    bagoft loglog_base_n610       160/200 replicates written to .part  ETA 2026-09-19 03:43 (12.36 h)
+2026-09-18 15:35:19    bagoft loglog_base_n610       200/200 replicates written to .part  ETA 2026-09-19 03:40 (12.09 h)
+2026-09-18 15:35:19  [1/9] bagoft loglog_base_n610       n=610   R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 420.5 s per data set, 70.9 min  ETA 2026-09-19 03:40 (12.09 h)
+2026-09-18 15:35:19  bagoft loglog_base_n1000: 200 of 200 replicates to run
+2026-09-18 15:54:05    bagoft loglog_base_n1000      40/200 replicates written to .part  ETA 2026-09-19 03:02 (11.14 h)
+2026-09-18 16:12:10    bagoft loglog_base_n1000      80/200 replicates written to .part  ETA 2026-09-19 02:35 (10.38 h)
+2026-09-18 16:30:37    bagoft loglog_base_n1000      120/200 replicates written to .part  ETA 2026-09-19 02:18 (9.80 h)
+2026-09-18 16:49:07    bagoft loglog_base_n1000      160/200 replicates written to .part  ETA 2026-09-19 02:07 (9.30 h)
+2026-09-18 17:07:35    bagoft loglog_base_n1000      200/200 replicates written to .part  ETA 2026-09-19 01:58 (8.85 h)
+2026-09-18 17:07:35  [2/9] bagoft loglog_base_n1000      n=1000  R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 550.4 s per data set, 92.3 min  ETA 2026-09-19 01:58 (8.85 h)
+2026-09-18 17:07:35  bagoft cauchit_auc_n460: 200 of 200 replicates to run
+2026-09-18 18:25:53  block 8, bagoft: 30 cells, bagoft replicates 1-200, 20 workers, root C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery, out C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery/8
+2026-09-18 18:27:21  bagoft null_link_n500: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft null_link_n1000: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft stk_long_n500: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft stk_long_n1000: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft stk_short_n500: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft stk_short_n1000: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft stk_asym_n500: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft stk_asym_n1000: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft cauchit_n500: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft cauchit_n1000: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft t4_n500: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft t4_n1000: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft loglog_n500: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft loglog_n1000: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft null_base_n610: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft null_base_n1000: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft null_auc_n460: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft null_auc_n760: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft null_auc_n380: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft null_auc_n640: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft null_e12_n1000: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft loglog_base_n610: finished file present (200 rows), skipped
+2026-09-18 18:27:21  bagoft loglog_base_n1000: finished file present (200 rows), skipped
+2026-09-18 18:27:22  bagoft cauchit_auc_n460: 200 of 200 replicates to run
+2026-09-18 18:39:44    bagoft cauchit_auc_n460       40/200 replicates written to .part  ETA 2026-09-19 06:12 (11.54 h)
+2026-09-18 18:52:20    bagoft cauchit_auc_n460       80/200 replicates written to .part  ETA 2026-09-19 06:18 (11.44 h)
+2026-09-18 19:04:35    bagoft cauchit_auc_n460       120/200 replicates written to .part  ETA 2026-09-19 06:14 (11.16 h)
+2026-09-18 19:16:40    bagoft cauchit_auc_n460       160/200 replicates written to .part  ETA 2026-09-19 06:09 (10.88 h)
+2026-09-18 19:28:45    bagoft cauchit_auc_n460       200/200 replicates written to .part  ETA 2026-09-19 06:06 (10.63 h)
+2026-09-18 19:28:45  [1/7] bagoft cauchit_auc_n460       n=460   R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 364.8 s per data set, 61.4 min  ETA 2026-09-19 06:06 (10.63 h)
+2026-09-18 19:28:45  bagoft cauchit_auc_n760: 200 of 200 replicates to run
+2026-09-18 19:45:33    bagoft cauchit_auc_n760       40/200 replicates written to .part  ETA 2026-09-19 05:36 (9.85 h)
+2026-09-18 20:01:58    bagoft cauchit_auc_n760       80/200 replicates written to .part  ETA 2026-09-19 05:16 (9.24 h)
+2026-09-18 20:18:48    bagoft cauchit_auc_n760       120/200 replicates written to .part  ETA 2026-09-19 05:04 (8.77 h)
+2026-09-18 20:35:19    bagoft cauchit_auc_n760       160/200 replicates written to .part  ETA 2026-09-19 04:55 (8.33 h)
+2026-09-18 20:51:39    bagoft cauchit_auc_n760       200/200 replicates written to .part  ETA 2026-09-19 04:47 (7.92 h)
+2026-09-18 20:51:39  [2/7] bagoft cauchit_auc_n760       n=760   R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 496.1 s per data set, 82.9 min  ETA 2026-09-19 04:47 (7.92 h)
+2026-09-18 20:51:39  bagoft loglog_auc_n380: 200 of 200 replicates to run
+2026-09-19 00:07:11  block 8, bagoft: 30 cells, bagoft replicates 1-200, 20 workers, root C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery, out C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery/8
+2026-09-19 00:08:41  bagoft null_link_n500: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft null_link_n1000: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft stk_long_n500: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft stk_long_n1000: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft stk_short_n500: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft stk_short_n1000: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft stk_asym_n500: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft stk_asym_n1000: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft cauchit_n500: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft cauchit_n1000: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft t4_n500: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft t4_n1000: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft loglog_n500: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft loglog_n1000: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft null_base_n610: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft null_base_n1000: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft null_auc_n460: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft null_auc_n760: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft null_auc_n380: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft null_auc_n640: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft null_e12_n1000: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft loglog_base_n610: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft loglog_base_n1000: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft cauchit_auc_n460: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft cauchit_auc_n760: finished file present (200 rows), skipped
+2026-09-19 00:08:41  bagoft loglog_auc_n380: 200 of 200 replicates to run
+2026-09-19 00:20:39    bagoft loglog_auc_n380        40/200 replicates written to .part  ETA 2026-09-19 10:41 (10.35 h)
+2026-09-19 00:32:06    bagoft loglog_auc_n380        80/200 replicates written to .part  ETA 2026-09-19 10:28 (9.94 h)
+2026-09-19 00:43:36    bagoft loglog_auc_n380        120/200 replicates written to .part  ETA 2026-09-19 10:24 (9.68 h)
+2026-09-19 00:55:07    bagoft loglog_auc_n380        160/200 replicates written to .part  ETA 2026-09-19 10:22 (9.46 h)
+2026-09-19 01:06:36    bagoft loglog_auc_n380        200/200 replicates written to .part  ETA 2026-09-19 10:21 (9.25 h)
+2026-09-19 01:06:36  [1/5] bagoft loglog_auc_n380        n=380   R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 343.7 s per data set, 57.9 min  ETA 2026-09-19 10:21 (9.25 h)
+2026-09-19 01:06:36  bagoft loglog_auc_n640: 200 of 200 replicates to run
+2026-09-19 01:22:09    bagoft loglog_auc_n640        40/200 replicates written to .part  ETA 2026-09-19 09:50 (8.47 h)
+2026-09-19 01:37:12    bagoft loglog_auc_n640        80/200 replicates written to .part  ETA 2026-09-19 09:28 (7.85 h)
+2026-09-19 01:52:25    bagoft loglog_auc_n640        120/200 replicates written to .part  ETA 2026-09-19 09:14 (7.37 h)
+2026-09-19 02:09:24    bagoft loglog_auc_n640        160/200 replicates written to .part  ETA 2026-09-19 09:12 (7.06 h)
+2026-09-19 02:24:39    bagoft loglog_auc_n640        200/200 replicates written to .part  ETA 2026-09-19 09:04 (6.67 h)
+2026-09-19 02:24:39  [2/5] bagoft loglog_auc_n640        n=640   R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 457.2 s per data set, 78.0 min  ETA 2026-09-19 09:04 (6.67 h)
+2026-09-19 02:24:39  bagoft loglog_e12_n1000: 200 of 200 replicates to run
+2026-09-19 02:45:06    bagoft loglog_e12_n1000       40/200 replicates written to .part  ETA 2026-09-19 08:44 (5.98 h)
+2026-09-19 03:04:41    bagoft loglog_e12_n1000       80/200 replicates written to .part  ETA 2026-09-19 08:26 (5.37 h)
+2026-09-19 03:23:58    bagoft loglog_e12_n1000       120/200 replicates written to .part  ETA 2026-09-19 08:13 (4.82 h)
+2026-09-19 03:43:05    bagoft loglog_e12_n1000       160/200 replicates written to .part  ETA 2026-09-19 08:02 (4.32 h)
+2026-09-19 04:01:59    bagoft loglog_e12_n1000       200/200 replicates written to .part  ETA 2026-09-19 07:52 (3.85 h)
+2026-09-19 04:01:59  [3/5] bagoft loglog_e12_n1000       n=1000  R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 577.9 s per data set, 97.3 min  ETA 2026-09-19 07:52 (3.85 h)
+2026-09-19 04:01:59  bagoft null_crossover_n1000: 200 of 200 replicates to run
+2026-09-19 04:20:13    bagoft null_crossover_n1000   40/200 replicates written to .part  ETA 2026-09-19 07:44 (3.40 h)
+2026-09-19 04:38:30    bagoft null_crossover_n1000   80/200 replicates written to .part  ETA 2026-09-19 07:36 (2.97 h)
+2026-09-19 04:56:44    bagoft null_crossover_n1000   120/200 replicates written to .part  ETA 2026-09-19 07:30 (2.57 h)
+2026-09-19 05:15:05    bagoft null_crossover_n1000   160/200 replicates written to .part  ETA 2026-09-19 07:25 (2.17 h)
+2026-09-19 05:33:29    bagoft null_crossover_n1000   200/200 replicates written to .part  ETA 2026-09-19 07:21 (1.79 h)
+2026-09-19 05:33:29  [4/5] bagoft null_crossover_n1000   n=1000  R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 547.0 s per data set, 91.5 min  ETA 2026-09-19 07:21 (1.79 h)
+2026-09-19 05:33:29  bagoft crossover_n1000: 200 of 200 replicates to run
+2026-09-19 05:51:47    bagoft crossover_n1000        40/200 replicates written to .part  ETA 2026-09-19 07:17 (1.42 h)
+2026-09-19 06:10:03    bagoft crossover_n1000        80/200 replicates written to .part  ETA 2026-09-19 07:13 (1.06 h)
+2026-09-19 06:28:15    bagoft crossover_n1000        120/200 replicates written to .part  ETA 2026-09-19 07:10 (0.70 h)
+2026-09-19 06:46:30    bagoft crossover_n1000        160/200 replicates written to .part  ETA 2026-09-19 07:07 (0.35 h)
+2026-09-19 07:04:47    bagoft crossover_n1000        200/200 replicates written to .part  ETA 2026-09-19 07:04 (0.00 h)
+2026-09-19 07:04:47  [5/5] bagoft crossover_n1000        n=1000  R=200 kept 200, identity failures 0, errors 0, degenerate 0, median 545.8 s per data set, 91.3 min  ETA 2026-09-19 07:04 (0.00 h)
+2026-09-19 07:04:47  block 8: run finished

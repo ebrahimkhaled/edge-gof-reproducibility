@@ -1,0 +1,24 @@
+2026-09-20 19:10:57  block 9R2: 22 scenarios, 20 workers, out C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery/9R2 
+2026-09-20 19:11:01  [ 1/22] logit_C1_r001_n1000    n=1000  R=1000  gates 0/0  rejection V0 0.056 HYB05 0.064 HYB10 0.059 HYB20 0.056 G10 0.056  0.1 min 
+2026-09-20 19:11:04  [ 2/22] logit_C1_r002_n1000    n=1000  R=1000  gates 0/0  rejection V0 0.059 HYB05 0.053 HYB10 0.049 HYB20 0.048 G10 0.053  0.0 min 
+2026-09-20 19:11:07  [ 3/22] logit_C1_r005_n1000    n=1000  R=1000  gates 0/0  rejection V0 0.057 HYB05 0.047 HYB10 0.053 HYB20 0.056 G10 0.051  0.0 min 
+2026-09-20 19:11:10  [ 4/22] logit_C1_r010_n1000    n=1000  R=1000  gates 0/0  rejection V0 0.097 HYB05 0.081 HYB10 0.079 HYB20 0.050 G10 0.085  0.0 min 
+2026-09-20 19:11:12  [ 5/22] logit_clean_n1000      n=1000  R=1000  gates 0/0  rejection V0 0.045 HYB05 0.039 HYB10 0.043 HYB20 0.050 G10 0.040  0.0 min 
+2026-09-20 19:11:21  [ 6/22] logit_C1_r001_n5000    n=5000  R=1000  gates 0/0  rejection V0 0.050 HYB05 0.041 HYB10 0.043 HYB20 0.052 G10 0.048  0.1 min 
+2026-09-20 19:11:29  [ 7/22] logit_C1_r002_n5000    n=5000  R=1000  gates 0/0  rejection V0 0.060 HYB05 0.045 HYB10 0.045 HYB20 0.055 G10 0.047  0.1 min 
+2026-09-20 19:11:37  [ 8/22] logit_C1_r005_n5000    n=5000  R=1000  gates 0/0  rejection V0 0.151 HYB05 0.059 HYB10 0.059 HYB20 0.056 G10 0.065  0.1 min 
+2026-09-20 19:11:45  [ 9/22] logit_C1_r010_n5000    n=5000  R=1000  gates 0/0  rejection V0 0.740 HYB05 0.111 HYB10 0.113 HYB20 0.097 G10 0.107  0.1 min 
+2026-09-20 19:11:53  [10/22] logit_clean_n5000      n=5000  R=1000  gates 0/0  rejection V0 0.048 HYB05 0.050 HYB10 0.041 HYB20 0.048 G10 0.051  0.1 min 
+2026-09-20 19:11:56  [11/22] probit_C1_r005_n1000   n=1000  R=1000  gates 0/0  rejection V0 0.072 HYB05 0.076 HYB10 0.073 HYB20 0.065 G10 0.063  0.0 min 
+2026-09-20 19:11:58  [12/22] probit_clean_n1000     n=1000  R=1000  gates 0/0  rejection V0 0.074 HYB05 0.079 HYB10 0.086 HYB20 0.078 G10 0.079  0.0 min 
+2026-09-20 19:12:07  [13/22] probit_clean_n5000     n=5000  R=1000  gates 0/0  rejection V0 0.277 HYB05 0.240 HYB10 0.178 HYB20 0.145 G10 0.236  0.1 min 
+2026-09-20 19:12:10  [14/22] cloglog_C1_r005_n1000  n=1000  R=1000  gates 0/0  rejection V0 0.800 HYB05 0.791 HYB10 0.774 HYB20 0.690 G10 0.773  0.0 min 
+2026-09-20 19:12:12  [15/22] cloglog_clean_n1000    n=1000  R=1000  gates 0/0  rejection V0 0.818 HYB05 0.804 HYB10 0.769 HYB20 0.670 G10 0.770  0.0 min 
+2026-09-20 19:12:21  [16/22] cloglog_clean_n5000    n=5000  R=1000  gates 0/0  rejection V0 1.000 HYB05 1.000 HYB10 1.000 HYB20 1.000 G10 1.000  0.1 min 
+2026-09-20 19:12:27  [17/22] stk_long_n1000         n=1000  R=1000  gates 0/0  rejection V0 0.152 HYB05 0.153 HYB10 0.147 HYB20 0.143 G10 0.135  0.1 min 
+2026-09-20 19:12:32  [18/22] stk_short_n1000        n=1000  R=1000  gates 0/0  rejection V0 0.883 HYB05 0.876 HYB10 0.852 HYB20 0.752 G10 0.840  0.1 min 
+2026-09-20 19:12:38  [19/22] stk_asym_n1000         n=1000  R=1000  gates 0/0  rejection V0 0.999 HYB05 0.997 HYB10 0.995 HYB20 0.985 G10 0.997  0.1 min 
+2026-09-20 19:12:44  [20/22] cauchit_n1000          n=1000  R=1000  gates 0/0  rejection V0 0.232 HYB05 0.221 HYB10 0.199 HYB20 0.165 G10 0.204  0.1 min 
+2026-09-20 19:12:50  [21/22] t4_n1000               n=1000  R=1000  gates 0/0  rejection V0 0.075 HYB05 0.076 HYB10 0.076 HYB20 0.059 G10 0.085  0.1 min 
+2026-09-20 19:12:55  [22/22] loglog_n1000           n=1000  R=1000  gates 0/0  rejection V0 0.709 HYB05 0.690 HYB10 0.628 HYB20 0.512 G10 0.678  0.1 min 
+2026-09-20 19:12:55  block 9R2: run finished 

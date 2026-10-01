@@ -1,0 +1,52 @@
+{
+  "title": "Reproducibility archive: A grouped calibration test for logistic regression that tolerates a few corrupted records",
+  "upload_type": "dataset",
+  "version": "1.0.0",
+  "language": "eng",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Ebrahim, Ebrahim Khaled",
+      "affiliation": "Department of Applied Statistics, Alexandria University, Egypt",
+      "orcid": "0009-0006-7839-8778"
+    },
+    {
+      "name": "Hussein, Osama Abd El-Aziz",
+      "affiliation": "Department of Applied Statistics, Alexandria University",
+      "orcid": "0000-0002-6576-4912"
+    },
+    {
+      "name": "El-Kotory, Ahmed",
+      "affiliation": "Department of Applied Statistics, Alexandria University, Egypt",
+      "orcid": "0009-0000-1485-0768"
+    }
+  ],
+  "description": "<p>Pre-declarations, simulation code, deposited per-replicate results and manuscript source for the study of the directed grouped goodness-of-fit test (EDGE) for logistic regression under corrupted predictions.</p><p>Every block of the study was declared and cryptographically hashed before any of its scenarios was computed; the declarations and their hashes are included, and the archive refuses to assemble if a declaration no longer matches its frozen hash. The deposit holds one file per scenario with one row per replicate and one column per test, so every rejection rate reported in the paper can be recomputed without re-running the simulations. Blocks added after the main study carry an identity gate that recomputes the published test on regenerated data and rejects the result unless it matches the stored p-value to 1e-8.</p><p>Contents: declarations with hashes; the study's R code (data generators, test battery, block runners, self-tests, analyses); the declared analysis files behind every table; the per-replicate deposits of the reported blocks; and the LaTeX source, generated tables, figures and compiled PDF of the manuscript. Code is licensed GPL-3 to match the accompanying R package ebrahim.gof; declarations, results and text are CC BY 4.0.</p>",
+  "keywords": [
+    "goodness-of-fit",
+    "logistic regression",
+    "calibration",
+    "clinical prediction model",
+    "contaminated data",
+    "Hosmer-Lemeshow test",
+    "reproducibility",
+    "pre-declaration",
+    "simulation study"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.32614/CRAN.package.ebrahim.gof",
+      "relation": "isSupplementedBy",
+      "resource_type": "software",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.24432/C5230J",
+      "relation": "references",
+      "resource_type": "dataset",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "The per-replicate deposits of the main power battery (blocks 1a, 1b and 2 to 7, about 500 MB) are not included; the declared analysis files generated from them are included in full, and they can be regenerated exactly from the runners and the stored seeds."
+}

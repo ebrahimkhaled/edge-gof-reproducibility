@@ -1,0 +1,28 @@
+## A. Choosing unit or sqrt(V_g) weighting (the author asked for an empirical choice)
+
+**Candidates, per basis.** For each of EDGE-poly3 (default), EDGE-sym (new, column eta|eta| at the group-mean
+logit) and EDGE-stk:
+- *unit form*: the current construction, S = r'P_Z r, weighted chi-square null (Satterthwaite/Imhof);
+- *score form*: columns multiplied by sqrt(V_g), statistic u'I^-1 u with I the post-fit information of the
+  weighted columns, plain chi-square on the column rank.
+
+**Eligibility (validity gate).** A variant is eligible only if, in every null cell of the battery, its realised size
+at alpha = 0.05 lies within three Monte Carlo standard errors of 0.05 or is conservative (below), and at
+alpha = 0.01 it does not exceed 0.01 by more than three standard errors. A variant that fails the gate in any cell is
+reported and not chosen.
+
+**Primary criterion.** Macro-averaged size-adjusted power at alpha = 0.05: average over the alternative cells within
+each departure family first, then over families with equal weight. Families: (1) symmetric-tail links (probit,
+cauchit, t4); (2) asymmetric links (cloglog, loglog, Stukel asymmetric); (3) Stukel symmetric-family links (heavy,
+light); (4) omitted terms (quadratic, binary interaction, continuous interaction); (5) rough misfit (oscillation,
+sawtooth); (6) off-index (crossover). Each family is averaged over its designs (base, high AUC, low event rate,
+where run) and sample sizes.
+
+**Decision.** Chosen separately for each basis:
+1. If one eligible variant has a macro-average higher by at least 0.014 (the paper's tie margin), it is chosen, unless
+   it loses more than 0.10 against the other variant in any single family average, in which case the other variant is
+   chosen.
+2. Otherwise (difference below 0.014) the unit form is kept, for continuity with the published definition.
+
+Both variants of every basis are reported in Supporting Information whatever is chosen.
+

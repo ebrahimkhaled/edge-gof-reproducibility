@@ -1,0 +1,152 @@
+% =====================================================================
+% EDGE paper 3 --- Statistics in Medicine (Wiley NJD / USG class).
+% Restructured from paper 2 (2026-09-30): same study and numbers, new story order
+% (calibration -> grouping -> its cost -> the ungrouped escape and its fragility -> EDGE),
+% mechanism before the simulations, hypothesis labels moved to Supporting Information.
+% Build: sh build.sh (pdflatex -> bibtex -> fix_bbl.py -> pdflatex x2)
+% =====================================================================
+\documentclass[ASNA]{USG}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\graphicspath{{figures/}{./figures/}{images/}{./images/}}
+\makeatletter
+\def\input@path{{tables/}{sections/}}
+\makeatother
+\usepackage{adjustbox}
+\usepackage[table]{xcolor}
+
+\providecommand{\qed}{\ensuremath{\square}}
+
+% --- EDGE notation, identical to the software and the companion papers
+\newcommand{\pibar}{\overline{\hat{\pi}}}
+\newcommand{\DEFp}[1]{\textsf{EDGE-poly}\ensuremath{_{#1}}}
+\newcommand{\DEFsym}{\textsf{EDGE-sym}}
+\newcommand{\DEFstk}{\textsf{EDGE-stk}}
+\newcommand{\DEFname}{\textsf{EDGE}}
+\newcommand{\EFname}{\textsf{HL}$_F$}
+\newcommand{\HLname}{\textsf{HL}}
+
+\articletype{Research Article}%
+\received{}\revised{}\accepted{}
+\journal{Statistics in Medicine}
+\copyyear{2026}\volume{00}\startpage{1}\articledoi{10.1002/sim.0000}
+
+% --- Remove the Wiley demo-template artifacts on the title page ---
+\makeatletter
+\def\@@articletype{%
+  \rule[-4\@p@t]{4\@p@t}{15\@p@t}%
+  \hskip -0\@p@t%
+  {\arttypefont\bf\uppercase{\letterspace to 1.15\naturalwidth{\@articletype}}}%
+}%
+\makeatother
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@maketitle}{\includegraphics[width=56mm]{allergy.eps}}{}{}{}
+\makeatother
+
+\begin{document}
+
+\title{A grouped calibration test for logistic regression that tolerates a few corrupted records}
+
+\author[1]{Ebrahim Khaled Ebrahim}[https://orcid.org/0009-0006-7839-8778]
+\author[1]{Osama Abd El-Aziz Hussein}[https://orcid.org/0000-0002-6576-4912]
+\author[1]{Ahmed El-Kotory}[https://orcid.org/0009-0000-1485-0768]
+\authormark{EBRAHIM \textsc{et al.}}
+\titlemark{A calibration test that tolerates corrupted records}
+
+\address[1]{\orgdiv{Department of Applied Statistics}, \orgname{Alexandria University},
+\orgaddress{\country{Egypt}}}
+
+\corres{Ebrahim Khaled Ebrahim, Department of Applied Statistics, Alexandria University, Egypt.
+\email{ebrahimkhaled@alexu.edu.eg}}
+
+\keywords{Calibration | Clinical prediction model | Contaminated data | Goodness-of-fit |
+Hosmer--Lemeshow test | Logistic regression}
+
+\abstract[Abstract]{The Hosmer--Lemeshow calibration test groups patients by predicted risk for
+a valid reference and loses power that more groups cannot recover. Later tests weight each record's
+residual alone, which makes them fragile: on an otherwise correct model, one record in a thousand with a
+corrupted covariate raises the false-alarm rate of Stukel's score test from $5\%$ to $12\%$, and ten to
+$63\%$.
+Pooling on equal-size groups bounds a wrong record's influence, dividing its residual by its groupmates'
+variance; without pooling, the same directions are as fragile as Stukel's test after a refit. EDGE, the test proposed
+here, projects the grouped residuals onto a small basis of calibration shapes. Its degrees of freedom do
+not depend on the number of groups, so the partition becomes a setting, fine-grained for power and
+coarse when records may be wrong, and its reference needs no resampling. In a prespecified simulation
+EDGE was comparable in power to Stukel's test on clean data and $0.064$ more powerful on average than the
+ten-group Hosmer--Lemeshow test. With one and ten exaggerated covariates in a thousand its false-alarm rates were $0.056$ and $0.097$,
+and with ten groups below $0.10$ up to about ten exaggerated or five reversed. In external validation, at ten groups, its average power was that of Cox's
+recalibration test and the GiViTI belt, and its false-alarm rate stayed below $0.10$ with ten reversed
+records in a thousand, where theirs did not. In a $70{,}000$-patient cohort its verdict did not change with the partition.}
+
+\maketitle
+
+\setcounter{secnumdepth}{3}
+
+\input{sections/01_introduction}
+\input{sections/02_test}
+\input{sections/03_mechanism}
+\input{sections/04_design}
+\input{sections/05_power}
+\input{sections/06_corrupted}
+\input{sections/07_realdata}
+\input{sections/08_discussion}
+\input{sections/09_appendix}
+
+\bmsubsection*{Author Contributions}
+\textbf{Ebrahim Khaled Ebrahim:} conceptualisation; methodology; formal analysis; software;
+investigation; data curation; visualisation; writing, original draft. \textbf{Osama Abd El-Aziz
+Hussein:} supervision; validation; writing, review and editing. \textbf{Ahmed El-Kotory:} supervision;
+project administration; validation; writing, review and editing. All authors read and approved the
+final manuscript.
+
+\bmsubsection*{Financial Disclosure}
+This research received no specific grant from any funding agency in the public, commercial or
+not-for-profit sectors.
+
+\bmsubsection*{Conflict of Interest}
+The authors declare no conflict of interest. The R package \texttt{ebrahim.gof}, which implements the
+test proposed here and several of its comparators, is written and maintained by the first author and
+is distributed free of charge under the GPL-3 licence.
+
+\bmsubsection*{Ethics Statement}
+This work required no ethical approval. It reports a simulation study together with an analysis of
+the Diabetes 130-US Hospitals data \citep{clore2014uci}, a de-identified public data set released for
+secondary research by the UCI Machine Learning Repository; no individual patient was contacted and no
+identifiable data were used.
+
+\bmsubsection*{Data Availability Statement}
+No new patient data were generated. The clinical data analysed in Section~\ref{sec:realdata} are
+publicly available from the UCI Machine Learning Repository \citep{clore2014uci} and are described by
+\citet{strack2014impact}; the exclusion and preparation applied to them are in the archive below.
+
+Everything else this paper reports is deposited in a public archive \citep{edge2_repro_2026}: the
+study specifications with the SHA-256 hashes that fixed them before any result was computed, the
+simulation code, the per-replicate $p$-values of every scenario, and the scripts that build every
+table and figure.
+
+The tests are implemented in the R package \texttt{ebrahim.gof} \citep{ebrahim2025gof}, available from
+CRAN, where a single call to \texttt{run.all.gof()} runs the whole battery and returns one row a test,
+and \texttt{run.all.external()} does the same for frozen predictions.
+
+\bmsubsection*{Supporting Information}
+Additional supporting information may be found online in the Supporting Information section at the
+end of this article: S0, the comparisons specified before the study was run and their outcomes; S1,
+the choice of weighting; S2, the three further corruptions; S3, the resampling tests under
+corruption; S4, the robust fit in full; S5, partitions that pool only the extreme groups, and the
+remedies that remove them; S6, the false alarms of every test under the exaggerated covariate;
+S7, external validation against the usual tests; S8, EDGE on streaming data, with its proof; S9, power by departure family; S10, what
+protects a test; S11, the proof of Theorem 2.
+
+\bmsubsection*{Use of Artificial Intelligence Tools}
+During the preparation of this manuscript, the authors used a large-language-model assistant
+(Claude, Anthropic) to help draft and edit the wording and \LaTeX{} of the text. The authors
+reviewed and edited all AI-assisted text and take full responsibility for the content of the
+publication.
+
+\bibliography{refs}
+
+\end{document}

@@ -1,0 +1,11 @@
+cell,n,k,test,rejection
+g_n1000_k00,1000,0,Stk.joint,0.05
+g_n1000_k05,1000,5,Stk.joint,0.363
+g_n1000_k10,1000,10,Stk.joint,0.593
+g_n1000_k25,1000,25,Stk.joint,0.887
+g_n1000_k50,1000,50,Stk.joint,0.982
+g_n5000_k00,5000,0,Stk.joint,0.055
+g_n5000_k05,5000,5,Stk.joint,0.253
+g_n5000_k10,5000,10,Stk.joint,0.43
+g_n5000_k25,5000,25,Stk.joint,0.804
+g_n5000_k50,5000,50,Stk.joint,0.981

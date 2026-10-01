@@ -1,0 +1,29 @@
+\begin{table}[htbp]\centering\small
+\caption{What protects a test. Rejection rate at $5\%$ on the same data sets, $1000$ replicates a row:
+false alarms under a correct model, with $k$ records carrying the covariate multiplied by $4$ or $-4$
+(shaded above $0.10$), and size-adjusted power under misfit (last six rows). EDGE at the default
+partition and at ten groups; HL, the Hosmer--Lemeshow statistic at ten groups; HH, the weighted grouped
+tests of Hosmer and Hjort with their general-purpose weight; Twin, the ungrouped score test for the
+cubic directions of EDGE in the predicted risk; EDGE$_n$, EDGE with one record a group ($n\le1000$);
+Spz, Spiegelhalter's $z$, whose raw rate is $0$ throughout and which is shown at its own realised level.}
+\label{tab:tw}
+\resizebox{\textwidth}{!}{\begin{tabular}{llrrrrrrrrrrrrr}\hline
+Design & $n$ & Setting & EDGE & EDGE$_{10}$ & HL & HH$_{\mathrm{HL}}$ & HH$_{X^2}$ & Twin & EDGE$_n$ & Spz & Stukel & cubic & GiViTI \\ \hline
+two covariates & 1000 & correct model & 0.063 & 0.059 & 0.052 & 0.055 & 0.055 & 0.057 & 0.057 & 0.050 & 0.063 & 0.058 & 0.049 \\
+two covariates & 1000 & $\times4$, $k=1$ & 0.047 & 0.051 & 0.042 & 0.052 & 0.059 & \cellcolor{black!12}0.166 & \cellcolor{black!12}0.148 & \cellcolor{black!12}0.118 & \cellcolor{black!12}0.147 & \cellcolor{black!12}0.149 & \cellcolor{black!12}0.111 \\
+two covariates & 1000 & $\times4$, $k=10$ & \cellcolor{black!12}0.101 & 0.066 & 0.049 & \cellcolor{black!12}0.183 & \cellcolor{black!12}0.271 & \cellcolor{black!12}0.641 & \cellcolor{black!12}0.594 & \cellcolor{black!12}0.546 & \cellcolor{black!12}0.595 & \cellcolor{black!12}0.454 & \cellcolor{black!12}0.375 \\
+two covariates & 1000 & $\times-4$, $k=1$ & 0.051 & 0.041 & 0.043 & 0.073 & \cellcolor{black!12}0.141 & \cellcolor{black!12}0.468 & \cellcolor{black!12}0.379 & \cellcolor{black!12}0.303 & \cellcolor{black!12}0.378 & \cellcolor{black!12}0.393 & \cellcolor{black!12}0.278 \\
+two covariates & 1000 & $\times-4$, $k=10$ & \cellcolor{black!12}0.406 & \cellcolor{black!12}0.210 & 0.093 & \cellcolor{black!12}0.676 & \cellcolor{black!12}0.815 & \cellcolor{black!12}0.992 & \cellcolor{black!12}0.986 & \cellcolor{black!12}0.987 & \cellcolor{black!12}0.986 & \cellcolor{black!12}0.978 & \cellcolor{black!12}0.966 \\
+two covariates & 5000 & correct model & 0.049 & 0.050 & 0.027 & 0.037 & 0.038 & 0.052 & -- & 0.050 & 0.053 & 0.048 & 0.051 \\
+two covariates & 5000 & $\times4$, $k=50$ & \cellcolor{black!12}0.745 & 0.096 & 0.069 & \cellcolor{black!12}0.456 & \cellcolor{black!12}0.615 & \cellcolor{black!12}0.989 & -- & \cellcolor{black!12}0.966 & \cellcolor{black!12}0.973 & \cellcolor{black!12}0.953 & \cellcolor{black!12}0.879 \\
+two covariates & 5000 & $\times-4$, $k=25$ & \cellcolor{black!12}0.777 & \cellcolor{black!12}0.236 & \cellcolor{black!12}0.120 & \cellcolor{black!12}0.819 & \cellcolor{black!12}0.946 & \cellcolor{black!12}1.000 & -- & \cellcolor{black!12}1.000 & \cellcolor{black!12}1.000 & \cellcolor{black!12}1.000 & \cellcolor{black!12}1.000 \\
+twelve covariates & 2000 & correct model & 0.045 & 0.065 & 0.050 & 0.065 & 0.070 & 0.057 & -- & 0.050 & 0.043 & 0.046 & 0.042 \\
+twelve covariates & 2000 & $\times4$, $k=25$ & \cellcolor{black!12}0.102 & 0.055 & 0.054 & 0.061 & 0.072 & \cellcolor{black!12}0.218 & -- & \cellcolor{black!12}0.108 & \cellcolor{black!12}0.275 & \cellcolor{black!12}0.217 & \cellcolor{black!12}0.134 \\
+twelve covariates & 2000 & $\times-4$, $k=10$ & 0.091 & 0.048 & 0.058 & 0.075 & 0.081 & \cellcolor{black!12}0.292 & -- & \cellcolor{black!12}0.134 & \cellcolor{black!12}0.315 & \cellcolor{black!12}0.306 & \cellcolor{black!12}0.204 \\
+two covariates & 1000 & cloglog truth & 0.738 & 0.708 & 0.382 & 0.286 & 0.233 & 0.684 & 0.756 & 0.987 & 0.765 & 0.837 & 0.874 \\
+two covariates & 1000 & top 2\%, risk 0.6 of prediction & 0.416 & 0.194 & 0.166 & 0.224 & 0.209 & 0.742 & 0.469 & 0.380 & 0.432 & 0.509 & 0.422 \\
+two covariates & 1000 & C2, $k=10$ & 0.601 & 0.261 & 0.222 & 0.334 & 0.323 & 0.988 & 0.727 & 0.586 & 0.673 & 0.813 & 0.683 \\
+two covariates & 5000 & top 2\%, risk 0.8 of prediction & 0.624 & 0.292 & 0.315 & 0.364 & 0.372 & 0.886 & -- & 0.661 & 0.578 & 0.718 & 0.526 \\
+twelve covariates & 2000 & cloglog truth & 0.552 & 0.379 & 0.232 & 0.256 & 0.241 & 0.425 & -- & 0.225 & 0.545 & 0.622 & 0.614 \\
+twelve covariates & 2000 & omitted interaction & 0.464 & 0.276 & 0.155 & 0.209 & 0.189 & 0.364 & -- & 0.260 & 0.490 & 0.483 & 0.587 \\
+\hline\end{tabular}}\end{table}

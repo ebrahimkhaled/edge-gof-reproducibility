@@ -1,0 +1,124 @@
+\section{The proposed test statistic}\label{sec:test}
+
+\subsection{Grouped residuals and a basis of calibration shapes}
+
+Sort the $n$ observations by fitted risk $\hat\pi_i$, ties in the order of the records, and cut them
+into $G$ groups of equal frequency, as the Hosmer--Lemeshow test does. Write $O_g$ for the events observed in group $g$,
+$E_g=\sum_{i\in g}\hat\pi_i$ for those expected, $V_g=\sum_{i\in g}\hat\pi_i(1-\hat\pi_i)$, $\pibar_g$
+for the mean fitted risk of the group, and
+\begin{equation}\label{eq:resid}
+  r_g=\frac{O_g-E_g}{\sqrt{V_g}},\qquad r=(r_1,\dots,r_G)^\top .
+\end{equation}
+The Hosmer--Lemeshow statistic is $\lVert r\rVert^2$. It responds to a departure in any of the $G$
+directions of residual space and spends a degree of freedom on each.
+
+Suppose the fitted model is wrong through a misspecified link or an omitted smooth term, so that the
+true event rate among patients of predicted risk $\pibar_g$ is $\pibar_g+\delta(\pibar_g)$ for a smooth
+function $\delta$. Then $\mathbb{E}[r_g]\approx|g|\,\delta(\pibar_g)/\sqrt{V_g}$ is itself a smooth
+function of $\pibar_g$, and a smooth function sampled at $G$ ordered points is described almost
+entirely by a few shape components: a tilt, a bend and a second bend. The mean of $r$ therefore lies
+close to a low-dimensional subspace, while the Hosmer--Lemeshow statistic weights all $G$ directions
+equally.
+
+Let $Z\in\mathbb{R}^{G\times d}$, with $d$ small, have columns that are smooth functions of the
+calibration position. The test statistic is the squared length of the projection of $r$ onto the
+span of $Z$,
+\begin{equation}\label{eq:stat}
+  S=r^\top Z(Z^\top Z)^{-1}Z^\top r=\lVert P_Z r\rVert^2 ,
+  \qquad P_Z=Z(Z^\top Z)^{-1}Z^\top .
+\end{equation}
+The choice $Z=I_G$ returns the Hosmer--Lemeshow statistic, and the single column
+$a_g=(1-2\pibar_g)/\sqrt{V_g}$ returns, up to scaling, the first-order correction of
+\citet{osius1992normal} and \citet{farrington1996}. The groups and the residual vector are those of
+the Hosmer--Lemeshow test; only the final combination differs. The weights act on groups, through the
+basis, and never on the residual of an individual record, which is what Section~\ref{sec:mechanism}
+turns on.
+
+\subsection{The bases}\label{sec:bases}
+
+Three bases are used, each a choice of alternative rather than a tuning parameter. With
+$\bar\eta_g=\operatorname{logit}(\pibar_g)$:
+\begin{description}
+\item[\DEFp{3}, the default.] Orthogonal polynomials $P_1,P_2,P_3$ of $\pibar_g$, the tilt, bend and
+double bend of the calibration curve; $d=3$.
+\item[\DEFstk{}.] The grouped form of Stukel's constructed variables, $\bar\eta_g$,
+$\bar\eta_g^2\mathbf 1\{\bar\eta_g\ge0\}$ and $-\bar\eta_g^2\mathbf 1\{\bar\eta_g<0\}$, which let the link
+bend separately in each tail; $d=3$. It is a grouped version of Stukel's score test
+\citep{stukel1988generalized}.
+\item[\DEFsym{}.] The single column $\bar\eta_g|\bar\eta_g|$, the symmetric member of Stukel's
+family, in which both tails bend together; $d=1$.
+\end{description}
+We write EDGE for the test in general and name the basis where it matters.
+
+The columns of $Z$ may be used as they stand, the \emph{unit} form, or first scaled by $\sqrt{V_g}$,
+the \emph{score} form, in which $Z^\top r$ is the score for adding the grouped shape to the model. The
+score form moves weight towards the extreme risk groups. The unit form with the cubic basis is the
+default and is used throughout unless stated. With the symmetric basis the score form is the better
+choice when discrimination is high (an area under the curve near $0.9$ in our designs) and when a
+covariate is strongly skewed, provided the data are clean: because it leans on the extreme groups, it
+is the form most affected by corrupted records (Supporting Information S1).
+
+\subsection{The null distribution}\label{sec:null}
+
+The model is fitted to the same data, so $r$ is not a vector of independent standard normals. With
+$X$ the model matrix, $W$ the fitted weights and $U$ the $G\times p$ matrix with rows
+$U_g=\sum_{i\in g}\hat\pi_i(1-\hat\pi_i)x_i^\top/\sqrt{V_g}$,
+\begin{equation}\label{eq:omega}
+  r\ \dot\sim\ N(0,\Omega),\qquad \Omega=I_G-U(X^\top WX)^{-1}U^\top .
+\end{equation}
+Fitting the model absorbs part of each group's residual, so the diagonal of $\Omega$ is below one.
+When a model is validated on new data with its coefficients frozen, nothing is estimated from those
+data and $\Omega=I_G$. No score equation then absorbs the overall level, so a constant column is added
+to the basis and the statistic has $d+1$ degrees of freedom; we call this the external mode. It uses
+only the outcomes and the predicted probabilities, so it applies to the predictions of any model,
+logistic or not, provided they were produced without the validation data.
+
+\begin{theorem}[Null distribution]\label{thm:null}
+Under the null hypothesis and conditions (A1)--(A4) of Appendix~\ref{app:proofs},
+\begin{equation}\label{eq:wchi2}
+  S\ \dot\sim\ \sum_{j=1}^{d}\lambda_j\,\chi^2_{1,j},\qquad
+  \{\lambda_j\}=\text{eigenvalues of }(Z^\top Z)^{-1}Z^\top\Omega Z ,
+\end{equation}
+with $0\le\lambda_j\le1$ for every $j$.
+\end{theorem}
+
+The $p$-value is computed from the Satterthwaite scaled chi-squared approximation to this weighted
+sum \citep{satterthwaite1946}, which is exact when $d=1$; Imhof's numerical inversion \citep{imhof1961}
+is available when more accuracy is wanted. Every simulation in this paper uses the Satterthwaite
+approximation. Neither computation needs a second model fit or resampling.
+
+\subsection{The partition as a setting}\label{sec:partitionchoice}
+
+\begin{theorem}[Growing partition]\label{thm:growingG}
+Let the basis columns be the values at the group positions of fixed, continuously differentiable,
+linearly independent functions on $[0,1]$, and let $G=G_n\le n$ with $G_n/\sqrt{\log n}\to\infty$.
+Under the null hypothesis and conditions (A2), (A3) and (A4$'$) of Appendix~\ref{app:proofs}, $S$
+converges to a weighted sum of $d$ chi-squared variables on one degree of freedom whose weights, given
+in \eqref{eq:growingG}, do not depend on $G_n$. No lower bound on the number of observations per
+group is required.
+\end{theorem}
+
+The rate condition is mild: the default partition below grows linearly in $n$ and satisfies it.
+
+The Hosmer--Lemeshow statistic spends one degree of freedom per group, so a finer partition dilutes
+it. The test statistic spends $d$ degrees of freedom whatever $G$ is, so the number of groups
+becomes a setting that the analyst chooses, and we use two. The \emph{default partition} refines with
+the sample, $G=\max(10,\lceil n/25\rceil)$, about twenty-five patients a group (the simulation study
+rounded $n/25$ to the nearest integer, which moves the partition by at most one group); on clean data it gives
+EDGE more power than ten groups (Section~\ref{sec:verdicts}). When records may be wrong,
+the \emph{ten-group partition} keeps many clean records in the extreme groups, where corrupted records
+collect, and protects the cubic basis much further (Section~\ref{sec:edgefr}); the symmetric basis is
+better protected at the default partition against reversed records, though not against many
+exaggerated ones (Section~\ref{sec:severity}). Pooling only the two extreme groups protects no better
+than ten groups (Supporting Information S5).
+
+In the R package \texttt{ebrahim.gof} \citep{ebrahim2025gof} the test is
+\texttt{edge.gof(fit)} for a fitted \texttt{glm}. It reports two rows: the verdict at the default
+partition and, as a robustness check, the same test at ten groups; its degrees of freedom are the
+effective $\nu$ of the Satterthwaite reference. \texttt{G = 10} alone gives the ten-group partition, \texttt{basis = "sym"} or \texttt{"stukel"} for the other bases and
+\texttt{weights = "score"} for the score form. For frozen predictions,
+\texttt{edge.gof(y, predicted\_probs = p, external = TRUE, G = 10)} computes the external-mode
+statistic at ten groups, with $\Omega=I_G$ and the constant column added, and reproduces every statistic
+of Section~\ref{sec:realdata} at its own $G$; \texttt{run.all.external(y, p)} runs it at ten groups and at
+the default partition beside the other external-validation tests of Supporting Information S7
+(version 2.9.0 onwards).

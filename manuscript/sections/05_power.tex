@@ -1,0 +1,164 @@
+\section{Power on clean data}\label{sec:power}
+
+\subsection{Level and choice of basis}\label{sec:size}\label{sec:basis}
+
+Table~\ref{tab:size} gives the size of each basis and weighting over the $131$ null scenarios. The
+median is $0.048$ to $0.050$ in every form and the range is $0.013$ to $0.064$. In the unit form the
+cubic basis falls outside a band of three Monte Carlo standard errors in one scenario of $131$, at the
+$5\%$ level, the symmetric basis in one, at the $1\%$ level, and the Stukel basis in three, all at
+$1\%$. The score form is less well behaved, failing four scenarios with the cubic basis and ten with
+the Stukel basis. The rule fixed in advance therefore selected the unit form for all three bases.
+
+\input{tab_size}
+
+Table~\ref{tab:families} gives the mean size-adjusted power of the three bases in each departure
+family. No basis leads everywhere. The cubic basis leads on asymmetric links, by $0.25$ over the
+symmetric basis, and on the off-index scenarios; the symmetric basis leads on symmetric tails and on
+rough misfit. Averaged over the six families the cubic basis leads narrowly, $0.452$ against $0.442$
+and $0.425$, so it is the default, and an analyst who knows which departure they fear should choose
+the basis from the row for that family rather than from the average.
+
+\input{tab_families}
+
+\subsection{The partition, Stukel's test and the calibration belt}\label{sec:verdicts}
+
+\paragraph{Refining the partition} On clean data the default partition gives EDGE more
+power than ten groups: it leads or ties the ten-group form in $155$ of the $158$ scenarios, with a mean
+gain of $0.017$ in size-adjusted power. Against the partition tests the gain is larger, because the
+Hosmer--Lemeshow statistic cannot use a finer partition without spending a degree of freedom on each
+new group. Against the best of four partition tests (the Hosmer--Lemeshow statistic, its Farrington
+correction, its equal-width form and the Pigeon--Heyse test), EDGE at the default
+partition leads or ties in all $21$ scenarios that the specification selected as detectable and not
+saturated; with ten groups for every test, in $17$ of the $19$ selected for that comparison.
+
+\paragraph{Against Stukel's test} Stukel's score test is the established directed test for this
+problem. The default basis stays within $0.02$ of Stukel's joint score in mean size-adjusted power in
+every departure family, and over all $158$ scenarios it is $0.011$ behind (Monte Carlo $95\%$ interval
+$0.010$ to $0.013$). On
+the symmetric-tail family, the departure Stukel's one-parameter score was built for, the one-parameter
+score is ahead of the default basis by $0.062$; there the symmetric basis is the one to use,
+and in its score form it matches the one-parameter score, $0.002$ behind on average. In its unit form it
+is level with Stukel's joint score on the same family, $0.005$ ahead. On clean data EDGE is
+therefore comparable to Stukel's test; they differ in how they behave under corrupted records
+(Section~\ref{sec:contamination}).
+
+\paragraph{Against the calibration belt} On the symmetric-tail family the cubic basis leads the GiViTI
+belt by $0.105$ on average, but not in every regime: in the scenarios with $12\%$ events the belt leads,
+by $0.152$ and $0.124$ in the two probit scenarios and by smaller margins in four others. On the
+asymmetric-link family the cubic basis is $0.075$ behind the belt. Both results have the same cause.
+When events are scarce, or when the calibration curve bends once and smoothly, a polynomial fitted to
+the whole risk scale uses information that a partition averages away. These are regimes in which the
+belt, or for the single bend the cubic calibration test, is the better test, and
+Section~\ref{sec:whennot} lists them as such.
+
+\subsection{Against the smoothing and resampling tests}\label{sec:rivals}
+
+Table~\ref{tab:rivals} gives raw rejection rates of le Cessie's smoothed test, the Liu projection test
+and BAGofT beside EDGE on the $20$ link and tail scenarios at $n\ge500$. Le Cessie's test
+holds its level in all ten matched null scenarios, between $0.040$ and $0.064$. On size-adjusted power
+over the same $500$ replicates, EDGE leads or ties le Cessie's test in $19$ of the $20$
+scenarios, is ahead after the Holm correction in $14$, and has mean power $0.451$ against $0.314$. It
+leads the projection test in $17$ scenarios and BAGofT in $18$, by up to $0.364$ and $0.630$. All three
+rivals lead it clearly in one scenario, the same one for all three: the crossover departure, in which
+the calibration curve crosses the diagonal twice. There le Cessie's test rejects $496$ of $500$
+replicates and the projection test $478$, against EDGE's $37$, and BAGofT rejects $155$ of
+$200$ against $18$.
+
+\input{tab_rivals}
+
+The same three tests were run on the families they are built for, omitted terms and rough misfit:
+le Cessie's test on the $56$ such scenarios with $n\le1000$, the projection test on the $19$ at
+$n=500$ and BAGofT on six of those. Every matched null held its level, between $0.025$ and $0.070$.
+Where the omitted term acts through the fitted risk, a quadratic term, EDGE leads or ties
+le Cessie's test in $18$ of $21$ scenarios; where it does not, an interaction, le Cessie's test leads in
+$19$ of $27$, and the projection test on all four continuous interactions. On the fastest
+oscillation and the sawtooth BAGofT reaches $1.000$ and $0.805$ against EDGE's $0.295$ and $0.045$. A
+basis of smooth shapes cannot follow a fast oscillation, and a test that learns its own partition can.
+
+At $n=200$, where the default partition is ten groups and there is nothing to refine,
+EDGE leads or ties le Cessie's test and the projection test in all six link and tail scenarios and
+BAGofT in five. Its mean size-adjusted power is $0.160$ against $0.111$ and $0.125$, and $0.098$
+against BAGofT's $0.073$ on the replicates BAGofT was run on. Two paired differences survive the Holm
+correction, both in its favour and both on the asymmetric Stukel design, where its size-adjusted power
+is $0.450$ against le Cessie's $0.330$ and $0.350$ against BAGofT's $0.185$.
+
+\subsection{All scenarios, and what each test costs}\label{sec:census}\label{sec:compute}
+
+Table~S7 of the Supporting Information gives, for each departure family, the mean difference in
+size-adjusted power between EDGE at its default setting and each comparator, with a Monte Carlo $95\%$
+interval. Over all $158$ scenarios EDGE is ahead of the Hosmer--Lemeshow statistic at ten groups by
+$0.064$ ($0.063$ to $0.066$): by $0.18$ on asymmetric links and symmetric tails, $0.13$ on the Stukel
+symmetric family and $0.07$ on omitted terms, and behind by $0.46$ on rough misfit, which a basis of
+smooth shapes cannot follow. It is level with Stukel's joint score ($-0.011$), the one-parameter score
+($-0.007$) and the cubic calibration test ($-0.008$), and $0.015$ ahead of the GiViTI belt, which leads by
+$0.07$ on asymmetric links and trails by $0.10$ on symmetric tails. The tie with the cubic calibration
+test is expected, because EDGE's default basis looks for the same shapes: a cubic in the predicted risk,
+where that test fits a cubic in the logit. The two tests ask the same question of clean data; they
+differ in how a record enters the answer, and that is what decides their behaviour when a few records
+are wrong (Section~\ref{sec:whatprotects}). Figure~\ref{fig:scenarios} shows the
+same comparison scenario by scenario and Figure~\ref{fig:census} by family; the counts in their strips
+use a margin of $0.01$, within which two tests cannot be told apart. Against the other grouped tests
+EDGE is behind in $14$ of the $80$ omitted-term scenarios, $10$ of the $13$ rough-misfit scenarios and
+both off-index scenarios; $20$ of these $26$ losses are to Xie's and Tsiatis's tests, which group on the
+covariates.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{Fig13_scenarios}
+\caption{EDGE at its default setting against every comparator, one point per alternative scenario. Both
+axes are size-adjusted power, so each test is read at its own realised level; a point in the green
+half is a scenario in which EDGE is ahead. The strip gives the number of scenarios in
+which it leads or ties, within $0.01$. The first panel takes, in each scenario, the better of the
+Hosmer--Lemeshow statistic and its Farrington correction at ten groups; the second, the best of the
+equal-width Hosmer--Lemeshow statistic, the Pigeon--Heyse, Tsiatis and Xie tests. Le Cessie's test and
+the two resampling tests were run on a subset of the scenarios, and the strip gives how many. Colour
+is the departure family.}
+\label{fig:scenarios}
+\end{figure}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{Fig14_census}
+\caption{The comparison of Figure~\ref{fig:scenarios} by departure family: each entry is the number of
+scenarios in which EDGE leads or ties the comparator in that row. The last column is the
+total over all families.}
+\label{fig:census}
+\end{figure}
+
+Figure~\ref{fig:cost} sets power on clean data against protection and cost, on one core with nothing
+else running. At $n=1000$ EDGE takes $4$ milliseconds, Stukel's joint score $1$, the
+Hosmer--Lemeshow statistic $2$, the cubic calibration test $5$ and the GiViTI belt $9$; le Cessie's test
+takes $5.6$ seconds, the projection test $35$ and BAGofT $392$, three to five orders of magnitude more.
+On the twenty scenarios of panel (a) the cubic calibration test ($0.477$) is slightly ahead of EDGE
+($0.440$) and Stukel's joint score ($0.446$) level with it, but neither survives one corrupted record in a thousand
+(Section~\ref{sec:contamination}). Among the protected tests EDGE has the most power: at ten groups
+$0.411$, against $0.267$ for the Hosmer--Lemeshow statistic, the only cheaper one, and $0.314$ for
+le Cessie's test, at more than a thousand times the cost in its published form. These panel (a) values
+use each test's full replicates; on the $500$ replicates of Table~\ref{tab:rivals} EDGE reads $0.451$
+(Section~\ref{sec:rivals}).
+
+The tests without resampling grow roughly in proportion to $n$: at $n=100{,}000$ EDGE takes half
+a second, more than Stukel's score and the Hosmer--Lemeshow statistic ($18$ and $120$ milliseconds)
+because it also builds the covariance of its partition. Le Cessie's test in its published form multiplies $n\times n$
+matrices and grows with the cube of $n$: $74$ seconds at $n=2000$ and $21$ minutes at $n=5000$, where EDGE
+takes $14$ milliseconds. The rates reported for le Cessie's test were computed with its implementation
+in \texttt{ebrahim.gof}, which gives the same statistic. BAGofT's cost is fixed by its design rather than by $n$: $(1+\textit{nsim})\times
+\textit{nsplits}$ model fits, ten minutes for one test at $n=2000$.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{Fig15_cost}
+\caption{Power, protection and cost of each test. (a)~Mean size-adjusted power on clean data
+over the twenty scenarios on which all eight tests were run (link and tail departures and one
+crossover), against the false-alarm rate when ten records in $1000$ carry a corrupted covariate and the
+model is otherwise correct (corruption C1, Section~\ref{sec:contamination}); the shaded strip is below
+$0.10$. Each label gives the median time for one data set at $n=1000$. The two resampling tests were
+not run with corrupted records. The power axis ranks the tests on one family only, the one in which a
+curve fitted to the whole risk scale is strongest; over all $158$ scenarios EDGE leads or
+ties the cubic calibration test in $123$ (Figure~\ref{fig:scenarios}), as expected of two tests that
+look for the same cubic shapes (Section~\ref{sec:census}). (b)~Median time against sample size, both axes
+logarithmic, on one core. Each rival is timed as published: BAGofT from its own package at its
+defaults, whose cost is $10{,}100$ model fits, le Cessie's test in its published $O(n^3)$ form, and the
+projection test from our implementation at $B=250$. The tests without resampling are timed over eleven
+repetitions, le Cessie's test over three at $n\le1000$; le Cessie's test at $n\ge2000$, the projection
+test at $n=1000$ and BAGofT are timed once.
+Colour gives the cost class in (a); EDGE is shown at the default partition and at ten groups.}
+\label{fig:cost}
+\end{figure}

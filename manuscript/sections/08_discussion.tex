@@ -1,0 +1,115 @@
+\section{Discussion}\label{sec:discuss}
+
+\subsection{What grouping still buys}\label{sec:asymmetry}
+
+Grouping was introduced so that a goodness-of-fit test for logistic regression would have a reference
+distribution. It also bounds the influence of a record whose prediction is wrong, because the record's
+residual is divided by the variance of its clean groupmates. The tests that left grouping behind to
+gain power lost that bound: the record-level tests lose their level with one corrupted record in a
+thousand (Section~\ref{sec:c1}). So do grouped tests whose extreme groups are small or that group on the
+covariates, and so do tests along bounded directions once the model is refitted
+(Section~\ref{sec:whatprotects}).
+Among the pooled tests compared here, EDGE is the most powerful on link and tail departures, and the Hosmer--Lemeshow statistic
+at ten groups holds its level further under reversed records (Section~\ref{sec:edgefr}).
+
+On clean data EDGE is comparable to Stukel's score test and the cubic calibration test.
+Its advantage is that it keeps its level when a few records are wrong, at a modest cost in
+power. The protection
+has a size, which depends on the error and the partition (Section~\ref{sec:edgefr}), and it does not
+extend to wrong outcomes, which a calibration test should detect. A grouped test that rejects while
+covariate errors are suspected is therefore reporting something other than those errors; the same
+test rejecting while outcome errors are suspected may be reporting them, and the data should be checked before the model is rebuilt. Tolerating a few
+wrong inputs is the right behaviour when the question is whether the model is right, at development
+and validation. Once the model is deployed, a patient whose input is wrong receives a wrong
+prediction whatever the model's calibration; finding that patient is the job of checks at data
+entry, not of a calibration test.
+
+\subsection{Recommended use}\label{sec:whentouse}
+
+\begin{enumerate}
+\item Use the cubic basis in its unit form at the default partition, $G=\max(10,\lceil n/25\rceil)$, and
+      report the calibration intercept and slope beside it; \texttt{edge.gof(fit)} reports it beside
+      ten groups.
+\item If the data are known to carry entry errors in the predictors, as routinely collected records
+      may, plan ten groups instead, \texttt{edge.gof(fit, G = 10)}: they tolerate about ten exaggerated
+      or five reversed records in $1000$ and ten reversed records in $5000$, at a cost of $0.017$ in mean
+      power and about half the power against misfit confined to the extreme risks. Decide this before
+      seeing the results. Whichever setting decides, if only the default partition rejects, check the
+      records in the extreme groups. If the suspected errors are reversals only, up to about ten in
+      $1000$, the symmetric basis at the default partition holds further; it fails against many
+      exaggerated records. If protection matters more than power, use the Hosmer--Lemeshow statistic at
+      ten groups. Beyond a few tens of corrupted records, clean the data; influence diagnostics do not
+      find them (Section~\ref{sec:whatprotects}).
+\item When the departure feared is a symmetric change in both tails, use the symmetric basis; on clean
+      data with high discrimination (an area under the curve near $0.9$) or a strongly skewed
+      covariate, in its score form, \texttt{edge.gof(fit, basis = "sym", weights = "score")}.
+\item When a frozen model, logistic or not, is validated on new patients, use the external mode at ten
+      groups, in which Proposition~\ref{prop:bounded} holds exactly because nothing is refitted:
+      \texttt{run.all.external(y, p)}, which reports it beside Cox's recalibration test and the
+      calibration intercept and slope. In the design studied its average power was that of Cox's test
+      and its false-alarm rate stayed below $0.10$ where that test's did not; Stukel's and the cubic
+      tests on the frozen linear predictor broke in the cohort experiment of Section~\ref{sec:realcorrupt}.
+\end{enumerate}
+
+\subsection{When another test is better}\label{sec:whennot}
+
+Table~\ref{tab:whennot} lists the settings in which the study found a better choice. In one of them
+the remedy is a different form of EDGE; in the others it is a different test. For each,
+we compared the best of EDGE's forms with the rival named.
+
+\begin{table}[htbp]\centering
+\caption{Settings in which another test, or another form of EDGE, is the better choice.
+Power comparisons are on clean data; the false-alarm rates quoted in the first two rows, and the last
+two rows, are under corrupted records.}
+\label{tab:whennot}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.26\textwidth}>{\raggedright\arraybackslash}p{0.21\textwidth}>{\raggedright\arraybackslash}p{0.44\textwidth}}\toprule
+Setting & Better choice & Evidence \\ \midrule
+Scarce events ($12\%$), clean data & GiViTI belt & The belt leads EDGE by up to $0.152$;
+but it reads $0.089$ false alarms at one corrupted record in $1000$ and $0.397$ at ten. \\
+A single smooth bend, clean data & Cubic calibration test or GiViTI belt & The cubic test leads in $15$
+of $21$ asymmetric-link scenarios (mean $0.741$, belt $0.744$, EDGE $0.669$; largest gap $0.208$); but it
+reads $0.127$
+and $0.482$ false alarms at one and ten corrupted records in $1000$, where EDGE reads $0.056$ and
+$0.097$. \\
+A curve that crosses the diagonal twice & BAGofT or le Cessie's test & BAGofT rejects $155$ of $200$
+replicates, EDGE $18$. \\
+Rough or oscillating misfit & BAGofT & $1.000$ and $0.805$ on the fastest oscillation and the sawtooth,
+against $0.438$ and $0.093$ for the best form of EDGE, the Stukel basis. \\
+An omitted interaction & Le Cessie's test & Leads in $11$ of $15$ binary and $8$ of $12$ continuous
+interaction scenarios. \\
+Symmetric tails, or a strongly skewed covariate & Symmetric basis, score form & Stukel's one-parameter
+score leads the default basis by $0.062$ on symmetric tails and the unit symmetric form by $0.252$ under
+a skewed covariate; the score form ties it on both ($-0.002$ on average over $32$ scenarios, $-0.007$
+to $+0.012$ over the four skewed ones, where its level is $0.049$ to $0.057$). \\
+Many reversed records, protection first & Hosmer--Lemeshow at ten groups & $0.099$ against $0.182$ for
+EDGE at ten groups with ten reversed records in $1000$, and $0.126$ against $0.249$ with
+twenty-five in $5000$; its power is lower. \\
+Tens of corrupted records & Clean the data & At fifty in $5000$ the default reads $0.740$ and ten groups
+$0.107$; at a hundred no setting holds, and a robust fit does not help. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Limitations and further work}\label{sec:limits}
+
+The study is a simulation over six departure families, with models of one to three covariates, five
+in the external-validation study and twelve in one design, and one real cohort fitted on its routinely
+recorded predictors. The corrupted-record results use one family of covariate error, a value multiplied by four or by
+minus four, with three other mechanisms reported beside it; errors correlated with the outcome were not
+examined. Robust tests were compared only in the form of Stukel's test and at $n=1000$, and the weighted grouped
+tests of \citet{hosmer2002goodness} only with their general-purpose weight. Proposition~\ref{prop:bounded} holds at
+fixed coefficients; when the model is refitted, the influence of a corrupted record through the fit is
+that of the maximum-likelihood estimator, which is measured here and not bounded. And the number of
+corrupted records the test tolerates is read from the measured surface: we had expected the protection
+at the default partition to hold over the whole range $0.1\%$ to $0.5\%$, and at the upper end it does
+not.
+
+In external mode the test already applies to any model that reports probabilities; in the
+development data the estimation adjustment $\Omega$ is derived here for logistic regression only, and
+its form for other models is left for further work. A quantity that predicts the whole partition surface of
+Figure~\ref{fig:partition} is still missing. The difference between wrong predictions and wrong
+outcomes suggests reading a grouped and an ungrouped test together, since their disagreement carries
+information about which kind of error is present. A frozen model can be monitored as patients arrive (Section~\ref{sec:stream}); a sequential reference
+that uses the dependence between looks, rather than spending the level over them, is left for further
+work.

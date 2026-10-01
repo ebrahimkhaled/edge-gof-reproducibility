@@ -1,0 +1,71 @@
+block 9b
+cells read: clean (100 reps), x4 (100 reps), x8 (100 reps)
+bound for B9b.1-3: 0.05 + 3 SE(B = 100) = 0.1154
+
+===== false-alarm rates (the model is correct for every uncorrupted record) =====
+               test clean    x4    x8
+             <char> <num> <num> <num>
+ EDGE.poly3.u.Grule  0.08  0.02  0.05
+               proj  0.08  0.06  0.22
+             BAGofT  0.06  0.01  0.05
+   EDGE.sym.u.Grule  0.05  0.06  0.20
+          Stk.joint  0.06  0.45  0.49
+           Stk.sym1  0.05  0.43  0.47
+             Stk.LR  0.07  0.33  0.41
+             GiViTI  0.07  0.29  0.37
+           Cubic.LR  0.06  0.35  0.40
+             HL.G10  0.02  0.00  0.06
+
+===== B9b.1: BAGofT's rate is at most 0.1154 in all three cells =====
+  clean: 0.060
+  x4: 0.010
+  x8: 0.050
+B9b.1 VERDICT: HOLDS  
+
+===== B9b.2: the projection test is at most 0.1154 in clean and x4, and above it in x8 =====
+  clean: 0.080
+  x4: 0.060
+  x8: 0.220
+B9b.2 VERDICT: HOLDS  
+
+===== B9b.3: EDGE-poly3 unit (rule G) is at most 0.1154 in all three cells =====
+  clean: 0.080
+  x4: 0.020
+  x8: 0.050
+B9b.3 VERDICT: HOLDS  
+
+===== rule 3: each rival against EDGE-poly3 unit on the same replicates (exact McNemar, Holm within 9b) =====
+   cell  rival rival_rate edge_rate rival_only edge_only mcnemar_p   holm_p
+ <char> <char>      <num>     <num>      <int>     <int>     <num>    <num>
+  clean   proj       0.08      0.08          4         4  1.00e+00 1.000000
+  clean BAGofT       0.06      0.08          6         8  7.91e-01 1.000000
+     x4   proj       0.06      0.02          4         0  1.25e-01 0.625000
+     x4 BAGofT       0.01      0.02          1         2  1.00e+00 1.000000
+     x8   proj       0.22      0.05         18         1  7.63e-05 0.000458
+     x8 BAGofT       0.05      0.05          5         5  1.00e+00 1.000000
+
+===== B9b.4 (reported): fitted coefficients, corrupted records' linear predictors, seconds =====
+identity gate: 300 of 300 regenerated data sets match their stored EDGE p-value to 1e-8
+   cell  reps mean_b0 mean_bx mean_bd median_max_eta_corrupt
+ <char> <int>   <num>   <num>   <num>                  <num>
+  clean   100   0.011   0.610   0.505                     NA
+     x4   100   0.025   0.579   0.438                    5.5
+     x8   100  -0.021   0.574   0.530                   11.1
+ max_max_eta_corrupt
+               <num>
+                  NA
+                 8.7
+                16.5
+(truth: intercept 0, slope on x 0.6, slope on d 0.5)
+
+   cell       test median_sec   q25   q75
+ <char>     <char>      <num> <num> <num>
+  clean projection       17.1  16.8  19.0
+  clean     BAGofT      375.0 373.6 376.7
+     x4 projection       16.2  16.1  16.9
+     x4     BAGofT      369.7 368.3 371.0
+     x8 projection       16.5  16.4  17.0
+     x8     BAGofT      370.8 369.5 372.2
+(seconds per data set, one core each, 20 data sets in parallel)
+
+written: C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery/9b/analysis  

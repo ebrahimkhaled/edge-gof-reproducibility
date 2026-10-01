@@ -1,0 +1,18 @@
+\begin{table}[htbp]\centering\small
+\caption{The seven hypotheses declared before the study was run, and their outcomes. The
+statistic and the threshold are those fixed in the pre-declaration; no threshold was moved
+after the results were seen. The last column counts the scenarios in which EDGE
+leads or ties, which is a different question from the declared verdict and answers it
+differently: H1 fails on a condition about one design while the test leads or ties in $26$
+of $32$ scenarios. Section 5.2 of the main text reports the results as findings.}
+\label{tab:hypotheses}
+\begin{tabular}{lp{0.40\textwidth}rrrll}\hline
+Hypothesis & Statement & Scenarios & Statistic & Threshold & Outcome & Leads or ties \\ \hline
+H1 & EDGE-poly3 leads GiViTI on symmetric tails & 32 & 0.105 & 0.1 & \textbf{against} & 26 of 32 \\
+H2 & EDGE-sym is not behind Stukel's joint score & 32 & 0.005 & -0.014 & \textbf{holds} & 25 of 32 \\
+H3 & EDGE-poly3 is not far behind GiViTI on asymmetric links & 21 & -0.075 & -0.05 & \textbf{against} & 7 of 21 \\
+H4 & EDGE-poly3 leads or ties the partition tests at $G=10$ & 29 & 17.000 & 19 & \textbf{against} & 17 of 19 \\
+H4-ruleG & the same at the default partition & 29 & 21.000 & 19 & reported & 21 of 21 \\
+H5 & EDGE-sym is not behind Stukel's one-parameter score & 4 & 0.006 & 0.02 & \textbf{holds} & 2 of 4 \\
+H5-skew & the same under a skewed covariate & 4 & 0.252 & -- & reported & 0 of 4 \\
+\hline\end{tabular}\end{table}

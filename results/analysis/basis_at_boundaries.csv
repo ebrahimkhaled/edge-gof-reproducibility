@@ -1,0 +1,6 @@
+situation,scenarios,rival,rival_mean,best_basis,best_mean,default_mean,best_leads_ties
+events are scarce,8,GiViTI,0.6934375,EDGE-poly3,0.572625,0.572625,0
+asymmetric links,21,cubic LR,0.74092380952381,EDGE-poly3,0.668852380952381,0.668852380952381,6
+crossover,2,GiViTI,0.102,EDGE-poly3,0.0947,0.0947,1
+rough misfit,13,GiViTI,0.414384615384615,EDGE-sym,0.576323076923077,0.507338461538462,13
+symmetric tails,32,GiViTI,0.2753125,EDGE-sym,0.3919375,0.380425,27

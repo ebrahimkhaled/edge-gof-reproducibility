@@ -1,0 +1,26 @@
+\begin{table}[htbp]\centering\small
+\caption{False-alarm rate at the nominal $5\%$ level when three records of $n=500$ have their
+covariate multiplied by four or by eight and the model is correct for every other record. $100$
+replicates a scenario, every test on the same data sets; the nominal standard error is $0.022$. EDGE is
+in its unit form at the default partition, which is twenty groups here. The
+Liu projection test and BAGofT reject at $p<0.05$, the others at $p\le0.05$. BAGofT pools the residuals
+within groups it learns from the data and le Cessie's test over neighbourhoods in covariate space, so
+both are listed with the pooled tests; le Cessie's test was run on the same data sets.
+ The Liu projection test took a median of $17$ seconds a data set and BAGofT $371$.}
+\label{tab:rivals-contam}
+\begin{tabular}{lrrr}\hline
+Test & clean & $\times4$ & $\times8$ \\ \hline
+\multicolumn{4}{l}{\emph{pooled}} \\
+\quad EDGE (default) & 0.080 & 0.020 & 0.050 \\
+\quad EDGE, symmetric basis & 0.050 & 0.060 & 0.200 \\
+\quad Hosmer--Lemeshow, $G=10$ & 0.020 & 0.000 & 0.060 \\
+\quad BAGofT & 0.060 & 0.010 & 0.050 \\
+\quad le Cessie--van Houwelingen & 0.070 & 0.040 & 0.070 \\
+\multicolumn{4}{l}{\emph{record-level}} \\
+\quad Liu projection test & 0.080 & 0.060 & 0.220 \\
+\quad Stukel joint score & 0.060 & 0.450 & 0.490 \\
+\quad Stukel one-parameter & 0.050 & 0.430 & 0.470 \\
+\quad Stukel LR refit & 0.070 & 0.330 & 0.410 \\
+\quad GiViTI belt & 0.070 & 0.290 & 0.370 \\
+\quad cubic calibration LR & 0.060 & 0.350 & 0.400 \\
+\hline\end{tabular}\end{table}

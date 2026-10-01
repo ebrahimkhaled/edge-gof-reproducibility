@@ -1,0 +1,6 @@
+2026-09-14 12:47:32  block 7: 5 cells (0 done), 6400 replicates to run, 20 workers, root C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery
+2026-09-14 12:48:48  [1/5] runD_probit_n20000             B=800   n=20000     75.9 s  rep errors 0  14.7% of cost  ETA 2026-09-14 12:56 (0.12 h)
+2026-09-14 12:52:54  [2/5] runD_probit_n50000             B=800   n=50000    245.4 s  rep errors 0  50.9% of cost  ETA 2026-09-14 12:58 (0.09 h)
+2026-09-14 12:55:45  [3/5] runD_null_n50000               B=800   n=50000    171.6 s  rep errors 0  87.2% of cost  ETA 2026-09-14 12:56 (0.02 h)
+2026-09-14 12:56:14  [4/5] runJ_null_n2000                B=2000  n=2000      28.7 s  rep errors 0  93.6% of cost  ETA 2026-09-14 12:56 (0.01 h)
+2026-09-14 12:56:42  [5/5] runJ_cloglog_n2000             B=2000  n=2000      27.8 s  rep errors 0  100.0% of cost  ETA 2026-09-14 12:56 (-0.00 h)

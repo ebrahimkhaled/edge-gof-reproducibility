@@ -1,0 +1,14 @@
+2026-09-20 23:55:47  block 9dX: 4 configurations (8 cells), 6 workers, 1000 replicates, out C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery/9dX 
+2026-09-21 00:01:15  [1/4] logit  k=0   ML      EDGE 0.055  HL 0.055  Stukel 0.049  cubic 0.059  5.4 min 
+2026-09-21 00:01:15  [1/4] logit  k=0   robust  EDGE 0.054  HL 0.049  Stukel 0.200  cubic 0.061  5.4 min 
+2026-09-21 00:01:15          robust converged 1000 of 1000 
+2026-09-21 00:06:49  [2/4] logit  k=25  ML      EDGE 0.144  HL 0.090  Stukel 0.807  cubic 0.748  5.6 min 
+2026-09-21 00:06:49  [2/4] logit  k=25  robust  EDGE 0.144  HL 0.096  Stukel 0.860  cubic 0.749  5.6 min 
+2026-09-21 00:06:49          robust converged 1000 of 1000 
+2026-09-21 00:12:14  [3/4] logit  k=50  ML      EDGE 0.732  HL 0.392  Stukel 0.967  cubic 0.937  5.4 min 
+2026-09-21 00:12:14  [3/4] logit  k=50  robust  EDGE 0.736  HL 0.444  Stukel 0.980  cubic 0.937  5.4 min 
+2026-09-21 00:12:14          robust converged 1000 of 1000 
+2026-09-21 00:18:10  [4/4] logit  k=100 ML      EDGE 1.000  HL 0.986  Stukel 1.000  cubic 0.999  5.9 min 
+2026-09-21 00:18:10  [4/4] logit  k=100 robust  EDGE 1.000  HL 0.991  Stukel 1.000  cubic 0.999  5.9 min 
+2026-09-21 00:18:10          robust converged 1000 of 1000 
+2026-09-21 00:18:10  block 9dX: run finished 

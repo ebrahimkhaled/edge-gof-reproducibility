@@ -1,0 +1,7 @@
+run.all.gof: running the full battery, including the slow tests (le-Cessie, the GAM tests, Stute-Zhu, eHL, BAGofT, GiViTI). For a quick run with the fast tests only, set include_slow = FALSE.
+n=500: O(n^3) p = 0.7411399404 | ebrahim.gof p = 0.7411399404
+23:16:12  n=  500  median 0.43 s
+23:16:36  n= 1000  median 5.57 s
+23:17:50  n= 2000  median 73.64 s
+23:38:58  n= 5000  median 1267.53 s
+written: C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery/T/timing_lecessie_n3.csv 

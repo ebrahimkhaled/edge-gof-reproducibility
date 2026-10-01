@@ -1,0 +1,8 @@
+# The archive is a deposit, not a working tree: everything in it is meant to be published.
+# These are the only things that should never reach it.
+*.tmp
+*.part
+.Rhistory
+.RData
+.DS_Store
+Thumbs.db

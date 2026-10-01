@@ -1,0 +1,10 @@
+2026-09-19 16:50:26  block 9d: 8 configurations x 1000 replicates, 2 estimators each, 14 workers, out C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery/9d
+2026-09-19 16:50:43  [1/8] logit  k=0  written both estimators; robust converged 1000 of 1000, errors 0  elapsed 0.3 min
+2026-09-19 16:50:59  [2/8] logit  k=5  written both estimators; robust converged 1000 of 1000, errors 0  elapsed 0.5 min
+2026-09-19 16:51:15  [3/8] logit  k=10 written both estimators; robust converged 1000 of 1000, errors 0  elapsed 0.8 min
+2026-09-19 16:51:33  [4/8] logit  k=25 written both estimators; robust converged 1000 of 1000, errors 0  elapsed 1.1 min
+2026-09-19 16:51:49  [5/8] probit k=0  written both estimators; robust converged 1000 of 1000, errors 0  elapsed 1.4 min
+2026-09-19 16:52:07  [6/8] probit k=5  written both estimators; robust converged 1000 of 1000, errors 0  elapsed 1.7 min
+2026-09-19 16:52:25  [7/8] probit k=10 written both estimators; robust converged 1000 of 1000, errors 0  elapsed 2.0 min
+2026-09-19 16:52:43  [8/8] probit k=25 written both estimators; robust converged 1000 of 1000, errors 0  elapsed 2.3 min
+2026-09-19 16:52:43  block 9d finished

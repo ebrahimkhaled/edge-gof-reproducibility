@@ -1,0 +1,19 @@
+\begin{table}[htbp]\centering\small
+\caption{The same question on frozen predictions: rejection rate at $5\%$, $1000$ replicates a row,
+on the corrupted data sets of the external-validation study ($n=1000$, five covariates), where nothing
+is refitted. Twin, the score test for the cubic directions of EDGE in the frozen prediction, on three
+degrees of freedom; Spz, Spiegelhalter's $z$; EDGE in external mode at ten groups and at the default
+partition. Shaded above $0.10$.}
+\label{tab:twext}
+\begin{tabular}{lrrrrr}\hline
+Setting & Twin & Spz & EDGE$_{10}$ & EDGE \\ \hline
+correct model & 0.052 & 0.061 & 0.061 & 0.050 \\
+$\times4$, $k=1$ & 0.061 & 0.048 & 0.044 & 0.055 \\
+$\times4$, $k=2$ & 0.044 & 0.043 & 0.034 & 0.043 \\
+$\times4$, $k=5$ & 0.067 & 0.054 & 0.059 & 0.072 \\
+$\times4$, $k=10$ & 0.096 & 0.070 & 0.055 & 0.077 \\
+$\times-4$, $k=1$ & 0.051 & 0.047 & 0.045 & 0.040 \\
+$\times-4$, $k=2$ & 0.057 & 0.044 & 0.044 & 0.051 \\
+$\times-4$, $k=5$ & \cellcolor{black!12}0.132 & 0.071 & 0.065 & \cellcolor{black!12}0.104 \\
+$\times-4$, $k=10$ & \cellcolor{black!12}0.311 & 0.090 & 0.082 & \cellcolor{black!12}0.240 \\
+\hline\end{tabular}\end{table}

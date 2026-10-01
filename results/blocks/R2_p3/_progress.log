@@ -1,0 +1,6 @@
+2026-09-30 23:10:01  block R: validation half n=34994, event rate 0.0888, rule G=1400, 20 workers, 500 replicates, covariate number_inpatient (coefficient 0.3843) 
+2026-09-30 23:11:09  k=0    EDGE.Grule 0.050  EDGE.G10 0.044  HL.G10 0.048  Stk.joint 0.050  Cubic.LR 0.042  0.8 min 
+2026-09-30 23:11:55  k=10   EDGE.Grule 0.042  EDGE.G10 0.042  HL.G10 0.050  Stk.joint 0.102  Cubic.LR 0.080  0.8 min 
+2026-09-30 23:12:39  k=50   EDGE.Grule 0.086  EDGE.G10 0.060  HL.G10 0.060  Stk.joint 0.254  Cubic.LR 0.198  0.7 min 
+2026-09-30 23:13:24  k=100  EDGE.Grule 0.080  EDGE.G10 0.054  HL.G10 0.048  Stk.joint 0.448  Cubic.LR 0.314  0.7 min 
+2026-09-30 23:13:24  block R: run finished 

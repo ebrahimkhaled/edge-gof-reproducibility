@@ -1,0 +1,11 @@
+sha256 of PREDECLARATION_block9_contamination.md (block 9: a few corrupted records; design, rules, claims B9.1-B9.5)
+2b5b3d6066f55ba2ca6bec82ee1da2104d7ebe4ffad57abbaeb99b24315aa926
+written 2026-09-16 03:03, before any block 9 cell was run; the exploratory runs of the same day are named inside as exploratory only
+
+sha256 after the revision of 2026-09-16 (rate grid, B9.1, B9.3, B9.6; still before any block 9 cell ran)
+2fbaffb6e4b7d0f4d585666f07bd8830135b94a20bd2c2dae6297b70385d8922
+written 2026-09-16 06:15
+
+sha256 after the cell count was corrected for the added 0.1% rate (84 cells); still before any block 9 cell ran
+99eb4c27864d99229c9e1bf2c1421c35befbbb5ec0ba0161479cbeeae06c8ca5
+written 2026-09-16 06:15

@@ -1,0 +1,38 @@
+2026-09-14 11:41:26  block 4: 37 cells (0 done), 56000 replicates to run, 20 workers, root C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery
+2026-09-14 11:41:54  [1/37] crossover_n1000                B=5000  n=1000      27.1 s  rep errors 0   4.9% of cost  ETA 2026-09-14 11:50 (0.15 h)
+2026-09-14 11:42:36  [2/37] crossover_n2000                B=5000  n=2000      42.4 s  rep errors 0  12.8% of cost  ETA 2026-09-14 11:50 (0.13 h)
+2026-09-14 11:43:00  [3/37] osc4_n1000                     B=5000  n=1000      24.1 s  rep errors 0  17.0% of cost  ETA 2026-09-14 11:50 (0.13 h)
+2026-09-14 11:43:41  [4/37] osc4_n2000                     B=5000  n=2000      40.5 s  rep errors 0  25.2% of cost  ETA 2026-09-14 11:50 (0.11 h)
+2026-09-14 11:44:04  [5/37] sawtooth_n1000                 B=5000  n=1000      23.9 s  rep errors 0  29.5% of cost  ETA 2026-09-14 11:50 (0.10 h)
+2026-09-14 11:44:43  [6/37] sawtooth_n2000                 B=5000  n=2000      38.3 s  rep errors 0  37.7% of cost  ETA 2026-09-14 11:50 (0.09 h)
+2026-09-14 11:44:45  [7/37] proj_link_cloglog_n500         B=500   n=500        2.1 s  rep errors 0  38.0% of cost  ETA 2026-09-14 11:50 (0.09 h)  stored p_edge3 max|diff| 6.1e-16
+2026-09-14 11:44:48  [8/37] proj_link_cloglog_n1000        B=500   n=1000       3.2 s  rep errors 0  38.6% of cost  ETA 2026-09-14 11:50 (0.09 h)  stored p_edge3 max|diff| 8.3e-16
+2026-09-14 11:44:50  [9/37] proj_link_probit_n500          B=500   n=500        1.9 s  rep errors 0  38.9% of cost  ETA 2026-09-14 11:50 (0.09 h)  stored p_edge3 max|diff| 6.7e-16
+2026-09-14 11:44:53  [10/37] proj_link_probit_n1000         B=500   n=1000       2.8 s  rep errors 0  39.5% of cost  ETA 2026-09-14 11:50 (0.09 h)  stored p_edge3 max|diff| 6.1e-16
+2026-09-14 11:44:55  [11/37] proj_link_plateau_upper_n500   B=500   n=500        1.9 s  rep errors 0  39.9% of cost  ETA 2026-09-14 11:50 (0.09 h)  stored p_edge3 max|diff| 7.8e-16
+2026-09-14 11:44:57  [12/37] proj_link_plateau_upper_n1000  B=500   n=1000       2.8 s  rep errors 0  40.4% of cost  ETA 2026-09-14 11:50 (0.09 h)  stored p_edge3 max|diff| 5.3e-16
+2026-09-14 11:44:59  [13/37] proj_link_plateau_lower_n500   B=500   n=500        1.9 s  rep errors 0  40.8% of cost  ETA 2026-09-14 11:50 (0.09 h)  stored p_edge3 max|diff| 6.9e-16
+2026-09-14 11:45:02  [14/37] proj_link_plateau_lower_n1000  B=500   n=1000       2.7 s  rep errors 0  41.3% of cost  ETA 2026-09-14 11:50 (0.08 h)  stored p_edge3 max|diff| 6.7e-16
+2026-09-14 11:45:04  [15/37] proj_link_plateau_both_n500    B=500   n=500        1.9 s  rep errors 0  41.7% of cost  ETA 2026-09-14 11:50 (0.08 h)  stored p_edge3 max|diff| 5.6e-16
+2026-09-14 11:45:07  [16/37] proj_link_plateau_both_n1000   B=500   n=1000       2.9 s  rep errors 0  42.3% of cost  ETA 2026-09-14 11:50 (0.08 h)  stored p_edge3 max|diff| 5.0e-16
+2026-09-14 11:45:09  [17/37] proj_quad_0.02_n500            B=500   n=500        1.8 s  rep errors 0  42.5% of cost  ETA 2026-09-14 11:50 (0.08 h)  stored p_edge3 max|diff| 6.4e-16
+2026-09-14 11:45:12  [18/37] proj_quad_0.02_n1000           B=500   n=1000       2.7 s  rep errors 0  43.0% of cost  ETA 2026-09-14 11:50 (0.08 h)  stored p_edge3 max|diff| 6.1e-16
+2026-09-14 11:45:14  [19/37] proj_binint_0.3_n500           B=500   n=500        1.9 s  rep errors 0  43.3% of cost  ETA 2026-09-14 11:50 (0.08 h)  stored p_edge3 max|diff| 6.7e-16
+2026-09-14 11:45:16  [20/37] proj_binint_0.3_n1000          B=500   n=1000       2.7 s  rep errors 0  43.8% of cost  ETA 2026-09-14 11:50 (0.08 h)  stored p_edge3 max|diff| 6.7e-16
+2026-09-14 11:45:18  [21/37] proj_contint_0.5_n500          B=500   n=500        1.9 s  rep errors 0  44.1% of cost  ETA 2026-09-14 11:50 (0.08 h)  stored p_edge3 max|diff| 7.8e-16
+2026-09-14 11:45:21  [22/37] proj_contint_0.5_n1000         B=500   n=1000       2.9 s  rep errors 0  44.7% of cost  ETA 2026-09-14 11:50 (0.08 h)  stored p_edge3 max|diff| 6.7e-16
+2026-09-14 11:45:23  [23/37] omit_2cov_n500                 B=500   n=500        1.6 s  rep errors 0  44.9% of cost  ETA 2026-09-14 11:50 (0.08 h)  stored p_edge3 max|diff| 7.8e-16
+2026-09-14 11:45:25  [24/37] omit_2cov_n1000                B=500   n=1000       2.4 s  rep errors 0  45.4% of cost  ETA 2026-09-14 11:50 (0.08 h)  stored p_edge3 max|diff| 7.8e-16
+2026-09-14 11:45:27  [25/37] proj_null_quad_n500            B=500   n=500        1.7 s  rep errors 0  45.7% of cost  ETA 2026-09-14 11:50 (0.08 h)  stored p_edge3 max|diff| 7.8e-16
+2026-09-14 11:45:29  [26/37] proj_null_quad_n1000           B=500   n=1000       2.3 s  rep errors 0  46.1% of cost  ETA 2026-09-14 11:50 (0.08 h)  stored p_edge3 max|diff| 6.7e-16
+2026-09-14 11:45:31  [27/37] proj_null_link_n500            B=500   n=500        1.8 s  rep errors 0  46.3% of cost  ETA 2026-09-14 11:50 (0.08 h)  stored p_edge3 max|diff| 8.3e-16
+2026-09-14 11:45:33  [28/37] proj_null_link_n1000           B=500   n=1000       2.7 s  rep errors 0  46.8% of cost  ETA 2026-09-14 11:50 (0.08 h)  stored p_edge3 max|diff| 6.7e-16
+2026-09-14 11:45:35  [29/37] proj_null_contint_n500         B=500   n=500        1.8 s  rep errors 0  47.1% of cost  ETA 2026-09-14 11:50 (0.08 h)  stored p_edge3 max|diff| 6.1e-16
+2026-09-14 11:45:38  [30/37] proj_null_contint_n1000        B=500   n=1000       2.8 s  rep errors 0  47.7% of cost  ETA 2026-09-14 11:50 (0.08 h)  stored p_edge3 max|diff| 7.8e-16
+2026-09-14 11:47:23  [31/37] probit_skew_n9400              B=2000  n=9400     104.7 s  rep errors 0  65.9% of cost  ETA 2026-09-14 11:50 (0.05 h)
+2026-09-14 11:49:45  [32/37] probit_skew_n16000             B=2000  n=16000    142.3 s  rep errors 0  84.6% of cost  ETA 2026-09-14 11:51 (0.03 h)
+2026-09-14 11:50:07  [33/37] cauchit_skew_n2400             B=2000  n=2400      21.9 s  rep errors 0  88.9% of cost  ETA 2026-09-14 11:51 (0.02 h)
+2026-09-14 11:50:41  [34/37] cauchit_skew_n4000             B=2000  n=4000      34.5 s  rep errors 0  96.2% of cost  ETA 2026-09-14 11:51 (0.01 h)
+2026-09-14 11:50:46  [35/37] sparse49_cloglog_n200          B=2000  n=200        4.9 s  rep errors 0  97.2% of cost  ETA 2026-09-14 11:51 (0.00 h)
+2026-09-14 11:50:53  [36/37] sparse49_cloglog_n300          B=2000  n=300        6.7 s  rep errors 0  98.4% of cost  ETA 2026-09-14 11:51 (0.00 h)
+2026-09-14 11:51:01  [37/37] sparse49_cloglog_n500          B=2000  n=500        8.2 s  rep errors 0  100.0% of cost  ETA 2026-09-14 11:51 (0.00 h)

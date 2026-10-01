@@ -1,0 +1,100 @@
+\section{Introduction}\label{sec:intro}
+
+A clinical risk model is judged on two properties. Discrimination is whether it ranks patients
+correctly, so that those who have the event were given higher risks than those who do not.
+Calibration is whether the risk it reports is the risk the patient carries. A model can rank well and
+still report the wrong number, and in medicine the number is what is used: a patient is treated,
+screened or discharged when the predicted risk crosses a threshold. A model that predicts $8\%$ for
+patients whose true risk is $5\%$ sends the wrong patients over that threshold, however well it
+discriminates: discrimination asks only whether the model separates the patients at higher risk from
+those at lower risk, not whether the risks it reports are right \citep{vancalster2016hierarchy}. Testing calibration is therefore routine in the
+development and validation of clinical prediction models.
+
+For logistic regression with continuous covariates the classical tests do not work. Almost every
+patient has a covariate pattern of their own, so the Pearson and deviance statistics are sums of
+cells with one observation each, and their chi-squared reference fails. Two repairs followed. One
+standardises the Pearson statistic by its moments \citep{mccullagh1985,osius1992normal}. The other, by
+\citet{hosmer1980goodness}, sorts the patients by predicted risk, cuts them into ten groups and
+compares observed with expected events in each group. Grouping makes the cells large enough for a
+reference distribution to exist, and the Hosmer--Lemeshow test is still the default check of
+calibration.
+
+Grouping has a cost: a data set of a million patients is reduced to ten numbers before the test sees
+it, and the statistic spends one degree of freedom on each group, so its power is spread over every
+direction in which a model can fail. Adding groups does not recover the lost information, because
+each new group adds a degree of freedom faster than it adds signal, and the verdict can change from
+rejection to acceptance with the number of groups alone \citep{paul2013power}. Most variants of the
+test repair one of these problems and leave the others. \citet{paul2013power} and \citet{Lai2018}
+standardise its power in large samples, \citet{nattino2020assessing} test whether the misfit exceeds a
+size that does not grow with $n$, \citet{surjanovic2024generalized} derive a correct reference
+distribution for a generalized form of the statistic, and BAGofT \citep{BAGofT2019} learns the
+partition from the data instead of fixing it. \citet{hosmer2002goodness} came closest to a directed
+grouped test: they weight each record's residual within the groups to gain power against a specified
+alternative. None of them lets the partition be refined freely.
+
+Other tests recover power by leaving the grouping behind. \citet{stukel1988generalized} embeds the
+logistic link in a two-parameter family and tests the two extra parameters with a score test; in the
+comparison of \citet{hosmer1997comparison} it had the best power against a misspecified link and was
+among the tests they recommended. The GiViTI calibration belt \citep{nattino2014new,nattino2015new}
+fits a polynomial to the calibration curve, and the Liu projection test \citep{liu2024comprehensive}
+projects the individual residuals and refers them to a bootstrap. These tests use every record's
+residual at its own weight, and that is why they are powerful. It also makes them sensitive to a few
+wrong records. Clinical data contain such records: a covariate entered in the wrong units, a value
+with a misplaced decimal point, a count typed as a larger but plausible count, which passes any range
+check. With a model that is correct for every other patient, one record in a thousand with a
+corrupted covariate raises the false-alarm rate of Stukel's score test from $5\%$ to $12\%$, and ten such
+records raise it to $63\%$; in the hospital cohort of Section~\ref{sec:realdata}, about twelve miscoded counts among
+$35{,}000$ patients raise it to $45\%$. A test that rejects for this reason is reporting a data-entry
+error, and the analyst cannot tell it from a miscalibrated model; the two call for opposite actions,
+cleaning the data or rebuilding the model.
+
+Two tests keep a form of pooling without a fixed partition. The smoothed residual test of
+\citet{le1991goodness} pools residuals over neighbourhoods in covariate space, and BAGofT pools them
+over a learned partition. Le Cessie's test is protected against a few wrong records, and BAGofT showed
+no rise in a small study (Section~\ref{sec:contamination}), but both pay in computation. Le Cessie's test builds an
+$n\times n$ kernel, which on the $35{,}000$ patients of each half of the cohort of
+Section~\ref{sec:realdata} would need about $10$ gigabytes, so it was not run there. BAGofT refits the
+model more than ten thousand times and takes $392$ seconds for one data set of a thousand patients.
+
+We keep the grouping and project the grouped residuals onto a small
+basis of smooth calibration shapes, chosen to include the link departures that Stukel's test targets;
+the weights act on groups, never on a single record. The statistic then spends a fixed number of
+degrees of freedom however many groups there are, so the partition can be refined as the sample grows
+without diluting the test, and its reference distribution needs no resampling or refitting: the test
+takes $4$ milliseconds at $n=1000$ and half a second at $n=100{,}000$. We call the test EDGE (Efficient Directed Grouped Examination), the name
+it has in the software. Its contributions are:
+
+\begin{enumerate}
+\item \textbf{A mechanism.} Pooling on equal-frequency groups bounds the influence that one corrupted
+record's covariate can have on a goodness-of-fit statistic, because the record's residual is divided by
+the variance of its clean groupmates (Proposition~\ref{prop:bounded}); the bound is exact in external
+validation, where a frozen model is checked on new patients. A test loses this protection when it divides
+a record's contribution by something that the record or the refit can make small: its own fitted
+variance, or the information that the test's direction keeps after the fit. Stukel's test, the cubic
+calibration test, an ungrouped test along EDGE's own directions and EDGE's score form all do, and break;
+so do grouped tests whose extreme groups are small or that group in covariate space, and a robust fit or
+a robust version of Stukel's test restores little
+(Sections~\ref{sec:mechanism} and~\ref{sec:contamination}).
+\item \textbf{A grouped test whose partition is a setting.} Because its degrees of freedom do not
+depend on the number of groups (Theorem~\ref{thm:growingG}), the partition can be refined for power on
+clean data and kept coarse for protection when records may be wrong
+(Section~\ref{sec:partitionchoice}). In external validation it needs only outcomes and predicted
+probabilities, so it applies to any model that reports them, logistic or not; there, at ten groups, its
+average power is that of Cox's recalibration test and it keeps its false-alarm rate below $0.10$ where
+that test does not. On clean data the test
+is comparable in power to Stukel's score
+test and the cubic calibration test; unlike them, it keeps its level when a few records are wrong, at
+a modest cost in power.
+\item \textbf{Evidence, including where the test loses.} A simulation study over six departure families
+with every comparison and threshold fixed before it was run, twelve comparator tests including two
+resampling tests and four other grouped tests, a study of external validation against the usual tests
+there, and a cohort of $70{,}000$ patients in which
+EDGE rejects at every partition while the Hosmer--Lemeshow verdict changes with the number of
+groups.
+\end{enumerate}
+
+Section~\ref{sec:test} defines the test and its null distribution, and Section~\ref{sec:mechanism}
+shows why pooling protects it. Section~\ref{sec:design} describes the simulation study,
+Section~\ref{sec:power} reports power on clean data and Section~\ref{sec:contamination} under
+corrupted records. Section~\ref{sec:realdata} applies the test to the hospital cohort, and
+Section~\ref{sec:discuss} says when it is the right test and when another is better.

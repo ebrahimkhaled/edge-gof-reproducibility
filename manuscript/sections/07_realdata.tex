@@ -1,0 +1,162 @@
+\section{A clinical cohort}\label{sec:realdata}
+
+The Diabetes 130-US hospitals cohort \citep{strack2014impact,clore2014uci} records $101{,}766$
+admissions of patients with diabetes at $130$ hospitals over ten years, with readmission within
+thirty days as the outcome. Patients recur across admissions, so we follow the data set's authors and
+keep one admission per patient, the first, excluding admissions that ended in death or discharge to
+hospice, whose patients cannot be readmitted, and the three records whose sex is unknown. That leaves
+$69{,}987$ patients. We split them in half at random, fitted a logistic model on the first half, and
+froze its predictions for the second. The model uses the routinely recorded predictors: age, sex, length
+of stay, the numbers of laboratory procedures, other procedures, medications, outpatient, emergency and
+inpatient visits in the preceding year and diagnoses, insulin use in four levels, a change of diabetes
+medication, and any diabetes medication. No attempt was made to
+make the model fit well or badly; it discriminates weakly, with an area under the curve of $0.60$ on
+the validation half.
+
+\subsection{The partition on real data}\label{sec:realpartition}
+
+On the development half ($34{,}993$ patients) the fit is checked as the partition is refined from
+$G=10$ to $G=2000$ (Figure~\ref{fig:diabetes}(b)). EDGE rejects at every partition,
+with $p$ between $4\times10^{-5}$ and $7\times10^{-4}$. The Hosmer--Lemeshow statistic rejects at ten
+groups ($p=0.041$) and at no finer partition, with $p$ between $0.10$ and $0.50$ from twenty groups on;
+its Farrington correction behaves the same way. Two analysts who chose $G=10$ and $G=50$ would reach
+opposite conclusions about the same model \citep{paul2013power}; EDGE's reference does not change
+with the number of groups (Theorem~\ref{thm:growingG}).
+
+\subsection{Validation}\label{sec:realvalidation}
+
+On the validation half ($34{,}994$ patients) nothing is refitted, so $\Omega=I$ exactly, and because no
+score equation absorbs the intercept, the statistic carries it as a fourth column beside the default
+basis. The usual check, the calibration intercept-and-slope test of \citet{cox1958} and
+\citet{Miller1991}, rejects: the calibration slope is $0.85$, so the predictions are too spread out, and
+the likelihood-ratio statistic is $13.3$ on two degrees of freedom, $p=0.001$. The miscalibration is
+small in absolute terms: the integrated calibration index of \citet{austin2019ici} is $0.007$, with E50
+$0.007$ and E90 $0.008$, so the predictions are off by less than one percentage point for nine patients in
+ten; with $35{,}000$ patients the tests detect it, and whether it matters clinically is a separate
+question \citep{nattino2020assessing,vancalster2019}. EDGE
+rejects at every partition, with $S$ between $23$ and $41$ on four degrees of freedom and $p$ between
+$1\times10^{-4}$ and $3\times10^{-8}$, and the GiViTI belt in its external mode rejects as well
+($p=1.5\times10^{-8}$). The Hosmer--Lemeshow statistic rejects at five of the eight partitions, with $p$
+from $5\times10^{-6}$ at ten groups to $0.062$, $0.15$ and $0.055$ at five hundred, a thousand and two
+thousand groups.
+
+The shape of the miscalibration is not a simple tilt. Figure~\ref{fig:diabetes}(a) shows the
+top decile and the second over-predicted and the middle deciles under-predicted, by $1.0$ to $1.5$
+percentage points in deciles three, five, six and nine. A grouped test restricted to a tilt, the intercept and slope columns alone, does
+not reject at any partition ($p$ between $0.08$ and $0.34$): at ten groups only about $2$ of the
+statistic's $23$ lie in the intercept and slope directions, and the rest in the curvature. The grouped
+tilt is less sensitive than the record-level Cox--Miller test to a calibration slope of $0.85$, so 
+EDGE complements the calibration intercept and slope and does not replace them.
+
+Figure~\ref{fig:belt} draws the ten standardized residuals against the reference the test uses, with
+the pointwise band $\pm1.96$ and the simultaneous band $\pm2.80$ over all ten groups. Examining observed
+and expected events group by group is standard practice after a Hosmer--Lemeshow test
+\citep{hosmer2013applied}; what the figure adds is that the curve drawn through the residuals is the projection $P_Z r$, whose squared length is the statistic, so
+the verdict and its location are read from the same picture. Six deciles clear the pointwise band and
+one clears the simultaneous one, the sixth, at $r_g=3.1$; the top decile, at $-2.79$, sits on its edge.
+
+For a model used at a threshold the shape has a direct cost. The highest-risk tenth of patients are
+predicted to be readmitted at $16.9\%$ and are readmitted at $15.2\%$, $1.7$ percentage points fewer
+than predicted, while patients predicted at $7$ to $11\%$ carry a risk up to $1.5$ points higher
+than reported. An intercept and slope, the ``weak'' level of the calibration hierarchy
+\citep{vancalster2016hierarchy}, record that the model is miscalibrated but not where. A smoothed calibration curve
+\citep{vancalster2019,austin2019ici} shows where too, and it remains the first display; EDGE adds a
+test whose verdict does not depend on the smoother or the partition, and whose residuals are read on
+the same picture.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{Fig10_diabetes}
+\caption{The Diabetes-130 cohort, one admission per patient. (a)~Validation half
+($n=34{,}994$), frozen model; observed readmission rate against mean predicted risk in ten
+equal-frequency risk groups, with the gap from the diagonal drawn as a bar. (b)~Development
+half ($n=34{,}993$), the same model; the $p$-value of EDGE, the Hosmer--Lemeshow statistic
+and its Farrington correction as the partition is refined from $G=10$ to $G=2000$, on a
+logarithmic scale; the dotted line is $0.05$.}
+\label{fig:diabetes}
+\end{figure}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{Fig11_belt}
+\caption{The residual band implied by EDGE, on the validation half ($n=34{,}994$, frozen
+model, ten equal-frequency risk groups). (a)~The standardized residual
+$r_g=(O_g-E_g)/\sqrt{V_g}$ of each decile. Nothing was estimated from these outcomes, so each residual
+is standard normal under a calibrated model; the shaded band is the simultaneous $95\%$ band over all
+ten groups, a Bonferroni band for ten independent residuals, which is valid because nothing was refitted, and the dashed lines the pointwise band. Triangles mark the deciles beyond the simultaneous
+band. The curve is the projection of $r$ onto the test's basis, whose squared length is the statistic.
+(b)~The same band on the readmission-rate scale.}
+\label{fig:belt}
+\end{figure}
+
+\subsection{Corrupted records in this cohort}\label{sec:realcorrupt}
+
+The experiment of Section~\ref{sec:contamination} can be repeated on this cohort. On the real
+covariates and the frozen predictions we draw the outcome from the model itself, so that the model is
+correct by construction and every rejection is a false alarm. Then $k$ records have one covariate
+multiplied by four, with their prediction recomputed at the corrupted value and their outcome kept.
+There are $500$ replicates at each of $k=0,10,50,100$ in the validation half; the Monte Carlo standard
+error of a rate of $0.05$ is $0.010$.
+
+Corrupting the number of laboratory procedures moves no test at any $k$: at a hundred corrupted
+records EDGE reads $0.036$, Stukel's joint score $0.052$ and the cubic calibration test
+$0.048$. Its coefficient is small, so a fourfold error moves a record's linear predictor by $0.23$ on
+average, less than the spread of the linear predictor across the cohort ($0.37$), and no record becomes
+extreme.
+
+The number of previous inpatient admissions is the model's largest coefficient, $0.38$. Only $12\%$ of
+patients have any previous admission, so a fourfold error changes about one corrupted record in eight,
+but it moves that record's linear predictor by $1.7$ on average, more than four times the cohort's
+spread. This is an error that passes a range check, because four previous admissions is a plausible
+value. It is also the covariate on which the experiment could show most, and it was chosen for that
+reason after the first showed nothing. Of a hundred corrupted records about twelve therefore change, and the separation of
+Section~\ref{sec:contamination} appears (Table~\ref{tab:cohortcorrupt}).
+
+\begin{table}[htbp]\centering\small
+\caption{False-alarm rate on the cohort's validation half ($n=34{,}994$) when $k$ records have the
+number of previous inpatient admissions multiplied by four and the model is otherwise correct by
+construction. The grouped tests use frozen predictions in the external mode (four columns); the
+default partition has $1400$ groups. $500$ replicates at each $k$.}
+\label{tab:cohortcorrupt}
+\begin{tabular}{rrrrrr}\hline
+$k$ & EDGE (default $G$) & EDGE ($G{=}10$) & HL ($G{=}10$) & Stukel joint & cubic LR \\ \hline
+0   & 0.050 & 0.044 & 0.048 & 0.050 & 0.042 \\
+10  & 0.042 & 0.042 & 0.050 & 0.102 & 0.080 \\
+50  & 0.086 & 0.060 & 0.060 & 0.254 & 0.198 \\
+100 & 0.080 & 0.054 & 0.048 & 0.448 & 0.314 \\ \hline
+\end{tabular}
+\end{table}
+
+About twelve changed records among $34{,}994$ patients raise Stukel's score test to $0.448$ and the
+cubic calibration test to $0.314$. At the default partition EDGE rises to $0.086$ with
+fifty corrupted records, about six of them changed, and stays below $0.09$; at ten groups it stays
+within Monte Carlo error of the nominal level.
+
+A simulation of external validation in one design with five covariates (Supporting Information S7) sets
+EDGE against the usual tests there. At ten groups its mean size-adjusted power over ten departures is
+$0.415$, against $0.420$ for the GiViTI belt and $0.410$ for Cox's recalibration test, which in most data
+sets return the same $p$-value; the two lead by up to $0.14$ on a shift and a threshold term, and EDGE by
+up to $0.21$ on a U-shaped term and an interaction. With ten reversed records in $1000$ EDGE reads
+$0.082$, below the bar of $0.10$, where Cox's test reads $0.158$ and the belt $0.347$; the
+Hosmer--Lemeshow statistic and Spiegelhalter's $z$ stay below it too, with less power ($0.335$ and $0.271$).
+
+\subsection{Monitoring a deployed model}\label{sec:stream}
+
+Once the risk groups are fixed by cut points chosen in advance from reference predictions, the
+external-mode statistic depends on the data only through four sums per group: observed events, expected
+events, the binomial variance and the count. It can therefore be kept up to date as patients arrive:
+each new patient updates one group, and the test is recomputed from the $G$ group summaries without
+revisiting earlier records. The streamed statistic equals the external statistic computed in one pass on
+all the records with the same cut points, whatever the order and batching of the updates; these fixed
+groups drift away from equal size when the risk mix of the monitored patients changes. Provided every
+group keeps receiving patients, it keeps its $\chi^2_{d+1}$ reference under a calibrated model
+(Supporting Information S8). In a simulation fixed before it was run, at ten groups and with $2000$
+replicates, the level was $0.047$ and $0.054$ after $10{,}000$ and $100{,}000$ patients, and $0.050$ and
+$0.052$ when every monitored patient came from a risk distribution different from the reference; it
+detected an overfitted model, calibration slope $0.8$, in $0.99$ of replicates after $2000$ patients.
+The statistic accumulates since deployment, so it answers whether the model has been calibrated over
+that whole period; to follow drift, the summaries are restarted each period, a month or a quarter, and
+each period is tested on its own.
+Adding a hundred patients takes about half a millisecond and the test about $1.5$ milliseconds on one
+core, however many patients have been seen. One test at any time is valid, but acting on the first
+rejection over repeated looks is not: ten looks at $5\%$ raised the false-alarm rate to $0.21$, and
+splitting the level over ten looks fixed in advance, $0.5\%$ each, brought it to $0.030$. In
+\texttt{ebrahim.gof} the monitor is \texttt{edge.stream()}.

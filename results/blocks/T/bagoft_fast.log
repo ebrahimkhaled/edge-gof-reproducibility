@@ -1,0 +1,6 @@
+Warning message:
+package 'BAGofT' was built under R version 4.4.3 
+n=500   package   241.5 s   fast   118.1 s   speedup   2.0x   p 0.98 / 0.98
+n=1000  package   422.8 s   fast   206.5 s   speedup   2.0x   p 0.35 / 0.35
+
+wrote battery/T/bagoft_fast_vs_package.csv

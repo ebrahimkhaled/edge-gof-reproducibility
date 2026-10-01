@@ -1,0 +1,113 @@
+2026-09-19 19:28:31  block 8L: 35 cells (part both), A 1-500, B 1-1000, 20 workers, ebrahim.gof 2.8.0, out C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery/8L
+2026-09-19 19:29:37  le Cessie check: package p 0.927054998217 = declared (I-H)'R(I-H) 0.927054998217; vendor (I-H)R(I-H) would give 0.910099516880
+2026-09-19 19:29:41  null_link_n500 (part A): 500 of 500 replicates to run
+2026-09-19 19:29:43    null_link_n500           500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.11 h)
+2026-09-19 19:29:43  [1/35] null_link_n500           n=500   R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.048, median 0.06 s, 0.0 min  ETA 2026-09-19 19:36 (0.11 h)
+2026-09-19 19:29:43  null_link_n1000 (part A): 500 of 500 replicates to run
+2026-09-19 19:29:58    null_link_n1000          500/500 replicates written to .part  ETA 2026-09-19 19:37 (0.12 h)
+2026-09-19 19:29:58  [2/35] null_link_n1000          n=1000  R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.052, median 0.59 s, 0.3 min  ETA 2026-09-19 19:37 (0.12 h)
+2026-09-19 19:29:59  stk_long_n500 (part A): 500 of 500 replicates to run
+2026-09-19 19:30:01    stk_long_n500            500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.10 h)
+2026-09-19 19:30:01  [3/35] stk_long_n500            n=500   R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.068, median 0.06 s, 0.0 min  ETA 2026-09-19 19:36 (0.10 h)
+2026-09-19 19:30:01  stk_long_n1000 (part A): 500 of 500 replicates to run
+2026-09-19 19:30:17    stk_long_n1000           500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.11 h)
+2026-09-19 19:30:17  [4/35] stk_long_n1000           n=1000  R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.102, median 0.61 s, 0.3 min  ETA 2026-09-19 19:36 (0.11 h)
+2026-09-19 19:30:17  stk_short_n500 (part A): 500 of 500 replicates to run
+2026-09-19 19:30:19    stk_short_n500           500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.10 h)
+2026-09-19 19:30:19  [5/35] stk_short_n500           n=500   R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.124, median 0.06 s, 0.0 min  ETA 2026-09-19 19:36 (0.10 h)
+2026-09-19 19:30:19  stk_short_n1000 (part A): 500 of 500 replicates to run
+2026-09-19 19:30:34    stk_short_n1000          500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.10 h)
+2026-09-19 19:30:34  [6/35] stk_short_n1000          n=1000  R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.320, median 0.59 s, 0.3 min  ETA 2026-09-19 19:36 (0.10 h)
+2026-09-19 19:30:34  stk_asym_n500 (part A): 500 of 500 replicates to run
+2026-09-19 19:30:36    stk_asym_n500            500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.09 h)
+2026-09-19 19:30:36  [7/35] stk_asym_n500            n=500   R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.784, median 0.06 s, 0.0 min  ETA 2026-09-19 19:36 (0.09 h)
+2026-09-19 19:30:36  stk_asym_n1000 (part A): 500 of 500 replicates to run
+2026-09-19 19:30:53    stk_asym_n1000           500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.09 h)
+2026-09-19 19:30:53  [8/35] stk_asym_n1000           n=1000  R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.992, median 0.63 s, 0.3 min  ETA 2026-09-19 19:36 (0.09 h)
+2026-09-19 19:30:53  cauchit_n500 (part A): 500 of 500 replicates to run
+2026-09-19 19:30:55    cauchit_n500             500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.09 h)
+2026-09-19 19:30:55  [9/35] cauchit_n500             n=500   R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.052, median 0.06 s, 0.0 min  ETA 2026-09-19 19:36 (0.09 h)
+2026-09-19 19:30:55  cauchit_n1000 (part A): 500 of 500 replicates to run
+2026-09-19 19:31:11    cauchit_n1000            500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.09 h)
+2026-09-19 19:31:11  [10/35] cauchit_n1000            n=1000  R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.094, median 0.61 s, 0.3 min  ETA 2026-09-19 19:36 (0.09 h)
+2026-09-19 19:31:12  t4_n500 (part A): 500 of 500 replicates to run
+2026-09-19 19:31:14    t4_n500                  500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.08 h)
+2026-09-19 19:31:14  [11/35] t4_n500                  n=500   R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.052, median 0.06 s, 0.0 min  ETA 2026-09-19 19:36 (0.08 h)
+2026-09-19 19:31:14  t4_n1000 (part A): 500 of 500 replicates to run
+2026-09-19 19:31:30    t4_n1000                 500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.08 h)
+2026-09-19 19:31:30  [12/35] t4_n1000                 n=1000  R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.056, median 0.61 s, 0.3 min  ETA 2026-09-19 19:36 (0.08 h)
+2026-09-19 19:31:30  loglog_n500 (part A): 500 of 500 replicates to run
+2026-09-19 19:31:32    loglog_n500              500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.08 h)
+2026-09-19 19:31:32  [13/35] loglog_n500              n=500   R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.228, median 0.06 s, 0.0 min  ETA 2026-09-19 19:36 (0.08 h)
+2026-09-19 19:31:32  loglog_n1000 (part A): 500 of 500 replicates to run
+2026-09-19 19:31:48    loglog_n1000             500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.08 h)
+2026-09-19 19:31:48  [14/35] loglog_n1000             n=1000  R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.448, median 0.61 s, 0.3 min  ETA 2026-09-19 19:36 (0.08 h)
+2026-09-19 19:31:48  null_base_n610 (part A): 500 of 500 replicates to run
+2026-09-19 19:31:52    null_base_n610           500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.07 h)
+2026-09-19 19:31:52  [15/35] null_base_n610           n=610   R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.042, median 0.12 s, 0.1 min  ETA 2026-09-19 19:36 (0.07 h)
+2026-09-19 19:31:52  null_base_n1000 (part A): 500 of 500 replicates to run
+2026-09-19 19:32:09    null_base_n1000          500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.07 h)
+2026-09-19 19:32:09  [16/35] null_base_n1000          n=1000  R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.040, median 0.61 s, 0.3 min  ETA 2026-09-19 19:36 (0.07 h)
+2026-09-19 19:32:09  null_auc_n460 (part A): 500 of 500 replicates to run
+2026-09-19 19:32:11    null_auc_n460            500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.07 h)
+2026-09-19 19:32:11  [17/35] null_auc_n460            n=460   R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.064, median 0.05 s, 0.0 min  ETA 2026-09-19 19:36 (0.07 h)
+2026-09-19 19:32:11  null_auc_n760 (part A): 500 of 500 replicates to run
+2026-09-19 19:32:19    null_auc_n760            500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.06 h)
+2026-09-19 19:32:19  [18/35] null_auc_n760            n=760   R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.054, median 0.23 s, 0.1 min  ETA 2026-09-19 19:36 (0.06 h)
+2026-09-19 19:32:19  null_auc_n380 (part A): 500 of 500 replicates to run
+2026-09-19 19:32:20    null_auc_n380            500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.06 h)
+2026-09-19 19:32:20  [19/35] null_auc_n380            n=380   R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.054, median 0.03 s, 0.0 min  ETA 2026-09-19 19:36 (0.06 h)
+2026-09-19 19:32:20  null_auc_n640 (part A): 500 of 500 replicates to run
+2026-09-19 19:32:25    null_auc_n640            500/500 replicates written to .part  ETA 2026-09-19 19:35 (0.06 h)
+2026-09-19 19:32:25  [20/35] null_auc_n640            n=640   R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.048, median 0.14 s, 0.1 min  ETA 2026-09-19 19:35 (0.06 h)
+2026-09-19 19:32:25  null_e12_n1000 (part A): 500 of 500 replicates to run
+2026-09-19 19:32:41    null_e12_n1000           500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.06 h)
+2026-09-19 19:32:41  [21/35] null_e12_n1000           n=1000  R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.052, median 0.61 s, 0.3 min  ETA 2026-09-19 19:36 (0.06 h)
+2026-09-19 19:32:41  loglog_base_n610 (part A): 500 of 500 replicates to run
+2026-09-19 19:32:45    loglog_base_n610         500/500 replicates written to .part  ETA 2026-09-19 19:35 (0.05 h)
+2026-09-19 19:32:45  [22/35] loglog_base_n610         n=610   R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.266, median 0.12 s, 0.1 min  ETA 2026-09-19 19:35 (0.05 h)
+2026-09-19 19:32:45  loglog_base_n1000 (part A): 500 of 500 replicates to run
+2026-09-19 19:33:01    loglog_base_n1000        500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.05 h)
+2026-09-19 19:33:01  [23/35] loglog_base_n1000        n=1000  R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.472, median 0.60 s, 0.3 min  ETA 2026-09-19 19:36 (0.05 h)
+2026-09-19 19:33:01  cauchit_auc_n460 (part A): 500 of 500 replicates to run
+2026-09-19 19:33:03    cauchit_auc_n460         500/500 replicates written to .part  ETA 2026-09-19 19:35 (0.05 h)
+2026-09-19 19:33:03  [24/35] cauchit_auc_n460         n=460   R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.200, median 0.05 s, 0.0 min  ETA 2026-09-19 19:35 (0.05 h)
+2026-09-19 19:33:03  cauchit_auc_n760 (part A): 500 of 500 replicates to run
+2026-09-19 19:33:11    cauchit_auc_n760         500/500 replicates written to .part  ETA 2026-09-19 19:35 (0.05 h)
+2026-09-19 19:33:11  [25/35] cauchit_auc_n760         n=760   R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.316, median 0.23 s, 0.1 min  ETA 2026-09-19 19:35 (0.05 h)
+2026-09-19 19:33:11  loglog_auc_n380 (part A): 500 of 500 replicates to run
+2026-09-19 19:33:12    loglog_auc_n380          500/500 replicates written to .part  ETA 2026-09-19 19:35 (0.04 h)
+2026-09-19 19:33:12  [26/35] loglog_auc_n380          n=380   R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.184, median 0.03 s, 0.0 min  ETA 2026-09-19 19:35 (0.04 h)
+2026-09-19 19:33:12  loglog_auc_n640 (part A): 500 of 500 replicates to run
+2026-09-19 19:33:17    loglog_auc_n640          500/500 replicates written to .part  ETA 2026-09-19 19:35 (0.04 h)
+2026-09-19 19:33:17  [27/35] loglog_auc_n640          n=640   R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.348, median 0.14 s, 0.1 min  ETA 2026-09-19 19:35 (0.04 h)
+2026-09-19 19:33:17  loglog_e12_n1000 (part A): 500 of 500 replicates to run
+2026-09-19 19:33:32    loglog_e12_n1000         500/500 replicates written to .part  ETA 2026-09-19 19:35 (0.04 h)
+2026-09-19 19:33:32  [28/35] loglog_e12_n1000         n=1000  R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.282, median 0.59 s, 0.3 min  ETA 2026-09-19 19:35 (0.04 h)
+2026-09-19 19:33:33  null_crossover_n1000 (part A): 500 of 500 replicates to run
+2026-09-19 19:33:48    null_crossover_n1000     500/500 replicates written to .part  ETA 2026-09-19 19:35 (0.04 h)
+2026-09-19 19:33:48  [29/35] null_crossover_n1000     n=1000  R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.050, median 0.59 s, 0.3 min  ETA 2026-09-19 19:35 (0.04 h)
+2026-09-19 19:33:48  crossover_n1000 (part A): 500 of 500 replicates to run
+2026-09-19 19:34:03    crossover_n1000          500/500 replicates written to .part  ETA 2026-09-19 19:36 (0.03 h)
+2026-09-19 19:34:03  [30/35] crossover_n1000          n=1000  R=500  kept 500, identity failures 0, no p-value 0, degenerate 0, rejection 0.992, median 0.59 s, 0.3 min  ETA 2026-09-19 19:36 (0.03 h)
+2026-09-19 19:34:03  logit_C1_r001_n1000 (part B): 1000 of 1000 replicates to run
+2026-09-19 19:34:18    logit_C1_r001_n1000      500/1000 replicates written to .part  ETA 2026-09-19 19:36 (0.03 h)
+2026-09-19 19:34:34    logit_C1_r001_n1000      1000/1000 replicates written to .part  ETA 2026-09-19 19:36 (0.03 h)
+2026-09-19 19:34:34  [31/35] logit_C1_r001_n1000      n=1000  R=1000 kept 1000, identity failures 0, no p-value 0, degenerate 0, rejection 0.055, median 0.59 s, 0.5 min  ETA 2026-09-19 19:36 (0.03 h)
+2026-09-19 19:34:34  logit_C1_r002_n1000 (part B): 1000 of 1000 replicates to run
+2026-09-19 19:34:49    logit_C1_r002_n1000      500/1000 replicates written to .part  ETA 2026-09-19 19:36 (0.02 h)
+2026-09-19 19:35:05    logit_C1_r002_n1000      1000/1000 replicates written to .part  ETA 2026-09-19 19:36 (0.02 h)
+2026-09-19 19:35:05  [32/35] logit_C1_r002_n1000      n=1000  R=1000 kept 1000, identity failures 0, no p-value 0, degenerate 0, rejection 0.052, median 0.60 s, 0.5 min  ETA 2026-09-19 19:36 (0.02 h)
+2026-09-19 19:35:05  logit_C1_r005_n1000 (part B): 1000 of 1000 replicates to run
+2026-09-19 19:35:20    logit_C1_r005_n1000      500/1000 replicates written to .part  ETA 2026-09-19 19:36 (0.02 h)
+2026-09-19 19:35:35    logit_C1_r005_n1000      1000/1000 replicates written to .part  ETA 2026-09-19 19:36 (0.01 h)
+2026-09-19 19:35:35  [33/35] logit_C1_r005_n1000      n=1000  R=1000 kept 1000, identity failures 0, no p-value 0, degenerate 0, rejection 0.052, median 0.59 s, 0.5 min  ETA 2026-09-19 19:36 (0.01 h)
+2026-09-19 19:35:35  logit_C1_r010_n1000 (part B): 1000 of 1000 replicates to run
+2026-09-19 19:35:51    logit_C1_r010_n1000      500/1000 replicates written to .part  ETA 2026-09-19 19:36 (0.01 h)
+2026-09-19 19:36:06    logit_C1_r010_n1000      1000/1000 replicates written to .part  ETA 2026-09-19 19:36 (0.01 h)
+2026-09-19 19:36:06  [34/35] logit_C1_r010_n1000      n=1000  R=1000 kept 1000, identity failures 0, no p-value 0, degenerate 0, rejection 0.077, median 0.59 s, 0.5 min  ETA 2026-09-19 19:36 (0.01 h)
+2026-09-19 19:36:06  logit_clean_n1000 (part B): 1000 of 1000 replicates to run
+2026-09-19 19:36:21    logit_clean_n1000        500/1000 replicates written to .part  ETA 2026-09-19 19:36 (0.00 h)
+2026-09-19 19:36:36    logit_clean_n1000        1000/1000 replicates written to .part  ETA 2026-09-19 19:36 (0.00 h)
+2026-09-19 19:36:36  [35/35] logit_clean_n1000        n=1000  R=1000 kept 1000, identity failures 0, no p-value 0, degenerate 0, rejection 0.059, median 0.59 s, 0.5 min  ETA 2026-09-19 19:36 (0.00 h)
+2026-09-19 19:36:36  block 8L: run finished

@@ -1,0 +1,58 @@
+Section A weighting decision, arm Grule
+root: C:/Users/ebrah/.gemini/Projects/PDFs/Paper_Ebrahim_Frangiton/simulations/battery
+written: 2026-09-16 09:59:40
+rule: PREDECLARATION_restructure_battery.md A and E12.3 (size gate alpha + 3 MCSE at 0.05 and 0.01 in every null cell;
+      tie margin 0.014 on the macro-average; no family loss above 0.10; one eligible form is chosen; none -> unit;
+      a family with a cell without a size-adjusted power has no mean, and then no decision when both forms are eligible (E13.2))
+MCSE of the size gate: null, sqrt(alpha (1 - alpha) / B), the nominal standard error of E13.1 (the realised one is in rule_A_gate.csv and decides nothing)
+
+basis poly3  (EDGE.poly3.u.Grule against EDGE.poly3.sc.Grule)
+  eligible        unit no (1 of 131 null cells fail)   score no (4 of 131)
+    unit fails:   1b/null_census_omit_2cov_n500 (z05 3.24, z01 1.28)
+    score fails:  1a/null_link_n1000 (z05 3.26, z01 1.21); 1b/moderate1_n1000 (z05 1.30, z01 3.41); 1b/moderate1_n2000 (z05 1.69, z01 4.97); 1b/null_census_skew_n1000 (z05 1.82, z01 5.26)
+  family 1 symmetric tails          unit 0.3804  score 0.3417  (cells 32, with a value 32 / 32)
+  family 2 asymmetric links         unit 0.6689  score 0.6211  (cells 21, with a value 21 / 21)
+  family 3 Stukel symmetric family  unit 0.4637  score 0.4336  (cells 10, with a value 10 / 10)
+  family 4 omitted terms            unit 0.5997  score 0.5757  (cells 80, with a value 80 / 80)
+  family 5 rough misfit             unit 0.5073  score 0.4763  (cells 13, with a value 13 / 13)
+  family 6 off-index                unit 0.0947  score 0.0803  (cells 2, with a value 2 / 2)
+  macro-average   unit 0.4525  score 0.4215  difference (score - unit) -0.0310
+  worst family loss  score against unit 0.0478 (family 2)   unit against score -0.0144 (family 6)
+  choice          unit
+  reason          neither form passes the size gate (unit fails in 1 null cells, score in 4); the unit form is kept (E12.3)
+
+basis sym  (EDGE.sym.u.Grule against EDGE.sym.sc.Grule)
+  eligible        unit no (1 of 131 null cells fail)   score no (1 of 131)
+    unit fails:   1b/null_auc_n380 (z05 -0.41, z01 3.37)
+    score fails:  1b/sparse49_n500 (z05 3.31, z01 2.27)
+  family 1 symmetric tails          unit 0.3919  score 0.4400  (cells 32, with a value 32 / 32)
+  family 2 asymmetric links         unit 0.4207  score 0.4835  (cells 21, with a value 21 / 21)
+  family 3 Stukel symmetric family  unit 0.4813  score 0.5069  (cells 10, with a value 10 / 10)
+  family 4 omitted terms            unit 0.6171  score 0.6154  (cells 80, with a value 80 / 80)
+  family 5 rough misfit             unit 0.5763  score 0.5432  (cells 13, with a value 13 / 13)
+  family 6 off-index                unit 0.0642  score 0.0606  (cells 2, with a value 2 / 2)
+  macro-average   unit 0.4253  score 0.4416  difference (score - unit) +0.0163
+  worst family loss  score against unit 0.0331 (family 5)   unit against score 0.0628 (family 2)
+  choice          unit
+  reason          neither form passes the size gate (unit fails in 1 null cells, score in 1); the unit form is kept (E12.3)
+
+basis stk  (EDGE.stk.u.Grule against EDGE.stk.sc.Grule)
+  eligible        unit no (3 of 131 null cells fail)   score no (10 of 131)
+    unit fails:   1a/null_quad_n1000 (z05 0.64, z01 3.12); 1b/null_skew_n16000 (z05 -0.62, z01 4.05); 1b/sparse49_n500 (z05 -1.75, z01 4.26)
+    score fails:  1a/null_contint_n2000 (z05 2.52, z01 3.32); 1a/null_contint_n5000 (z05 0.87, z01 4.22); 1b/moderate1_n1000 (z05 1.69, z01 3.98); 1b/moderate1_n2000 (z05 0.78, z01 4.26); 1b/moderate1_n5000 (z05 1.23, z01 5.12); 1b/null_census_omit_2cov_n500 (z05 3.05, z01 1.14); 1b/null_census_skew_n1000 (z05 1.75, z01 4.41); 1b/null_skew_n2400 (z05 0.00, z01 3.37); 1b/null_skew_n4000 (z05 1.23, z01 4.05); 1b/null_skew_n9400 (z05 2.98, z01 4.49)
+  family 1 symmetric tails          unit 0.3386  score 0.3449  (cells 32, with a value 32 / 32)
+  family 2 asymmetric links         unit 0.5838  score 0.6313  (cells 21, with a value 21 / 21)
+  family 3 Stukel symmetric family  unit 0.4506  score 0.4315  (cells 10, with a value 10 / 10)
+  family 4 omitted terms            unit 0.6169  score 0.5909  (cells 80, with a value 80 / 80)
+  family 5 rough misfit             unit 0.5724  score 0.4872  (cells 13, with a value 13 / 13)
+  family 6 off-index                unit 0.0870  score 0.0853  (cells 2, with a value 2 / 2)
+  macro-average   unit 0.4416  score 0.4285  difference (score - unit) -0.0130
+  worst family loss  score against unit 0.0852 (family 5)   unit against score 0.0475 (family 2)
+  choice          unit
+  reason          neither form passes the size gate (unit fails in 3 null cells, score in 10); the unit form is kept (E12.3)
+
+forms used for H1-H5: poly3 unit, sym unit (Section A at the rule-G arm)
+
+choice poly3 unit
+choice sym unit
+choice stk unit

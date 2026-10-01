@@ -1,0 +1,384 @@
+\begin{thebibliography}{47}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[\protect\citeauthoryear{Van~Calster, Nieboer, Vergouwe, De~Cock,
+  Pencina, and Steyerberg}{Van~Calster et~al.}{}]{vancalster2016hierarchy}
+Ben Van~Calster, Daan Nieboer, Yvonne Vergouwe, Bavo De~Cock, Michael~J.
+  Pencina, and Ewout~W. Steyerberg.
+\newblock
+\newblock ``A calibration hierarchy for risk models was defined: from utopia to
+  empirical data.''  {\it Journal of Clinical Epidemiology\/}~74 (2016):
+  167--176.
+\newblock \doi{10.1016/j.jclinepi.2015.12.005}.
+
+\bibitem[\protect\citeauthoryear{McCullagh}{McCullagh}{}]{mccullagh1985}
+P.~McCullagh.
+\newblock
+\newblock ``On the asymptotic distribution of Pearson's statistic in
+  linear-exponential family models.''  {\it International Statistical
+  Review\/}~53, no. 1 (1985): 61--67.
+\newblock \doi{10.2307/1402880}.
+
+\bibitem[\protect\citeauthoryear{Osius and Rojek}{Osius and
+  Rojek}{}]{osius1992normal}
+G.~Osius and D.~Rojek.
+\newblock
+\newblock ``Normal goodness-of-fit tests for multinomial models with large
+  degrees of freedom.''  {\it Journal of the American Statistical
+  Association\/}~87, no. 420 (1992): 1145--1152.
+\newblock \doi{10.1080/01621459.1992.10476271}.
+
+\bibitem[\protect\citeauthoryear{Hosmer~Jr and Lemeshow}{Hosmer~Jr and
+  Lemeshow}{}]{hosmer1980goodness}
+D.~W. Hosmer~Jr and S.~Lemeshow.
+\newblock
+\newblock ``Goodness of fit tests for the multiple logistic regression model.''
+   {\it Communications in Statistics -- Theory and Methods\/}~9, no. 10 (1980):
+  1043--1069.
+\newblock \doi{10.1080/03610928008827941}.
+
+\bibitem[\protect\citeauthoryear{Paul, Pennell, and Lemeshow}{Paul
+  et~al.}{}]{paul2013power}
+Prabasaj Paul, Michael~L. Pennell, and Stanley Lemeshow.
+\newblock
+\newblock ``Standardizing the power of the {Hosmer--Lemeshow} goodness of fit
+  test in large data sets.''  {\it Statistics in Medicine\/}~32, no. 1 (2013):
+  67--80.
+\newblock \doi{10.1002/sim.5525}.
+
+\bibitem[\protect\citeauthoryear{Lai and Liu}{Lai and Liu}{}]{Lai2018}
+Xin Lai and Liu Liu.
+\newblock
+\newblock ``A simple test procedure in standardizing the power of
+  Hosmer--Lemeshow test in large data sets.''  {\it Journal of Statistical
+  Computation and Simulation\/}~88, no. 13 (2018): 2463--2472.
+\newblock \doi{10.1080/00949655.2018.1467912}.
+
+\bibitem[\protect\citeauthoryear{Nattino, Pennell, and Lemeshow}{Nattino
+  et~al.}{}]{nattino2020assessing}
+Giovanni Nattino, Michael~L. Pennell, and Stanley Lemeshow.
+\newblock
+\newblock ``Assessing the goodness of fit of logistic regression models in
+  large samples: {A} modification of the {Hosmer--Lemeshow} test.''  {\it
+  Biometrics\/}~76, no. 2 (2020): 549--560.
+\newblock \doi{10.1111/biom.13249}.
+
+\bibitem[\protect\citeauthoryear{Surjanovic, Lockhart, and Loughin}{Surjanovic
+  et~al.}{}]{surjanovic2024generalized}
+Nikola Surjanovic, Richard~A. Lockhart, and Thomas~M. Loughin.
+\newblock
+\newblock ``A generalized {Hosmer--Lemeshow} goodness-of-fit test for a family
+  of generalized linear models.''  {\it TEST\/}~33, no. 2 (2024): 589--608.
+\newblock \doi{10.1007/s11749-023-00912-8}.
+
+\bibitem[\protect\citeauthoryear{Zhang, Ding, and Yang}{Zhang
+  et~al.}{}]{BAGofT2019}
+Jiawei Zhang, Jie Ding, and Yuhong Yang.
+\newblock
+\newblock ``Is a Classification Procedure Good Enough? {A} Goodness-of-Fit
+  Assessment Tool for Classification Learning.''  {\it Journal of the American
+  Statistical Association\/}~118, no. 542 (2023): 1115--1125.
+\newblock \doi{10.1080/01621459.2021.1979010}.
+
+\bibitem[\protect\citeauthoryear{Hosmer and Hjort}{Hosmer and
+  Hjort}{}]{hosmer2002goodness}
+David~W. Hosmer and Nils~Lid Hjort.
+\newblock
+\newblock ``Goodness-of-fit processes for logistic regression: simulation
+  results.''  {\it Statistics in Medicine\/}~21, no. 18 (2002): 2723--2738.
+\newblock \doi{10.1002/sim.1200}.
+
+\bibitem[\protect\citeauthoryear{Stukel}{Stukel}{}]{stukel1988generalized}
+T.~A. Stukel.
+\newblock
+\newblock ``Generalized logistic models.''  {\it Journal of the American
+  Statistical Association\/}~83, no. 402 (1988): 426--431.
+\newblock \doi{10.1080/01621459.1988.10478613}.
+
+\bibitem[\protect\citeauthoryear{Hosmer, Hosmer, le~Cessie, and
+  Lemeshow}{Hosmer et~al.}{}]{hosmer1997comparison}
+David~W. Hosmer, Trina Hosmer, Saskia le~Cessie, and Stanley Lemeshow.
+\newblock
+\newblock ``A comparison of goodness-of-fit tests for the logistic regression
+  model.''  {\it Statistics in Medicine\/}~16, no. 9 (1997): 965--980.
+\newblock
+  \doi{10.1002/(SICI)1097-0258(19970515)16:9<965::AID-SIM509>3.0.CO;2-O}.
+
+\bibitem[\protect\citeauthoryear{Nattino, Finazzi, and Bertolini}{Nattino
+  et~al.}{}]{nattino2014new}
+G.~Nattino, S.~Finazzi, and G.~Bertolini.
+\newblock
+\newblock ``A new calibration test and a reappraisal of the calibration belt
+  for the assessment of prediction models based on dichotomous outcomes.''
+  {\it Statistics in Medicine\/}~33, no. 14 (2014): 2390--2407.
+\newblock \doi{10.1002/sim.6100}.
+
+\bibitem[\protect\citeauthoryear{Nattino, Finazzi, and Bertolini}{Nattino
+  et~al.}{}]{nattino2015new}
+G.~Nattino, S.~Finazzi, and G.~Bertolini.
+\newblock
+\newblock ``A new test and graphical tool to assess the goodness of fit of
+  logistic regression models.''  {\it Statistics in Medicine\/}~35, no. 5
+  (2016): 709--720.
+\newblock \doi{10.1002/sim.6744}.
+
+\bibitem[\protect\citeauthoryear{Liu, Li, Chen, H{\"a}rdle, and Liang}{Liu
+  et~al.}{}]{liu2024comprehensive}
+H.~Liu, X.~Li, F.~Chen, W.~H{\"a}rdle, and H.~Liang.
+\newblock
+\newblock ``A comprehensive comparison of goodness-of-fit tests for logistic
+  regression models.''  {\it Statistics and Computing\/}~34, no. 5 (2024): 175.
+\newblock \doi{10.1007/s11222-024-10487-5}.
+
+\bibitem[\protect\citeauthoryear{le~Cessie and van Houwelingen}{le~Cessie and
+  van Houwelingen}{}]{le1991goodness}
+S.~le~Cessie and J.~C. van Houwelingen.
+\newblock
+\newblock ``A goodness-of-fit test for binary regression models, based on
+  smoothing methods.''  {\it Biometrics\/}~47, no. 4 (1991): 1267--1282.
+\newblock \doi{10.2307/2532385}.
+
+\bibitem[\protect\citeauthoryear{Farrington}{Farrington}{}]{farrington1996}
+C.P. Farrington.
+\newblock
+\newblock ``On Assessing Goodness of Fit of Generalized Linear Models to Sparse
+  Data.''  {\it Journal of the Royal Statistical Society, Series B\/}~58, no. 2
+  (1996): 349--360.
+\newblock \doi{10.1111/j.2517-6161.1996.tb02086.x}.
+
+\bibitem[\protect\citeauthoryear{Satterthwaite}{Satterthwaite}{}]{satterthwaite1946}
+F.~E. Satterthwaite.
+\newblock
+\newblock ``An approximate distribution of estimates of variance components.''
+  {\it Biometrics Bulletin\/}~2, no. 6 (1946): 110--114.
+\newblock \doi{10.2307/3002019}.
+
+\bibitem[\protect\citeauthoryear{Imhof}{Imhof}{}]{imhof1961}
+J.~P. Imhof.
+\newblock
+\newblock ``Computing the distribution of quadratic forms in normal
+  variables.''  {\it Biometrika\/}~48, no. 3/4 (1961): 419--426.
+\newblock \doi{10.1093/biomet/48.3-4.419}.
+
+\bibitem[\protect\citeauthoryear{Ebrahim}{Ebrahim}{}]{ebrahim2025gof}
+Ebrahim~Khaled Ebrahim 2026.
+\newblock ``{ebrahim.gof}: Goodness-of-Fit and Calibration Tests for Logistic
+  Regression.''   Comprehensive R Archive Network (CRAN), R package version
+  2.9.0, \doi{10.32614/CRAN.package.ebrahim.gof}.
+
+\bibitem[\protect\citeauthoryear{Rousseeuw and Leroy}{Rousseeuw and
+  Leroy}{}]{rousseeuwleroy1987}
+Peter~J. Rousseeuw and Annick~M. Leroy. 1987.
+\newblock {\it Robust Regression and Outlier Detection},
+\newblock New York: Wiley.
+
+\bibitem[\protect\citeauthoryear{Croux, Flandre, and Haesbroeck}{Croux
+  et~al.}{}]{croux2002breakdown}
+Christophe Croux, Christophe Flandre, and Gentiane Haesbroeck.
+\newblock
+\newblock ``The breakdown behavior of the maximum likelihood estimator in the
+  logistic regression model.''  {\it Statistics \& Probability Letters\/}~60,
+  no. 4 (2002): 377--386.
+\newblock \doi{10.1016/S0167-7152(02)00292-4}.
+
+\bibitem[\protect\citeauthoryear{Hampel, Ronchetti, Rousseeuw, and
+  Stahel}{Hampel et~al.}{}]{hampel1986robust}
+Frank~R. Hampel, Elvezio~M. Ronchetti, Peter~J. Rousseeuw, and Werner~A.
+  Stahel. 1986.
+\newblock {\it Robust Statistics: The Approach Based on Influence Functions},
+\newblock New York: Wiley.
+
+\bibitem[\protect\citeauthoryear{Ebrahim, Hussein, and El-Kotory}{Ebrahim
+  et~al.}{}]{edge2_repro_2026}
+Ebrahim~Khaled Ebrahim, Osama Abd El-Aziz Hussein, and Ahmed El-Kotory.
+  2026.
+\newblock ``Reproducibility archive for {\itshape A grouped calibration test
+  for logistic regression that tolerates a few corrupted records}: study
+  specifications, simulation code and per-replicate results.''   Zenodo,
+  Version 1.0.0.
+
+\bibitem[\protect\citeauthoryear{Pigeon and Heyse}{Pigeon and
+  Heyse}{}]{pigeon1999b}
+J.~G. Pigeon and J.~F. Heyse.
+\newblock
+\newblock ``An improved goodness of fit statistic for probability prediction
+  models.''  {\it Biometrical Journal\/}~41, no. 1 (1999): 71--82.
+\newblock \doi{10.1002/(SICI)1521-4036(199903)41:1<71::AID-BIMJ71>3.0.CO;2-O}.
+
+\bibitem[\protect\citeauthoryear{Tsiatis}{Tsiatis}{}]{Tsiatis1980}
+A.~A. Tsiatis.
+\newblock
+\newblock ``A note on a goodness-of-fit test for the logistic regression
+  model.''  {\it Biometrika\/}~67, no. 1 (1980): 250--251.
+\newblock \doi{10.1093/biomet/67.1.250}.
+
+\bibitem[\protect\citeauthoryear{Xie, Pendergast, and Clarke}{Xie
+  et~al.}{}]{xie2008increasing}
+X.~J. Xie, J.~Pendergast, and W.~Clarke.
+\newblock
+\newblock ``Increasing the power: A practical approach to goodness-of-fit test
+  for logistic regression models with continuous predictors.''  {\it
+  Computational Statistics \& Data Analysis\/}~52 (2008): 2703--2713.
+\newblock \doi{10.1016/j.csda.2007.09.027}.
+
+\bibitem[\protect\citeauthoryear{Dardis}{Dardis}{}]{LogisticDx}
+C.~Dardis 2022.
+\newblock ``LogisticDx: Diagnostic tests and plots for logistic regression
+  models.''   CRAN package archive,
+  \url{https://cran.r-project.org/src/contrib/Archive/LogisticDx/}, R package
+  version 0.3.
+
+\bibitem[\protect\citeauthoryear{Pregibon}{Pregibon}{}]{pregibon1980goodness}
+Daryl Pregibon.
+\newblock
+\newblock ``Goodness of Link Tests for Generalized Linear Models.''  {\it
+  Journal of the Royal Statistical Society. Series C (Applied
+  Statistics)\/}~29, no. 1 (1980): 15--23.
+\newblock \doi{10.2307/2346405}.
+
+\bibitem[\protect\citeauthoryear{le~Cessie and van Houwelingen}{le~Cessie and
+  van Houwelingen}{}]{le1995goodness}
+S.~le~Cessie and J.~C. van Houwelingen.
+\newblock
+\newblock ``Testing the fit of a regression model via score tests in random
+  effects models.''  {\it Biometrics\/}~51, no. 2 (1995): 600--614.
+\newblock \doi{10.2307/2532948}.
+
+\bibitem[\protect\citeauthoryear{Ebrahim and El-Kotory}{Ebrahim and
+  El-Kotory}{}]{ebrahim2026benchmark}
+Ebrahim~Khaled Ebrahim and Ahmed El-Kotory.
+\newblock
+\newblock ``Benchmarking Goodness-of-Fit and Calibration Algorithms for
+  Logistic Regression Classifiers: A Large-Scale Simulation Study under Sparse
+  Data.''  {\it Journal of Intelligent Computing and Data Science\/}~2, no. 2
+  (2026): 97--128.
+\newblock \doi{10.21608/jicds.2026.505341.1048}.
+
+\bibitem[\protect\citeauthoryear{Escanciano}{Escanciano}{}]{escanciano2006consistent}
+J.~Carlos Escanciano.
+\newblock
+\newblock ``A consistent diagnostic test for regression models using
+  projections.''  {\it Econometric Theory\/}~22, no. 6 (2006): 1030--1051.
+\newblock \doi{10.1017/S0266466606060506}.
+
+\bibitem[\protect\citeauthoryear{Huber}{Huber}{}]{huber1964robust}
+Peter~J. Huber.
+\newblock
+\newblock ``Robust Estimation of a Location Parameter.''  {\it The Annals of
+  Mathematical Statistics\/}~35, no. 1 (1964): 73--101.
+\newblock \doi{10.1214/aoms/1177703732}.
+
+\bibitem[\protect\citeauthoryear{Carroll, Ruppert, Stefanski, and
+  Crainiceanu}{Carroll et~al.}{}]{carroll2006measurement}
+Raymond~J. Carroll, David Ruppert, Leonard~A. Stefanski, and Ciprian~M.
+  Crainiceanu. 2006.
+\newblock {\it Measurement Error in Nonlinear Models: A Modern Perspective},
+\newblock Boca Raton: Chapman and Hall/CRC.
+
+\bibitem[\protect\citeauthoryear{Cantoni and Ronchetti}{Cantoni and
+  Ronchetti}{}]{cantoni2001robust}
+Eva Cantoni and Elvezio Ronchetti.
+\newblock
+\newblock ``Robust Inference for Generalized Linear Models.''  {\it Journal of
+  the American Statistical Association\/}~96, no. 455 (2001): 1022--1030.
+\newblock \doi{10.1198/016214501753209004}.
+
+\bibitem[\protect\citeauthoryear{Spiegelhalter}{Spiegelhalter}{}]{spiegelhalter1986probabilistic}
+David~J. Spiegelhalter.
+\newblock
+\newblock ``Probabilistic prediction in patient management and clinical
+  trials.''  {\it Statistics in Medicine\/}~5, no. 5 (1986): 421--433.
+\newblock \doi{10.1002/sim.4780050506}.
+
+\bibitem[\protect\citeauthoryear{Pregibon}{Pregibon}{}]{pregibon1981logistic}
+Daryl Pregibon.
+\newblock
+\newblock ``Logistic regression diagnostics.''  {\it The Annals of
+  Statistics\/}~9, no. 4 (1981): 705--724.
+\newblock \doi{10.1214/aos/1176345513}.
+
+\bibitem[\protect\citeauthoryear{Austin and Steyerberg}{Austin and
+  Steyerberg}{}]{austin2019ici}
+Peter~C. Austin and Ewout~W. Steyerberg.
+\newblock
+\newblock ``The {Integrated Calibration Index} ({ICI}) and related metrics for
+  quantifying the calibration of logistic regression models.''  {\it Statistics
+  in Medicine\/}~38, no. 21 (2019): 4051--4065.
+\newblock \doi{10.1002/sim.8281}.
+
+\bibitem[\protect\citeauthoryear{Hosmer, Lemeshow, and Sturdivant}{Hosmer
+  et~al.}{}]{hosmer2013applied}
+David~W. Hosmer, Stanley Lemeshow, and Rodney~X. Sturdivant. 2013.
+\newblock {\it Applied Logistic Regression},
+\newblock Hoboken, NJ: John Wiley \& Sons.
+\newblock \doi{10.1002/9781118548387}.
+
+\bibitem[\protect\citeauthoryear{Heritier and Ronchetti}{Heritier and
+  Ronchetti}{}]{heritier1994robust}
+Stephane Heritier and Elvezio Ronchetti.
+\newblock
+\newblock ``Robust Bounded-Influence Tests in General Parametric Models.''
+  {\it Journal of the American Statistical Association\/}~89, no. 427 (1994):
+  897--904.
+\newblock \doi{10.1080/01621459.1994.10476822}.
+
+\bibitem[\protect\citeauthoryear{Strack, DeShazo, Gennings, Olmo, Ventura,
+  Cios, and Clore}{Strack et~al.}{}]{strack2014impact}
+Beata Strack, Jonathan~P. DeShazo, Chris Gennings, Juan~L. Olmo, Sebastian
+  Ventura, Krzysztof~J. Cios, and John~N. Clore.
+\newblock
+\newblock ``Impact of {HbA1c} measurement on hospital readmission rates:
+  analysis of 70,000 clinical database patient records.''  {\it BioMed Research
+  International\/}~2014 (2014): 781670.
+\newblock \doi{10.1155/2014/781670}.
+
+\bibitem[\protect\citeauthoryear{Clore, Cios, DeShazo, and Strack}{Clore
+  et~al.}{}]{clore2014uci}
+John Clore, Krzysztof Cios, Jon DeShazo, and Beata Strack. 2014.
+\newblock ``Diabetes 130-{US} hospitals for years 1999--2008.''   UCI Machine
+  Learning Repository, \doi{10.24432/C5230J}.
+
+\bibitem[\protect\citeauthoryear{Cox}{Cox}{}]{cox1958}
+D.~R. Cox.
+\newblock
+\newblock ``Two further applications of a model for binary regression.''  {\it
+  Biometrika\/}~45, no. 3--4 (1958): 562--565.
+\newblock \doi{10.1093/biomet/45.3-4.562}.
+
+\bibitem[\protect\citeauthoryear{Miller, Hui, and Tierney}{Miller
+  et~al.}{}]{Miller1991}
+M.~E. Miller, S.~L. Hui, and W.~M. Tierney.
+\newblock
+\newblock ``Validation techniques for logistic regression models.''  {\it
+  Statistics in Medicine\/}~10, no. 8 (1991): 1213--1226.
+\newblock \doi{10.1002/sim.4780100805}.
+
+\bibitem[\protect\citeauthoryear{Van~Calster, McLernon, van Smeden, Wynants,
+  and Steyerberg}{Van~Calster et~al.}{}]{vancalster2019}
+Ben Van~Calster, David~J. McLernon, Maarten van Smeden, Laure Wynants, and
+  Ewout~W. Steyerberg.
+\newblock
+\newblock ``Calibration: the {Achilles} heel of predictive analytics.''  {\it
+  BMC Medicine\/}~17, no. 1 (2019): 230.
+\newblock \doi{10.1186/s12916-019-1466-7}.
+
+\bibitem[\protect\citeauthoryear{Moore and Spruill}{Moore and
+  Spruill}{}]{Moore1975}
+D.~S. Moore and M.~C. Spruill.
+\newblock
+\newblock ``Unified large-sample theory of general chi-squared statistics for
+  tests of fit.''  {\it The Annals of Statistics\/}~3, no. 3 (1975): 599--616.
+\newblock \doi{10.1214/aos/1176343125}.
+
+\bibitem[\protect\citeauthoryear{Rayner, Thas, and Best}{Rayner
+  et~al.}{}]{raynerthasbest2009}
+J.~C.~W. Rayner, O.~Thas, and D.~J. Best. 2009.
+\newblock {\it Smooth Tests of Goodness of Fit: Using {R}},
+\newblock Chichester, UK: John Wiley \& Sons.
+\newblock \doi{10.1002/9780470824443}.
+
+\end{thebibliography}

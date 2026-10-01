@@ -1,0 +1,41 @@
+\begin{table}[htbp]\centering\small
+\caption{External validation: a published model with frozen coefficients checked on new patients. Five
+standard normal covariates; the truth departs from the published linear predictor in five ways, two
+strengths each, at $n=500$; in the last block the model is correct and $k$ of $1000$ records carry the
+second covariate multiplied by four (exaggeration) or by $-4$ (sign error), with their prediction
+recomputed at the recorded value. EDGE is in external mode (cubic basis and constant, four
+degrees of freedom) at ten groups and at the default partition. Cox is the recalibration test on
+intercept and slope, Spiegelhalter the $z$ test, GiViTI the belt in external mode, HL the
+Hosmer--Lemeshow statistic at ten groups and Stukel his two terms added to the frozen linear predictor.
+$1000$ replicates a scenario. Power is size-adjusted at the null with $n=500$; shaded false-alarm rates
+exceed $0.10$.}
+\label{tab:external}
+\resizebox{\textwidth}{!}{\begin{tabular}{lrrrrrrr}\hline
+Scenario & EDGE, $G{=}10$ & EDGE, default & Cox & Spiegelhalter & GiViTI & HL & Stukel \\ \hline
+\multicolumn{8}{l}{\emph{Level: rejection rate of a correct model}} \\
+\quad $n=250$ & 0.051 & 0.051 & 0.053 & 0.050 & 0.056 & 0.048 & 0.051 \\
+\quad $n=500$ & 0.051 & 0.054 & 0.055 & 0.057 & 0.053 & 0.052 & 0.062 \\
+\quad $n=1000$ & 0.061 & 0.050 & 0.061 & 0.061 & 0.060 & 0.048 & 0.052 \\
+\multicolumn{8}{l}{\emph{Power, size-adjusted, $n=500$}} \\
+\quad calibration in the large, $C=0.2$ & 0.311 & 0.298 & 0.390 & 0.107 & 0.392 & 0.216 & 0.153 \\
+\quad calibration in the large, $C=0.4$ & 0.911 & 0.894 & 0.953 & 0.303 & 0.951 & 0.770 & 0.493 \\
+\quad calibration slope, $C=0.8$ & 0.394 & 0.387 & 0.415 & 0.526 & 0.415 & 0.290 & 0.321 \\
+\quad calibration slope, $C=0.6$ & 0.972 & 0.971 & 0.987 & 0.994 & 0.987 & 0.929 & 0.956 \\
+\quad U-shaped term, $C=0.4$ & 0.124 & 0.127 & 0.079 & 0.075 & 0.084 & 0.104 & 0.084 \\
+\quad U-shaped term, $C=0.8$ & 0.460 & 0.470 & 0.342 & 0.271 & 0.361 & 0.335 & 0.322 \\
+\quad threshold term, $C=2$ & 0.135 & 0.120 & 0.203 & 0.067 & 0.202 & 0.102 & 0.163 \\
+\quad threshold term, $C=4$ & 0.277 & 0.240 & 0.418 & 0.086 & 0.429 & 0.161 & 0.282 \\
+\quad interaction, $C=0.6$ & 0.144 & 0.151 & 0.091 & 0.072 & 0.102 & 0.115 & 0.103 \\
+\quad interaction, $C=1$ & 0.424 & 0.459 & 0.218 & 0.210 & 0.279 & 0.332 & 0.390 \\
+\quad mean of the ten & 0.415 & 0.412 & 0.410 & 0.271 & 0.420 & 0.335 & 0.327 \\
+\multicolumn{8}{l}{\emph{False alarms, correct model, $n=1000$}} \\
+\quad exaggeration, $k=1$ & 0.044 & 0.055 & 0.054 & 0.048 & 0.055 & 0.040 & 0.048 \\
+\quad exaggeration, $k=2$ & 0.034 & 0.043 & 0.046 & 0.043 & 0.047 & 0.046 & 0.070 \\
+\quad exaggeration, $k=5$ & 0.059 & 0.072 & 0.050 & 0.054 & 0.063 & 0.048 & \cellcolor{black!12}0.123 \\
+\quad exaggeration, $k=10$ & 0.055 & 0.077 & 0.072 & 0.070 & 0.089 & 0.064 & \cellcolor{black!12}0.173 \\
+\quad sign error, $k=1$ & 0.045 & 0.040 & 0.043 & 0.047 & 0.057 & 0.050 & \cellcolor{black!12}0.114 \\
+\quad sign error, $k=2$ & 0.044 & 0.051 & 0.043 & 0.044 & 0.080 & 0.058 & \cellcolor{black!12}0.132 \\
+\quad sign error, $k=5$ & 0.065 & \cellcolor{black!12}0.104 & 0.088 & 0.071 & \cellcolor{black!12}0.192 & 0.067 & \cellcolor{black!12}0.349 \\
+\quad sign error, $k=10$ & 0.082 & \cellcolor{black!12}0.240 & \cellcolor{black!12}0.158 & 0.090 & \cellcolor{black!12}0.347 & 0.076 & \cellcolor{black!12}0.610 \\
+\quad settings held, of eight & 8 & 6 & 7 & 8 & 6 & 8 & 2 \\
+\hline\end{tabular}}\end{table}

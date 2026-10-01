@@ -1,0 +1,5 @@
+"test","n","median_sec","min_sec","reps"
+"le Cessie, O(n^3) form",500,0.43,0.42,3
+"le Cessie, O(n^3) form",1000,5.57,5.09,3
+"le Cessie, O(n^3) form",2000,73.64,73.64,1
+"le Cessie, O(n^3) form",5000,1267.53,1267.53,1

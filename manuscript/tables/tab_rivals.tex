@@ -7,12 +7,13 @@ bold, and $\star$ marks a paired difference from EDGE significant after the Holm
 EDGE is at its default partition. The closing rows summarise the table: after the Holm correction EDGE
 is ahead of le Cessie's test and BAGofT in $14$ of the $20$ scenarios and of the projection test in
 $7$, and each rival is ahead in one, the crossing curve; the mean is of raw rates, while the text and
-Figure~\ref{fig:cost} give size-adjusted power. The rivals lead on the families they are built for,
-interactions and rough misfit (Section~\ref{sec:rivals}, Table~\ref{tab:whennot}). Time is the median
+Figure~1 of the main text give size-adjusted power. The rivals lead on the families they are built for,
+interactions and rough misfit (Section~5.3 and Table~3 of the main text). Time is the median
 for one data set at $n=1000$ on one core, le Cessie's test in its published form.}
 \label{tab:rivals}
+\footnotesize\setlength{\tabcolsep}{4pt}
 \begin{tabular}{llrrrrr}\hline
-Departure & Design & $n$ & EDGE & le Cessie & Liu projection & BAGofT \\ \hline
+Departure & Design & $n$ & EDGE & le Cessie & \hd{Liu}{projection} & BAGofT \\ \hline
 \multicolumn{7}{l}{\emph{Symmetric tails}} \\
 \quad cauchit link & high AUC & 460 & \textbf{0.470} & 0.200$^\star$ & 0.262$^\star$ & 0.140$^\star$ \\
 \quad cauchit link & one covariate & 500 & \textbf{0.120} & 0.052$^\star$ & 0.082 & 0.055 \\
@@ -40,5 +41,5 @@ Departure & Design & $n$ & EDGE & le Cessie & Liu projection & BAGofT \\ \hline
 \hline
 \multicolumn{3}{l}{Mean rejection rate (raw)} & 0.440 & 0.319 & 0.402 & 0.224 \\
 \multicolumn{3}{l}{EDGE ahead / behind after Holm} & -- & 14 / 1 & 7 / 1 & 14 / 1 \\
-\multicolumn{3}{l}{Time a data set, $n=1000$} & 4 ms & 5.6 s & 35 s & 392 s \\
+\multicolumn{3}{l}{Time a data set, $n=1000$} & 2 ms & 5.6 s & 35 s & 392 s \\
 \hline\end{tabular}\end{table}

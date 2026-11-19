@@ -1,0 +1,9 @@
+test,n,median_sec,min_sec,reps,inner_loop
+Sadatsafavi-Petkau BB (cumulcalib),1000,0.00015,0.00015,5,200
+"EDGE external, ten groups",1000,3e-04,0.00025,5,200
+Sadatsafavi-Petkau BB (cumulcalib),5000,0.000750000000000001,0.000750000000000001,5,40
+"EDGE external, ten groups",5000,0.000750000000000001,0.000750000000000001,5,40
+Sadatsafavi-Petkau BB (cumulcalib),20000,0.002,0.001,5,10
+"EDGE external, ten groups",20000,0.00299999999999998,0.002,5,10
+Sadatsafavi-Petkau BB (cumulcalib),100000,0.012,0.00800000000000001,5,5
+"EDGE external, ten groups",100000,0.0100000000000001,0.00999999999999996,5,5

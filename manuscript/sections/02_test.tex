@@ -53,10 +53,9 @@ We write EDGE for the test in general and name the basis where it matters.
 The columns of $Z$ may be used as they stand, the \emph{unit} form, or first scaled by $\sqrt{V_g}$,
 the \emph{score} form, in which $Z^\top r$ is the score for adding the grouped shape to the model. The
 score form moves weight towards the extreme risk groups. The unit form with the cubic basis is the
-default and is used throughout unless stated. With the symmetric basis the score form is the better
-choice when discrimination is high (an area under the curve near $0.9$ in our designs) and when a
-covariate is strongly skewed, provided the data are clean: because it leans on the extreme groups, it
-is the form most affected by corrupted records (Supporting Information S1).
+default and is used throughout unless stated. With the symmetric basis the score form is more
+powerful at high discrimination, but because it leans on the extreme groups it is the form most
+affected by corrupted records (Online Resource~1, Section~S1).
 
 \subsection{The null distribution}\label{sec:null}
 
@@ -85,7 +84,7 @@ with $0\le\lambda_j\le1$ for every $j$.
 The $p$-value is computed from the Satterthwaite scaled chi-squared approximation to this weighted
 sum \citep{satterthwaite1946}, which is exact when $d=1$; Imhof's numerical inversion \citep{imhof1961}
 is available when more accuracy is wanted. Every simulation in this paper uses the Satterthwaite
-approximation. Neither computation needs a second model fit or resampling.
+approximation.
 
 \subsection{The partition as a setting}\label{sec:partitionchoice}
 
@@ -107,18 +106,4 @@ the sample, $G=\max(10,\lceil n/25\rceil)$, about twenty-five patients a group (
 rounded $n/25$ to the nearest integer, which moves the partition by at most one group); on clean data it gives
 EDGE more power than ten groups (Section~\ref{sec:verdicts}). When records may be wrong,
 the \emph{ten-group partition} keeps many clean records in the extreme groups, where corrupted records
-collect, and protects the cubic basis much further (Section~\ref{sec:edgefr}); the symmetric basis is
-better protected at the default partition against reversed records, though not against many
-exaggerated ones (Section~\ref{sec:severity}). Pooling only the two extreme groups protects no better
-than ten groups (Supporting Information S5).
-
-In the R package \texttt{ebrahim.gof} \citep{ebrahim2025gof} the test is
-\texttt{edge.gof(fit)} for a fitted \texttt{glm}. It reports two rows: the verdict at the default
-partition and, as a robustness check, the same test at ten groups; its degrees of freedom are the
-effective $\nu$ of the Satterthwaite reference. \texttt{G = 10} alone gives the ten-group partition, \texttt{basis = "sym"} or \texttt{"stukel"} for the other bases and
-\texttt{weights = "score"} for the score form. For frozen predictions,
-\texttt{edge.gof(y, predicted\_probs = p, external = TRUE, G = 10)} computes the external-mode
-statistic at ten groups, with $\Omega=I_G$ and the constant column added, and reproduces every statistic
-of Section~\ref{sec:realdata} at its own $G$; \texttt{run.all.external(y, p)} runs it at ten groups and at
-the default partition beside the other external-validation tests of Supporting Information S7
-(version 2.9.0 onwards).
+collect, and protects the cubic basis much further (Section~\ref{sec:edgefr}).

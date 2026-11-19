@@ -182,3 +182,27 @@ The following scripts are deposited for completeness. The paper does not rely on
   index of the clean records under corruption, Section 6.1, output `results/analysis/corruption_ici.csv`).
 * **Robustness exploration.** This is `robust_influence_rivals.R`, which its header describes as
   exploratory.
+
+## 9. Added in version 1.1.0
+
+Version 1.1.0 adds a faster computation of the directed test, a comparison with the cumulative
+calibration test of Sadatsafavi and Petkau (2024), and the revised manuscript. The table and figure
+numbers in sections 1 and 2 are those of version 1.0.0; the file names in `manuscript/tables/` and
+`manuscript/figures/` are unchanged, so each row still finds its file.
+
+| what | script | reads | writes |
+|---|---|---|---|
+| Declaration of the comparison | (hashed before any replicate ran) | | `declarations/PREDECLARATION_blockEXT_SP.md` and `.sha256` |
+| Block EXT_SP: the Sadatsafavi--Petkau test (`cumulcalib`, method `"BB"`) on all 21 cells of block EXT | `code/simulations/run_M_blockEXT_SP.R` | regenerates block EXT's data from its seeds and checks them against `results/blocks/EXT/` | `results/blocks/EXT_SP/c*_pvalues.csv.gz`, `results/blocks/T/timing_sp.csv` |
+| Its declared analysis | `code/simulations/analyse_blockEXT_SP.R` | `results/blocks/EXT/`, `results/blocks/EXT_SP/` | `results/blocks/EXT_SP/_summary.csv`, `_paired.csv` |
+| The external-validation table with the new column | `code/paper/make_tab_external_v110.R` | `results/blocks/EXT/_summary.csv`, `results/blocks/EXT_SP/_summary.csv` | `manuscript/tables/tab_external.tex` |
+| Timing of the d x d computation | `code/simulations/bench_time_T_edge_dxd.R` | the two package sources (below) | `results/blocks/T/timing_edge_dxd.csv` (idle machine; `_underload.csv` is a run made while other jobs ran, kept for the record) |
+| Equality of the two computations, 250 data sets in each of 6600 settings | `code/simulations/check_edge_dxd_equality.R` | the two package sources | `results/blocks/T/edge_dxd_equality.csv` |
+| The cost figure with the new timings | `code/paper/_fig15_v110.R` | `results/blocks/T/*.csv` and the files listed for Figure 3 above | `manuscript/figures/Fig15_cost.pdf` |
+
+**The package source that was timed.** `code/package/ebrahim.gof-dxd-1ee8918.tar.gz` is the package
+source with the d x d computation: the matrix the reference distribution needs is built from the
+fitted model's columns and the basis, and the G x G projection is never formed. Its results equal
+those of version 3.1.0 on CRAN to within 1e-9 for the statistic and 1e-11 for the p-value (the
+equality file above). The timing and equality scripts compare the two sources; unpack them and set
+`EBGOF_OLD_SRC` (version 3.1.0 from CRAN) and `EBGOF_NEW_SRC` (this tarball) before running.

@@ -13,6 +13,7 @@ declarations/      every pre-declaration, with the sha256 that froze it
 code/INDEX.md      which script produced each table, figure and block, and which scripts are exploratory
 code/simulations/  the study's R code: generators, tests, block runners, self-tests, analyses
 code/paper/        the table builder and this archive's assembler
+code/package/      the package source with the faster d x d computation that was timed
 results/analysis/  the declared analysis files the paper's tables are built from
 results/blocks/    the per-replicate deposits of the blocks the paper reports, the block summaries of
                    the main battery, and the battery's design files (cell table, sample sizes)
@@ -20,6 +21,10 @@ results/cohort/    the outputs of the clinical-cohort analysis of Section 7
 manuscript/        the LaTeX source, the generated tables, the figures and the compiled PDF
 MANIFEST.sha256    sha256 of every file above
 ```
+
+Version 1.1.0 adds the comparison with the test of Sadatsafavi and Petkau (2024), the faster
+computation of the directed test with its timing and equality checks, and the revised manuscript;
+`code/INDEX.md`, section 9, lists the new files.
 
 ## How to run
 

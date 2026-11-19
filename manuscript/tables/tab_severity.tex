@@ -8,11 +8,11 @@ $1000$ replicates a scenario, every test on the same data sets; the Monte Carlo 
 a rate of $0.05$ is $0.007$. A replicate with no $p$-value counts as a non-rejection. Shaded cells exceed
 $0.10$, the rate above which a test is read as no longer holding its level.}
 \label{tab:severity}
-\begin{adjustbox}{max width=\textwidth}
+\footnotesize\setlength{\tabcolsep}{3.5pt}
 \begin{tabular}{rrrrrrrrrrr}\hline
  & & \multicolumn{4}{c}{EDGE} & \multicolumn{4}{c}{grouped rivals} & \\
 \cmidrule(lr){3-6}\cmidrule(lr){7-10}
-$n$ & $k$ & cubic, default & cubic, $G{=}10$ & symmetric, default & symmetric, $G{=}10$ & HL, $G{=}10$ & HL-ew & PH & Tsiatis & Stukel joint \\ \hline
+$n$ & $k$ & \hd{cubic}{default} & \hd{cubic}{$G{=}10$} & \hd{sym.}{default} & \hd{sym.}{$G{=}10$} & \hd{HL}{$G{=}10$} & HL-ew & PH & Tsiatis & \hd{Stukel}{joint} \\ \hline
 \multicolumn{11}{l}{\emph{Exaggeration}, $x\mapsto4x$} \\
 1000 & 0 & 0.045 & 0.040 & 0.044 & 0.047 & 0.040 & 0.040 & 0.019 & 0.059 & 0.044 \\
 1000 & 1 & 0.056 & 0.056 & 0.058 & 0.056 & 0.051 & \cellcolor{black!12}0.151 & 0.033 & 0.077 & \cellcolor{black!12}0.121 \\
@@ -36,4 +36,4 @@ $n$ & $k$ & cubic, default & cubic, $G{=}10$ & symmetric, default & symmetric, $
 5000 & 10 & \cellcolor{black!12}0.139 & 0.077 & 0.058 & \cellcolor{black!12}0.163 & 0.054 & \cellcolor{black!12}0.972 & 0.039 & \cellcolor{black!12}0.721 & \cellcolor{black!12}0.974 \\
 5000 & 25 & \cellcolor{black!12}0.794 & \cellcolor{black!12}0.249 & \cellcolor{black!12}0.291 & \cellcolor{black!12}0.543 & \cellcolor{black!12}0.126 & \cellcolor{black!12}1.000 & 0.080 & \cellcolor{black!12}0.998 & \cellcolor{black!12}1.000 \\
 5000 & 50 & \cellcolor{black!12}1.000 & \cellcolor{black!12}0.903 & \cellcolor{black!12}0.999 & \cellcolor{black!12}0.947 & \cellcolor{black!12}0.575 & \cellcolor{black!12}1.000 & \cellcolor{black!12}0.493 & \cellcolor{black!12}1.000 & \cellcolor{black!12}1.000 \\
-\hline\end{tabular}\end{adjustbox}\end{table}
+\hline\end{tabular}\end{table}

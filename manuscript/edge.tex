@@ -1,0 +1,130 @@
+% EDGE paper. Build: pdflatex -> bibtex -> pdflatex -> pdflatex.
+\PassOptionsToPackage{table}{xcolor}
+\documentclass[pdflatex,sn-mathphys-ay]{sn-jnl}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{adjustbox}
+\usepackage[table]{xcolor}
+\usepackage[title]{appendix}
+\graphicspath{{figures/}}
+\makeatletter
+\def\input@path{{tables/}{sections/}}
+\makeatother
+
+\theoremstyle{thmstyleone}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\raggedbottom
+
+% --- EDGE notation, identical to the software and the companion papers
+\newcommand{\pibar}{\overline{\hat{\pi}}}
+\newcommand{\DEFp}[1]{\textsf{EDGE-poly}\ensuremath{_{#1}}}
+\newcommand{\DEFsym}{\textsf{EDGE-sym}}
+\newcommand{\DEFstk}{\textsf{EDGE-stk}}
+\newcommand{\DEFname}{\textsf{EDGE}}
+\newcommand{\EFname}{\textsf{HL}$_F$}
+\newcommand{\HLname}{\textsf{HL}}
+\newcommand{\hd}[2]{\begin{tabular}[b]{@{}c@{}}#1\\#2\end{tabular}}
+
+\begin{document}
+
+\title[A calibration test that tolerates corrupted records]{A grouped calibration test for logistic
+regression that tolerates a few corrupted records}
+
+\author*[1]{\fnm{Ebrahim Khaled} \sur{Ebrahim}}\email{ebrahimkhaled@alexu.edu.eg}
+\author[1]{\fnm{Osama Abd El-Aziz} \sur{Hussein}}\email{osama.hussein@comm.alexu.edu.eg}
+\author[1]{\fnm{Ahmed} \sur{El-Kotory}}\email{ahmed.elkatory@alexu.edu.eg}
+
+\affil[1]{\orgdiv{Department of Applied Statistics, Faculty of Business}, \orgname{Alexandria
+University}, \orgaddress{\city{Alexandria}, \postcode{5424074}, \country{Egypt}}}
+
+\abstract{On an otherwise correct model, one record in a thousand with an exaggerated covariate
+(multiplied by four) raises the false-alarm rate of Stukel's score test from 5\% to 12\%, and ten
+raise it to 63\%. We found no earlier study of how a few corrupted covariate records change the level
+of calibration tests for logistic regression. Tests lost their level when they divided a record's
+contribution by something the record, or the refit it causes, can make small. Pooling with unit
+weights over equal-size risk groups divides a wrong record's residual by its clean groupmates'
+variance, which bounds its influence at fixed coefficients. We propose EDGE, which projects grouped
+residuals onto a small basis of calibration shapes. For groups formed by predicted risk, its limit
+does not depend on the number of groups as it grows with the sample size, making the partition a
+setting: fine for power, coarse when records may be wrong. In a prespecified simulation it had power
+comparable to Stukel's on clean data and 0.064 more than the ten-group Hosmer--Lemeshow test. With one
+and ten exaggerated records per thousand its false-alarm rates were 0.056 and 0.097; at ten groups
+they stayed below 0.10 up to about ten exaggerated or five reversed (sign-error) records. In external
+validation at ten groups EDGE matched the power of Cox's recalibration test, which lost its level
+under corruption. The cumulative-sum test of Sadatsafavi and Petkau was equally protected, while EDGE
+was 0.035 more powerful on average, from U-shaped and interaction departures.}
+
+\keywords{Calibration, Goodness-of-fit, Logistic regression, Contaminated data, Hosmer--Lemeshow
+test, Clinical prediction model}
+
+\pacs[MSC Classification]{62J12, 62F03, 62P10}
+
+\maketitle
+
+\input{sections/01_introduction}
+\input{sections/02_test}
+\input{sections/03_mechanism}
+\input{sections/04_design}
+\input{sections/05_power}
+\input{sections/055_computation}
+\input{sections/06_corrupted}
+\input{sections/07_realdata}
+\input{sections/08_discussion}
+
+\begin{appendices}
+\input{sections/09_appendix}
+\end{appendices}
+
+\backmatter
+
+\bmhead{Supplementary information}
+Online Resource~1 holds the proofs, the pre-specified comparisons and the full results.
+
+\bmhead{Acknowledgements}
+All praise and thanks are due to Allah, by whose grace this work was completed.
+
+\section*{Statements and Declarations}
+
+\noindent\textbf{Funding.} No funding was received for conducting this study.
+
+\smallskip\noindent\textbf{Competing interests.} The authors have no competing interests to declare
+that are relevant to the content of this article. The R package \texttt{ebrahim.gof}, which
+implements the test proposed here and several of its comparators, is written and maintained by the
+first author and is distributed free of charge under the GPL-3 licence.
+
+\smallskip\noindent\textbf{Ethics approval.} Not applicable. The work reports a simulation study and
+an analysis of the Diabetes 130-US Hospitals data \citep{clore2014uci}, a de-identified public data
+set released for secondary research; no individual patient was contacted and no identifiable data
+were used.
+
+\smallskip\noindent\textbf{Data availability.} No new patient data were generated. The clinical data
+analysed in Section~\ref{sec:realdata} are publicly available from the UCI Machine Learning Repository
+\citep{clore2014uci} and are described by \citet{strack2014impact}. The study specifications with the
+SHA-256 hashes that fixed them before any result was computed, the per-replicate $p$-values of every
+scenario and the scripts that build every table and figure are deposited in a public archive
+\citep{edge2_repro_2026}.
+
+\smallskip\noindent\textbf{Code availability.} The tests are implemented in the R package
+\texttt{ebrahim.gof} \citep{ebrahim2025gof}, available from CRAN, where a single call to
+\texttt{run.all.gof()} runs the whole battery and \texttt{run.all.external()} does the same for frozen
+predictions. The simulation code is in the archive above.
+
+\smallskip\noindent\textbf{Use of AI tools.} The authors used a large-language-model assistant
+(Claude, Anthropic) to help write code for the simulations, analyses and software and to draft and
+edit the wording and \LaTeX{} of the text. The authors designed the study, checked every result
+against the deposited scripts and data, reviewed all code and text, and take full responsibility for
+the content.
+
+\smallskip\noindent\textbf{Author contributions.} E.K.E.: conceptualisation, methodology, formal
+analysis, software, investigation, data curation, visualisation, writing (original draft). O.A.H.:
+supervision, validation, writing (review and editing). A.E.: supervision, project administration,
+validation, writing (review and editing). All authors read and approved the final manuscript.
+
+\bibliography{refs}
+
+\end{document}

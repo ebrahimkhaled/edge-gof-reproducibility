@@ -1,0 +1,956 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{61}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\url{https://doi.org/#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\bibcommenthead
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem[\protect\citeauthoryear{Austin and Steyerberg}{2019}]{austin2019ici}
+\begin{barticle}
+\bauthor{\bsnm{Austin}, \binits{P.C.}},
+\bauthor{\bsnm{Steyerberg}, \binits{E.W.}}:
+\batitle{The {Integrated Calibration Index} ({ICI}) and related metrics for
+  quantifying the calibration of logistic regression models}.
+\bjtitle{Statistics in Medicine}
+\bvolume{38}(\bissue{21}),
+\bfpage{4051}--\blpage{4065}
+(\byear{2019})
+\doiurl{10.1002/sim.8281}
+\end{barticle}
+\endbibitem
+
+%%% 2
+\bibitem[\protect\citeauthoryear{Best and Rayner}{1987}]{bestrayner1987grouped}
+\begin{barticle}
+\bauthor{\bsnm{Best}, \binits{D.J.}},
+\bauthor{\bsnm{Rayner}, \binits{J.C.W.}}:
+\batitle{Goodness-of-fit for grouped data using components of {P}earson's
+  {$X^2$}}.
+\bjtitle{Computational Statistics and Data Analysis}
+\bvolume{5}(\bissue{1}),
+\bfpage{53}--\blpage{57}
+(\byear{1987})
+\doiurl{10.1016/0167-9473(87)90007-7}
+\end{barticle}
+\endbibitem
+
+%%% 3
+\bibitem[\protect\citeauthoryear{Bianco and Yohai}{1996}]{bianco1996robust}
+\begin{bchapter}
+\bauthor{\bsnm{Bianco}, \binits{A.M.}},
+\bauthor{\bsnm{Yohai}, \binits{V.J.}}:
+\bctitle{Robust estimation in the logistic regression model}.
+In: \beditor{\bsnm{Rieder}, \binits{H.}} (ed.)
+\bbtitle{Robust Statistics, Data Analysis, and Computer Intensive Methods}.
+\bsertitle{Lecture Notes in Statistics},
+vol. \bseriesno{109},
+pp. \bfpage{17}--\blpage{34}.
+\bpublisher{Springer},
+\blocation{New York}
+(\byear{1996}).
+\doiurl{10.1007/978-1-4612-2380-1_2}
+\end{bchapter}
+\endbibitem
+
+%%% 4
+\bibitem[\protect\citeauthoryear{Cantoni and
+  Ronchetti}{2001}]{cantoni2001robust}
+\begin{barticle}
+\bauthor{\bsnm{Cantoni}, \binits{E.}},
+\bauthor{\bsnm{Ronchetti}, \binits{E.}}:
+\batitle{Robust inference for generalized linear models}.
+\bjtitle{Journal of the American Statistical Association}
+\bvolume{96}(\bissue{455}),
+\bfpage{1022}--\blpage{1030}
+(\byear{2001})
+\doiurl{10.1198/016214501753209004}
+\end{barticle}
+\endbibitem
+
+%%% 5
+\bibitem[\protect\citeauthoryear{Carroll et~al.}{2006}]{carroll2006measurement}
+\begin{bbook}
+\bauthor{\bsnm{Carroll}, \binits{R.J.}},
+\bauthor{\bsnm{Ruppert}, \binits{D.}},
+\bauthor{\bsnm{Stefanski}, \binits{L.A.}},
+\bauthor{\bsnm{Crainiceanu}, \binits{C.M.}}:
+\bbtitle{Measurement Error in Nonlinear Models: A Modern Perspective},
+\bedition{2}nd edn.
+\bpublisher{Chapman and Hall/CRC},
+\blocation{Boca Raton}
+(\byear{2006})
+\end{bbook}
+\endbibitem
+
+%%% 6
+\bibitem[\protect\citeauthoryear{Clore et~al.}{2014}]{clore2014uci}
+\begin{botherref}
+\oauthor{\bsnm{Clore}, \binits{J.}},
+\oauthor{\bsnm{Cios}, \binits{K.}},
+\oauthor{\bsnm{DeShazo}, \binits{J.}},
+\oauthor{\bsnm{Strack}, \binits{B.}}:
+Diabetes 130-{US} hospitals for years 1999--2008.
+UCI Machine Learning Repository
+(2014).
+\doiurl{10.24432/C5230J}
+\end{botherref}
+\endbibitem
+
+%%% 7
+\bibitem[\protect\citeauthoryear{Cox}{1958}]{cox1958}
+\begin{barticle}
+\bauthor{\bsnm{Cox}, \binits{D.R.}}:
+\batitle{Two further applications of a model for binary regression}.
+\bjtitle{Biometrika}
+\bvolume{45}(\bissue{3--4}),
+\bfpage{562}--\blpage{565}
+(\byear{1958})
+\doiurl{10.1093/biomet/45.3-4.562}
+\end{barticle}
+\endbibitem
+
+%%% 8
+\bibitem[\protect\citeauthoryear{Croux and
+  Haesbroeck}{2003}]{croux2003implementing}
+\begin{barticle}
+\bauthor{\bsnm{Croux}, \binits{C.}},
+\bauthor{\bsnm{Haesbroeck}, \binits{G.}}:
+\batitle{Implementing the {B}ianco and {Y}ohai estimator for logistic
+  regression}.
+\bjtitle{Computational Statistics \& Data Analysis}
+\bvolume{44}(\bissue{1--2}),
+\bfpage{273}--\blpage{295}
+(\byear{2003})
+\doiurl{10.1016/S0167-9473(03)00042-2}
+\end{barticle}
+\endbibitem
+
+%%% 9
+\bibitem[\protect\citeauthoryear{Croux et~al.}{2002}]{croux2002breakdown}
+\begin{barticle}
+\bauthor{\bsnm{Croux}, \binits{C.}},
+\bauthor{\bsnm{Flandre}, \binits{C.}},
+\bauthor{\bsnm{Haesbroeck}, \binits{G.}}:
+\batitle{The breakdown behavior of the maximum likelihood estimator in the
+  logistic regression model}.
+\bjtitle{Statistics \& Probability Letters}
+\bvolume{60}(\bissue{4}),
+\bfpage{377}--\blpage{386}
+(\byear{2002})
+\doiurl{10.1016/S0167-7152(02)00292-4}
+\end{barticle}
+\endbibitem
+
+%%% 10
+\bibitem[\protect\citeauthoryear{Davis et~al.}{2020}]{davis2020drift}
+\begin{barticle}
+\bauthor{\bsnm{Davis}, \binits{S.E.}},
+\bauthor{\bsnm{Greevy}, \binits{R.A.}},
+\bauthor{\bsnm{Lasko}, \binits{T.A.}},
+\bauthor{\bsnm{Walsh}, \binits{C.G.}},
+\bauthor{\bsnm{Matheny}, \binits{M.E.}}:
+\batitle{Detection of calibration drift in clinical prediction models to inform
+  model updating}.
+\bjtitle{Journal of Biomedical Informatics}
+\bvolume{112},
+\bfpage{103611}
+(\byear{2020})
+\doiurl{10.1016/j.jbi.2020.103611}
+\end{barticle}
+\endbibitem
+
+%%% 11
+\bibitem[\protect\citeauthoryear{Ebrahim}{2026}]{ebrahim2025gof}
+\begin{botherref}
+\oauthor{\bsnm{Ebrahim}, \binits{E.K.}}:
+{ebrahim.gof}: Goodness-of-Fit and Calibration Tests for Logistic Regression.
+Comprehensive R Archive Network (CRAN).
+R package version 2.9.0
+(2026).
+\doiurl{10.32614/CRAN.package.ebrahim.gof}
+\end{botherref}
+\endbibitem
+
+%%% 12
+\bibitem[\protect\citeauthoryear{Ebrahim et~al.}{2026}]{edge2_repro_2026}
+\begin{botherref}
+\oauthor{\bsnm{Ebrahim}, \binits{E.K.}},
+\oauthor{\bsnm{Hussein}, \binits{O.A.E.-A.}},
+\oauthor{\bsnm{El-Kotory}, \binits{A.}}:
+Reproducibility archive: {A} grouped calibration test for logistic regression
+  that tolerates a few corrupted records.
+Zenodo.
+Version 1.0.0
+(2026).
+\doiurl{10.5281/zenodo.23079225}
+\end{botherref}
+\endbibitem
+
+%%% 13
+\bibitem[\protect\citeauthoryear{Escanciano}{2006}]{escanciano2006consistent}
+\begin{barticle}
+\bauthor{\bsnm{Escanciano}, \binits{J.C.}}:
+\batitle{A consistent diagnostic test for regression models using projections}.
+\bjtitle{Econometric Theory}
+\bvolume{22}(\bissue{6}),
+\bfpage{1030}--\blpage{1051}
+(\byear{2006})
+\doiurl{10.1017/S0266466606060506}
+\end{barticle}
+\endbibitem
+
+%%% 14
+\bibitem[\protect\citeauthoryear{Farrington}{1996}]{farrington1996}
+\begin{barticle}
+\bauthor{\bsnm{Farrington}, \binits{C.P.}}:
+\batitle{On assessing goodness of fit of generalized linear models to sparse
+  data}.
+\bjtitle{Journal of the Royal Statistical Society, Series B}
+\bvolume{58}(\bissue{2}),
+\bfpage{349}--\blpage{360}
+(\byear{1996})
+\doiurl{10.1111/j.2517-6161.1996.tb02086.x}
+\end{barticle}
+\endbibitem
+
+%%% 15
+\bibitem[\protect\citeauthoryear{Feng et~al.}{2024}]{feng2024monitoring}
+\begin{bchapter}
+\bauthor{\bsnm{Feng}, \binits{J.}},
+\bauthor{\bsnm{Gossmann}, \binits{A.}},
+\bauthor{\bsnm{Pennello}, \binits{G.A.}},
+\bauthor{\bsnm{Petrick}, \binits{N.}},
+\bauthor{\bsnm{Sahiner}, \binits{B.}},
+\bauthor{\bsnm{Pirracchio}, \binits{R.}}:
+\bctitle{Monitoring machine learning-based risk prediction algorithms in the
+  presence of performativity}.
+In: \bbtitle{Proceedings of the 27th International Conference on Artificial
+  Intelligence and Statistics}.
+\bsertitle{Proceedings of Machine Learning Research},
+vol. \bseriesno{238},
+pp. \bfpage{919}--\blpage{927}
+(\byear{2024})
+\end{bchapter}
+\endbibitem
+
+%%% 16
+\bibitem[\protect\citeauthoryear{Goeman et~al.}{2006}]{goeman2006testing}
+\begin{barticle}
+\bauthor{\bsnm{Goeman}, \binits{J.J.}},
+\bauthor{\bsnm{Geer}, \binits{S.A.}},
+\bauthor{\bsnm{Houwelingen}, \binits{H.C.}}:
+\batitle{Testing against a high dimensional alternative}.
+\bjtitle{Journal of the Royal Statistical Society Series B: Statistical
+  Methodology}
+\bvolume{68}(\bissue{3}),
+\bfpage{477}--\blpage{493}
+(\byear{2006})
+\doiurl{10.1111/j.1467-9868.2006.00551.x}
+\end{barticle}
+\endbibitem
+
+%%% 17
+\bibitem[\protect\citeauthoryear{Grigg and Farewell}{2004}]{grigg2004overview}
+\begin{barticle}
+\bauthor{\bsnm{Grigg}, \binits{O.}},
+\bauthor{\bsnm{Farewell}, \binits{V.}}:
+\batitle{An overview of risk-adjusted charts}.
+\bjtitle{Journal of the Royal Statistical Society Series A: Statistics in
+  Society}
+\bvolume{167}(\bissue{3}),
+\bfpage{523}--\blpage{539}
+(\byear{2004})
+\doiurl{10.1111/j.1467-985X.2004.0apm2.x}
+\end{barticle}
+\endbibitem
+
+%%% 18
+\bibitem[\protect\citeauthoryear{Hampel et~al.}{1986}]{hampel1986robust}
+\begin{bbook}
+\bauthor{\bsnm{Hampel}, \binits{F.R.}},
+\bauthor{\bsnm{Ronchetti}, \binits{E.M.}},
+\bauthor{\bsnm{Rousseeuw}, \binits{P.J.}},
+\bauthor{\bsnm{Stahel}, \binits{W.A.}}:
+\bbtitle{Robust Statistics: The Approach Based on Influence Functions}.
+\bpublisher{Wiley},
+\blocation{New York}
+(\byear{1986})
+\end{bbook}
+\endbibitem
+
+%%% 19
+\bibitem[\protect\citeauthoryear{He et~al.}{1990}]{he1990breakdown}
+\begin{barticle}
+\bauthor{\bsnm{He}, \binits{X.}},
+\bauthor{\bsnm{Simpson}, \binits{D.G.}},
+\bauthor{\bsnm{Portnoy}, \binits{S.L.}}:
+\batitle{Breakdown robustness of tests}.
+\bjtitle{Journal of the American Statistical Association}
+\bvolume{85}(\bissue{410}),
+\bfpage{446}--\blpage{452}
+(\byear{1990})
+\doiurl{10.1080/01621459.1990.10476219}
+\end{barticle}
+\endbibitem
+
+%%% 20
+\bibitem[\protect\citeauthoryear{Hosmer and Hjort}{2002}]{hosmer2002goodness}
+\begin{barticle}
+\bauthor{\bsnm{Hosmer}, \binits{D.W.}},
+\bauthor{\bsnm{Hjort}, \binits{N.L.}}:
+\batitle{Goodness-of-fit processes for logistic regression: simulation
+  results}.
+\bjtitle{Statistics in Medicine}
+\bvolume{21}(\bissue{18}),
+\bfpage{2723}--\blpage{2738}
+(\byear{2002})
+\doiurl{10.1002/sim.1200}
+\end{barticle}
+\endbibitem
+
+%%% 21
+\bibitem[\protect\citeauthoryear{Hosmer et~al.}{2013}]{hosmer2013applied}
+\begin{bbook}
+\bauthor{\bsnm{Hosmer}, \binits{D.W.}},
+\bauthor{\bsnm{Lemeshow}, \binits{S.}},
+\bauthor{\bsnm{Sturdivant}, \binits{R.X.}}:
+\bbtitle{Applied Logistic Regression},
+\bedition{3}rd edn.
+\bpublisher{John Wiley \& Sons},
+\blocation{Hoboken, NJ}
+(\byear{2013}).
+\doiurl{10.1002/9781118548387}
+\end{bbook}
+\endbibitem
+
+%%% 22
+\bibitem[\protect\citeauthoryear{Hosmer et~al.}{1997}]{hosmer1997comparison}
+\begin{barticle}
+\bauthor{\bsnm{Hosmer}, \binits{D.W.}},
+\bauthor{\bsnm{Hosmer}, \binits{T.}},
+\bauthor{\bsnm{{le Cessie}}, \binits{S.}},
+\bauthor{\bsnm{Lemeshow}, \binits{S.}}:
+\batitle{A comparison of goodness-of-fit tests for the logistic regression
+  model}.
+\bjtitle{Statistics in Medicine}
+\bvolume{16}(\bissue{9}),
+\bfpage{965}--\blpage{980}
+(\byear{1997})
+\doiurl{10.1002/(SICI)1097-0258(19970515)16:9<965::AID-SIM509>3.0.CO;2-O}
+\end{barticle}
+\endbibitem
+
+%%% 23
+\bibitem[\protect\citeauthoryear{Hosmer~Jr and
+  Lemeshow}{1980}]{hosmer1980goodness}
+\begin{barticle}
+\bauthor{\bsnm{Hosmer~Jr}, \binits{D.W.}},
+\bauthor{\bsnm{Lemeshow}, \binits{S.}}:
+\batitle{Goodness of fit tests for the multiple logistic regression model}.
+\bjtitle{Communications in Statistics -- Theory and Methods}
+\bvolume{9}(\bissue{10}),
+\bfpage{1043}--\blpage{1069}
+(\byear{1980})
+\doiurl{10.1080/03610928008827941}
+\end{barticle}
+\endbibitem
+
+%%% 24
+\bibitem[\protect\citeauthoryear{Huber}{1964}]{huber1964robust}
+\begin{barticle}
+\bauthor{\bsnm{Huber}, \binits{P.J.}}:
+\batitle{Robust estimation of a location parameter}.
+\bjtitle{The Annals of Mathematical Statistics}
+\bvolume{35}(\bissue{1}),
+\bfpage{73}--\blpage{101}
+(\byear{1964})
+\doiurl{10.1214/aoms/1177703732}
+\end{barticle}
+\endbibitem
+
+%%% 25
+\bibitem[\protect\citeauthoryear{Imhof}{1961}]{imhof1961}
+\begin{barticle}
+\bauthor{\bsnm{Imhof}, \binits{J.P.}}:
+\batitle{Computing the distribution of quadratic forms in normal variables}.
+\bjtitle{Biometrika}
+\bvolume{48}(\bissue{3/4}),
+\bfpage{419}--\blpage{426}
+(\byear{1961})
+\doiurl{10.1093/biomet/48.3-4.419}
+\end{barticle}
+\endbibitem
+
+%%% 26
+\bibitem[\protect\citeauthoryear{Lai and Liu}{2018}]{Lai2018}
+\begin{barticle}
+\bauthor{\bsnm{Lai}, \binits{X.}},
+\bauthor{\bsnm{Liu}, \binits{L.}}:
+\batitle{A simple test procedure in standardizing the power of hosmer--lemeshow
+  test in large data sets}.
+\bjtitle{Journal of Statistical Computation and Simulation}
+\bvolume{88}(\bissue{13}),
+\bfpage{2463}--\blpage{2472}
+(\byear{2018})
+\doiurl{10.1080/00949655.2018.1467912}
+\end{barticle}
+\endbibitem
+
+%%% 27
+\bibitem[\protect\citeauthoryear{Lambert}{1981}]{lambert1981influence}
+\begin{barticle}
+\bauthor{\bsnm{Lambert}, \binits{D.}}:
+\batitle{Influence functions for testing}.
+\bjtitle{Journal of the American Statistical Association}
+\bvolume{76}(\bissue{375}),
+\bfpage{649}--\blpage{657}
+(\byear{1981})
+\doiurl{10.1080/01621459.1981.10477699}
+\end{barticle}
+\endbibitem
+
+%%% 28
+\bibitem[\protect\citeauthoryear{{le Cessie} and {van
+  Houwelingen}}{1991}]{le1991goodness}
+\begin{barticle}
+\bauthor{\bsnm{{le Cessie}}, \binits{S.}},
+\bauthor{\bsnm{{van Houwelingen}}, \binits{J.C.}}:
+\batitle{A goodness-of-fit test for binary regression models, based on
+  smoothing methods}.
+\bjtitle{Biometrics}
+\bvolume{47}(\bissue{4}),
+\bfpage{1267}--\blpage{1282}
+(\byear{1991})
+\doiurl{10.2307/2532385}
+\end{barticle}
+\endbibitem
+
+%%% 29
+\bibitem[\protect\citeauthoryear{{le Cessie} and {van
+  Houwelingen}}{1995}]{le1995goodness}
+\begin{barticle}
+\bauthor{\bsnm{{le Cessie}}, \binits{S.}},
+\bauthor{\bsnm{{van Houwelingen}}, \binits{J.C.}}:
+\batitle{Testing the fit of a regression model via score tests in random
+  effects models}.
+\bjtitle{Biometrics}
+\bvolume{51}(\bissue{2}),
+\bfpage{600}--\blpage{614}
+(\byear{1995})
+\doiurl{10.2307/2532948}
+\end{barticle}
+\endbibitem
+
+%%% 30
+\bibitem[\protect\citeauthoryear{Lin et~al.}{2002}]{lin2002cumulative}
+\begin{barticle}
+\bauthor{\bsnm{Lin}, \binits{D.Y.}},
+\bauthor{\bsnm{Wei}, \binits{L.J.}},
+\bauthor{\bsnm{Ying}, \binits{Z.}}:
+\batitle{Model-checking techniques based on cumulative residuals}.
+\bjtitle{Biometrics}
+\bvolume{58}(\bissue{1}),
+\bfpage{1}--\blpage{12}
+(\byear{2002})
+\doiurl{10.1111/j.0006-341X.2002.00001.x}
+\end{barticle}
+\endbibitem
+
+%%% 31
+\bibitem[\protect\citeauthoryear{Liu et~al.}{2024}]{liu2024comprehensive}
+\begin{barticle}
+\bauthor{\bsnm{Liu}, \binits{H.}},
+\bauthor{\bsnm{Li}, \binits{X.}},
+\bauthor{\bsnm{Chen}, \binits{F.}},
+\bauthor{\bsnm{H{\"a}rdle}, \binits{W.}},
+\bauthor{\bsnm{Liang}, \binits{H.}}:
+\batitle{A comprehensive comparison of goodness-of-fit tests for logistic
+  regression models}.
+\bjtitle{Statistics and Computing}
+\bvolume{34}(\bissue{5}),
+\bfpage{175}
+(\byear{2024})
+\doiurl{10.1007/s11222-024-10487-5}
+\end{barticle}
+\endbibitem
+
+%%% 32
+\bibitem[\protect\citeauthoryear{Liu and Briol}{2025}]{liubriol2025robustness}
+\begin{barticle}
+\bauthor{\bsnm{Liu}, \binits{X.}},
+\bauthor{\bsnm{Briol}, \binits{F.-X.}}:
+\batitle{On the robustness of kernel goodness-of-fit tests}.
+\bjtitle{Journal of Machine Learning Research}
+\bvolume{26}(\bissue{262}),
+\bfpage{1}--\blpage{72}
+(\byear{2025})
+\end{barticle}
+\endbibitem
+
+%%% 33
+\bibitem[\protect\citeauthoryear{McCullagh}{1985}]{mccullagh1985}
+\begin{barticle}
+\bauthor{\bsnm{McCullagh}, \binits{P.}}:
+\batitle{On the asymptotic distribution of pearson's statistic in
+  linear-exponential family models}.
+\bjtitle{International Statistical Review}
+\bvolume{53}(\bissue{1}),
+\bfpage{61}--\blpage{67}
+(\byear{1985})
+\doiurl{10.2307/1402880}
+\end{barticle}
+\endbibitem
+
+%%% 34
+\bibitem[\protect\citeauthoryear{Miller et~al.}{1991}]{Miller1991}
+\begin{barticle}
+\bauthor{\bsnm{Miller}, \binits{M.E.}},
+\bauthor{\bsnm{Hui}, \binits{S.L.}},
+\bauthor{\bsnm{Tierney}, \binits{W.M.}}:
+\batitle{Validation techniques for logistic regression models}.
+\bjtitle{Statistics in Medicine}
+\bvolume{10}(\bissue{8}),
+\bfpage{1213}--\blpage{1226}
+(\byear{1991})
+\doiurl{10.1002/sim.4780100805}
+\end{barticle}
+\endbibitem
+
+%%% 35
+\bibitem[\protect\citeauthoryear{Moore and Spruill}{1975}]{Moore1975}
+\begin{barticle}
+\bauthor{\bsnm{Moore}, \binits{D.S.}},
+\bauthor{\bsnm{Spruill}, \binits{M.C.}}:
+\batitle{Unified large-sample theory of general chi-squared statistics for
+  tests of fit}.
+\bjtitle{The Annals of Statistics}
+\bvolume{3}(\bissue{3}),
+\bfpage{599}--\blpage{616}
+(\byear{1975})
+\doiurl{10.1214/aos/1176343125}
+\end{barticle}
+\endbibitem
+
+%%% 36
+\bibitem[\protect\citeauthoryear{Nattino et~al.}{2014}]{nattino2014new}
+\begin{barticle}
+\bauthor{\bsnm{Nattino}, \binits{G.}},
+\bauthor{\bsnm{Finazzi}, \binits{S.}},
+\bauthor{\bsnm{Bertolini}, \binits{G.}}:
+\batitle{A new calibration test and a reappraisal of the calibration belt for
+  the assessment of prediction models based on dichotomous outcomes}.
+\bjtitle{Statistics in Medicine}
+\bvolume{33}(\bissue{14}),
+\bfpage{2390}--\blpage{2407}
+(\byear{2014})
+\doiurl{10.1002/sim.6100}
+\end{barticle}
+\endbibitem
+
+%%% 37
+\bibitem[\protect\citeauthoryear{Nattino et~al.}{2016}]{nattino2015new}
+\begin{barticle}
+\bauthor{\bsnm{Nattino}, \binits{G.}},
+\bauthor{\bsnm{Finazzi}, \binits{S.}},
+\bauthor{\bsnm{Bertolini}, \binits{G.}}:
+\batitle{A new test and graphical tool to assess the goodness of fit of
+  logistic regression models}.
+\bjtitle{Statistics in Medicine}
+\bvolume{35}(\bissue{5}),
+\bfpage{709}--\blpage{720}
+(\byear{2016})
+\doiurl{10.1002/sim.6744}
+\end{barticle}
+\endbibitem
+
+%%% 38
+\bibitem[\protect\citeauthoryear{Nattino et~al.}{2020}]{nattino2020assessing}
+\begin{barticle}
+\bauthor{\bsnm{Nattino}, \binits{G.}},
+\bauthor{\bsnm{Pennell}, \binits{M.L.}},
+\bauthor{\bsnm{Lemeshow}, \binits{S.}}:
+\batitle{Assessing the goodness of fit of logistic regression models in large
+  samples: {A} modification of the {Hosmer--Lemeshow} test}.
+\bjtitle{Biometrics}
+\bvolume{76}(\bissue{2}),
+\bfpage{549}--\blpage{560}
+(\byear{2020})
+\doiurl{10.1111/biom.13249}
+\end{barticle}
+\endbibitem
+
+%%% 39
+\bibitem[\protect\citeauthoryear{Neyman}{1937}]{neyman1937}
+\begin{barticle}
+\bauthor{\bsnm{Neyman}, \binits{J.}}:
+\batitle{Smooth test for goodness of fit}.
+\bjtitle{Skandinavisk Aktuarietidskrift}
+\bvolume{20},
+\bfpage{149}--\blpage{199}
+(\byear{1937})
+\doiurl{10.1080/03461238.1937.10404821}
+\end{barticle}
+\endbibitem
+
+%%% 40
+\bibitem[\protect\citeauthoryear{Osius and Rojek}{1992}]{osius1992normal}
+\begin{barticle}
+\bauthor{\bsnm{Osius}, \binits{G.}},
+\bauthor{\bsnm{Rojek}, \binits{D.}}:
+\batitle{Normal goodness-of-fit tests for multinomial models with large degrees
+  of freedom}.
+\bjtitle{Journal of the American Statistical Association}
+\bvolume{87}(\bissue{420}),
+\bfpage{1145}--\blpage{1152}
+(\byear{1992})
+\doiurl{10.1080/01621459.1992.10476271}
+\end{barticle}
+\endbibitem
+
+%%% 41
+\bibitem[\protect\citeauthoryear{Paul et~al.}{2013}]{paul2013power}
+\begin{barticle}
+\bauthor{\bsnm{Paul}, \binits{P.}},
+\bauthor{\bsnm{Pennell}, \binits{M.L.}},
+\bauthor{\bsnm{Lemeshow}, \binits{S.}}:
+\batitle{Standardizing the power of the {Hosmer--Lemeshow} goodness of fit test
+  in large data sets}.
+\bjtitle{Statistics in Medicine}
+\bvolume{32}(\bissue{1}),
+\bfpage{67}--\blpage{80}
+(\byear{2013})
+\doiurl{10.1002/sim.5525}
+\end{barticle}
+\endbibitem
+
+%%% 42
+\bibitem[\protect\citeauthoryear{Pigeon and Heyse}{1999}]{pigeon1999b}
+\begin{barticle}
+\bauthor{\bsnm{Pigeon}, \binits{J.G.}},
+\bauthor{\bsnm{Heyse}, \binits{J.F.}}:
+\batitle{An improved goodness of fit statistic for probability prediction
+  models}.
+\bjtitle{Biometrical Journal}
+\bvolume{41}(\bissue{1}),
+\bfpage{71}--\blpage{82}
+(\byear{1999})
+\doiurl{10.1002/(SICI)1521-4036(199903)41:1<71::AID-BIMJ71>3.0.CO;2-O}
+\end{barticle}
+\endbibitem
+
+%%% 43
+\bibitem[\protect\citeauthoryear{Pregibon}{1980}]{pregibon1980goodness}
+\begin{barticle}
+\bauthor{\bsnm{Pregibon}, \binits{D.}}:
+\batitle{Goodness of link tests for generalized linear models}.
+\bjtitle{Journal of the Royal Statistical Society. Series C (Applied
+  Statistics)}
+\bvolume{29}(\bissue{1}),
+\bfpage{15}--\blpage{23}
+(\byear{1980})
+\doiurl{10.2307/2346405}
+\end{barticle}
+\endbibitem
+
+%%% 44
+\bibitem[\protect\citeauthoryear{Pregibon}{1981}]{pregibon1981logistic}
+\begin{barticle}
+\bauthor{\bsnm{Pregibon}, \binits{D.}}:
+\batitle{Logistic regression diagnostics}.
+\bjtitle{The Annals of Statistics}
+\bvolume{9}(\bissue{4}),
+\bfpage{705}--\blpage{724}
+(\byear{1981})
+\doiurl{10.1214/aos/1176345513}
+\end{barticle}
+\endbibitem
+
+%%% 45
+\bibitem[\protect\citeauthoryear{Rayner et~al.}{1985}]{rayner1985construction}
+\begin{barticle}
+\bauthor{\bsnm{Rayner}, \binits{J.C.W.}},
+\bauthor{\bsnm{Best}, \binits{D.J.}},
+\bauthor{\bsnm{Dodds}, \binits{K.G.}}:
+\batitle{The construction of the simple {$X^2$} and {N}eyman smooth goodness of
+  fit tests}.
+\bjtitle{Statistica Neerlandica}
+\bvolume{39}(\bissue{1}),
+\bfpage{35}--\blpage{50}
+(\byear{1985})
+\doiurl{10.1111/j.1467-9574.1985.tb01123.x}
+\end{barticle}
+\endbibitem
+
+%%% 46
+\bibitem[\protect\citeauthoryear{Rayner et~al.}{2009}]{raynerthasbest2009}
+\begin{bbook}
+\bauthor{\bsnm{Rayner}, \binits{J.C.W.}},
+\bauthor{\bsnm{Thas}, \binits{O.}},
+\bauthor{\bsnm{Best}, \binits{D.J.}}:
+\bbtitle{Smooth Tests of Goodness of Fit: Using {R}},
+\bedition{2}nd edn.
+\bpublisher{John Wiley \& Sons},
+\blocation{Chichester, UK}
+(\byear{2009}).
+\doiurl{10.1002/9780470824443}
+\end{bbook}
+\endbibitem
+
+%%% 47
+\bibitem[\protect\citeauthoryear{Rousseeuw and
+  Leroy}{1987}]{rousseeuwleroy1987}
+\begin{bbook}
+\bauthor{\bsnm{Rousseeuw}, \binits{P.J.}},
+\bauthor{\bsnm{Leroy}, \binits{A.M.}}:
+\bbtitle{Robust Regression and Outlier Detection}.
+\bpublisher{Wiley},
+\blocation{New York}
+(\byear{1987})
+\end{bbook}
+\endbibitem
+
+%%% 48
+\bibitem[\protect\citeauthoryear{Sadatsafavi and
+  Petkau}{2024}]{sadatsafavi2024nonparametric}
+\begin{barticle}
+\bauthor{\bsnm{Sadatsafavi}, \binits{M.}},
+\bauthor{\bsnm{Petkau}, \binits{J.}}:
+\batitle{Non-parametric inference on calibration of predicted risks}.
+\bjtitle{Statistics in Medicine}
+\bvolume{43}(\bissue{18}),
+\bfpage{3524}--\blpage{3538}
+(\byear{2024})
+\doiurl{10.1002/sim.10138}
+\end{barticle}
+\endbibitem
+
+%%% 49
+\bibitem[\protect\citeauthoryear{Satterthwaite}{1946}]{satterthwaite1946}
+\begin{barticle}
+\bauthor{\bsnm{Satterthwaite}, \binits{F.E.}}:
+\batitle{An approximate distribution of estimates of variance components}.
+\bjtitle{Biometrics Bulletin}
+\bvolume{2}(\bissue{6}),
+\bfpage{110}--\blpage{114}
+(\byear{1946})
+\doiurl{10.2307/3002019}
+\end{barticle}
+\endbibitem
+
+%%% 50
+\bibitem[\protect\citeauthoryear{Spiegelhalter}{1986}]{spiegelhalter1986probabilistic}
+\begin{barticle}
+\bauthor{\bsnm{Spiegelhalter}, \binits{D.J.}}:
+\batitle{Probabilistic prediction in patient management and clinical trials}.
+\bjtitle{Statistics in Medicine}
+\bvolume{5}(\bissue{5}),
+\bfpage{421}--\blpage{433}
+(\byear{1986})
+\doiurl{10.1002/sim.4780050506}
+\end{barticle}
+\endbibitem
+
+%%% 51
+\bibitem[\protect\citeauthoryear{Steiner et~al.}{2000}]{steiner2000cusum}
+\begin{barticle}
+\bauthor{\bsnm{Steiner}, \binits{S.H.}},
+\bauthor{\bsnm{Cook}, \binits{R.J.}},
+\bauthor{\bsnm{Farewell}, \binits{V.T.}},
+\bauthor{\bsnm{Treasure}, \binits{T.}}:
+\batitle{Monitoring surgical performance using risk-adjusted cumulative sum
+  charts}.
+\bjtitle{Biostatistics}
+\bvolume{1}(\bissue{4}),
+\bfpage{441}--\blpage{452}
+(\byear{2000})
+\doiurl{10.1093/biostatistics/1.4.441}
+\end{barticle}
+\endbibitem
+
+%%% 52
+\bibitem[\protect\citeauthoryear{Strack et~al.}{2014}]{strack2014impact}
+\begin{barticle}
+\bauthor{\bsnm{Strack}, \binits{B.}},
+\bauthor{\bsnm{DeShazo}, \binits{J.P.}},
+\bauthor{\bsnm{Gennings}, \binits{C.}},
+\bauthor{\bsnm{Olmo}, \binits{J.L.}},
+\bauthor{\bsnm{Ventura}, \binits{S.}},
+\bauthor{\bsnm{Cios}, \binits{K.J.}},
+\bauthor{\bsnm{Clore}, \binits{J.N.}}:
+\batitle{Impact of {HbA1c} measurement on hospital readmission rates: analysis
+  of 70,000 clinical database patient records}.
+\bjtitle{BioMed Research International}
+\bvolume{2014},
+\bfpage{781670}
+(\byear{2014})
+\doiurl{10.1155/2014/781670}
+\end{barticle}
+\endbibitem
+
+%%% 53
+\bibitem[\protect\citeauthoryear{Stukel}{1988}]{stukel1988generalized}
+\begin{barticle}
+\bauthor{\bsnm{Stukel}, \binits{T.A.}}:
+\batitle{Generalized logistic models}.
+\bjtitle{Journal of the American Statistical Association}
+\bvolume{83}(\bissue{402}),
+\bfpage{426}--\blpage{431}
+(\byear{1988})
+\doiurl{10.1080/01621459.1988.10478613}
+\end{barticle}
+\endbibitem
+
+%%% 54
+\bibitem[\protect\citeauthoryear{Su and Wei}{1991}]{suwei1991}
+\begin{barticle}
+\bauthor{\bsnm{Su}, \binits{J.Q.}},
+\bauthor{\bsnm{Wei}, \binits{L.J.}}:
+\batitle{A lack-of-fit test for the mean function in a generalized linear
+  model}.
+\bjtitle{Journal of the American Statistical Association}
+\bvolume{86}(\bissue{414}),
+\bfpage{420}--\blpage{426}
+(\byear{1991})
+\doiurl{10.1080/01621459.1991.10475059}
+\end{barticle}
+\endbibitem
+
+%%% 55
+\bibitem[\protect\citeauthoryear{Surjanovic
+  et~al.}{2024}]{surjanovic2024generalized}
+\begin{barticle}
+\bauthor{\bsnm{Surjanovic}, \binits{N.}},
+\bauthor{\bsnm{Lockhart}, \binits{R.A.}},
+\bauthor{\bsnm{Loughin}, \binits{T.M.}}:
+\batitle{A generalized {Hosmer--Lemeshow} goodness-of-fit test for a family of
+  generalized linear models}.
+\bjtitle{TEST}
+\bvolume{33}(\bissue{2}),
+\bfpage{589}--\blpage{608}
+(\byear{2024})
+\doiurl{10.1007/s11749-023-00912-8}
+\end{barticle}
+\endbibitem
+
+%%% 56
+\bibitem[\protect\citeauthoryear{Tsiatis}{1980}]{Tsiatis1980}
+\begin{barticle}
+\bauthor{\bsnm{Tsiatis}, \binits{A.A.}}:
+\batitle{A note on a goodness-of-fit test for the logistic regression model}.
+\bjtitle{Biometrika}
+\bvolume{67}(\bissue{1}),
+\bfpage{250}--\blpage{251}
+(\byear{1980})
+\doiurl{10.1093/biomet/67.1.250}
+\end{barticle}
+\endbibitem
+
+%%% 57
+\bibitem[\protect\citeauthoryear{Van~Calster
+  et~al.}{2016}]{vancalster2016hierarchy}
+\begin{barticle}
+\bauthor{\bsnm{Van~Calster}, \binits{B.}},
+\bauthor{\bsnm{Nieboer}, \binits{D.}},
+\bauthor{\bsnm{Vergouwe}, \binits{Y.}},
+\bauthor{\bsnm{De~Cock}, \binits{B.}},
+\bauthor{\bsnm{Pencina}, \binits{M.J.}},
+\bauthor{\bsnm{Steyerberg}, \binits{E.W.}}:
+\batitle{A calibration hierarchy for risk models was defined: from utopia to
+  empirical data}.
+\bjtitle{Journal of Clinical Epidemiology}
+\bvolume{74},
+\bfpage{167}--\blpage{176}
+(\byear{2016})
+\doiurl{10.1016/j.jclinepi.2015.12.005}
+\end{barticle}
+\endbibitem
+
+%%% 58
+\bibitem[\protect\citeauthoryear{Van~Calster et~al.}{2019}]{vancalster2019}
+\begin{barticle}
+\bauthor{\bsnm{Van~Calster}, \binits{B.}},
+\bauthor{\bsnm{McLernon}, \binits{D.J.}},
+\bauthor{\bsnm{Smeden}, \binits{M.}},
+\bauthor{\bsnm{Wynants}, \binits{L.}},
+\bauthor{\bsnm{Steyerberg}, \binits{E.W.}}:
+\batitle{Calibration: the {Achilles} heel of predictive analytics}.
+\bjtitle{BMC Medicine}
+\bvolume{17}(\bissue{1}),
+\bfpage{230}
+(\byear{2019})
+\doiurl{10.1186/s12916-019-1466-7}
+\end{barticle}
+\endbibitem
+
+%%% 59
+\bibitem[\protect\citeauthoryear{Xie et~al.}{2008}]{xie2008increasing}
+\begin{barticle}
+\bauthor{\bsnm{Xie}, \binits{X.J.}},
+\bauthor{\bsnm{Pendergast}, \binits{J.}},
+\bauthor{\bsnm{Clarke}, \binits{W.}}:
+\batitle{Increasing the power: A practical approach to goodness-of-fit test for
+  logistic regression models with continuous predictors}.
+\bjtitle{Computational Statistics \& Data Analysis}
+\bvolume{52},
+\bfpage{2703}--\blpage{2713}
+(\byear{2008})
+\doiurl{10.1016/j.csda.2007.09.027}
+\end{barticle}
+\endbibitem
+
+%%% 60
+\bibitem[\protect\citeauthoryear{Zhang et~al.}{2023}]{BAGofT2019}
+\begin{barticle}
+\bauthor{\bsnm{Zhang}, \binits{J.}},
+\bauthor{\bsnm{Ding}, \binits{J.}},
+\bauthor{\bsnm{Yang}, \binits{Y.}}:
+\batitle{Is a classification procedure good enough? {A} goodness-of-fit
+  assessment tool for classification learning}.
+\bjtitle{Journal of the American Statistical Association}
+\bvolume{118}(\bissue{542}),
+\bfpage{1115}--\blpage{1125}
+(\byear{2023})
+\doiurl{10.1080/01621459.2021.1979010}
+\end{barticle}
+\endbibitem
+
+\end{thebibliography}

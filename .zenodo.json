@@ -1,7 +1,7 @@
 {
   "title": "Reproducibility archive: A grouped calibration test for logistic regression that tolerates a few corrupted records",
   "upload_type": "dataset",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "language": "eng",
   "license": "cc-by-4.0",
   "access_right": "open",
@@ -22,7 +22,7 @@
       "orcid": "0009-0000-1485-0768"
     }
   ],
-  "description": "<p>Pre-declarations, simulation code, deposited per-replicate results and manuscript source for the study of the directed grouped goodness-of-fit test (EDGE) for logistic regression under corrupted predictions.</p><p>Every block of the study was declared and cryptographically hashed before any of its scenarios was computed; the declarations and their hashes are included, and the archive refuses to assemble if a declaration no longer matches its frozen hash. The deposit holds one file per scenario with one row per replicate and one column per test, so every rejection rate reported in the paper can be recomputed without re-running the simulations. Blocks added after the main study carry an identity gate that recomputes the published test on regenerated data and rejects the result unless it matches the stored p-value to 1e-8.</p><p>Contents: declarations with hashes; the study's R code (data generators, test battery, block runners, self-tests, analyses); the declared analysis files behind every table; the per-replicate deposits of the reported blocks; and the LaTeX source, generated tables, figures and compiled PDF of the manuscript. Code is licensed GPL-3 to match the accompanying R package ebrahim.gof; declarations, results and text are CC BY 4.0.</p>",
+  "description": "<p>Pre-declarations, simulation code, deposited per-replicate results and manuscript source for the study of the directed grouped goodness-of-fit test (EDGE) for logistic regression under corrupted predictions.</p><p>Every block of the study was declared and cryptographically hashed before any of its scenarios was computed; the declarations and their hashes are included, and the archive refuses to assemble if a declaration no longer matches its frozen hash. The deposit holds one file per scenario with one row per replicate and one column per test, so every rejection rate reported in the paper can be recomputed without re-running the simulations. Blocks added after the main study carry an identity gate that recomputes the published test on regenerated data and rejects the result unless it matches the stored p-value to 1e-8.</p><p>Version 1.1.0 adds a comparison with the cumulative calibration test of Sadatsafavi and Petkau (2024) on the external-validation block, declared and hashed before it ran; a faster computation of the directed test, with its timing and a check that it gives the same results as the released package; and the revised manuscript.</p><p>Contents: declarations with hashes; the study's R code (data generators, test battery, block runners, self-tests, analyses); the declared analysis files behind every table; the per-replicate deposits of the reported blocks; and the LaTeX source, generated tables, figures and compiled PDF of the manuscript. Code is licensed GPL-3 to match the accompanying R package ebrahim.gof; declarations, results and text are CC BY 4.0.</p>",
   "keywords": [
     "goodness-of-fit",
     "logistic regression",
@@ -32,7 +32,8 @@
     "Hosmer-Lemeshow test",
     "reproducibility",
     "pre-declaration",
-    "simulation study"
+    "simulation study",
+    "calibration test"
   ],
   "related_identifiers": [
     {

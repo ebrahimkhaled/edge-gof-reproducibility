@@ -7,7 +7,8 @@ Hosmer--Lemeshow statistic is shown at both partitions. The pooled tests combine
 residual with those of other records --- in groups of predicted risk, or for le Cessie's test
 over neighbourhoods in covariate space. Every test built on each record's own
 linear predictor rises with $k$. The last two rows give the median time a data set in milliseconds on
-one core (the symmetric forms were not timed). Le Cessie's test is protected but holds an $n\times n$
+one core (the symmetric forms were not timed; EDGE in the implementation that forms no $G\times G$
+matrix). Le Cessie's test is protected but holds an $n\times n$
 kernel and grows with the cube of $n$; it was run with corrupted records at $n=1000$ only.}
 \label{tab:contamination}
 \resizebox{\textwidth}{!}{\begin{tabular}{rrrrrrrrrrr}\hline
@@ -25,6 +26,6 @@ $n$ & $k$ & EDGE & EDGE-sym & HL ($G$ rule) & HL ($G{=}10$) & le Cessie & Stukel
 5000 & 25 & 0.151 & 0.099 & 0.077 & 0.050 & -- & 0.801 & 0.784 & 0.575 & 0.753 \\
 5000 & 50 & 0.740 & 0.745 & 0.437 & 0.088 & -- & 0.980 & 0.977 & 0.869 & 0.954 \\
 \hline
-\multicolumn{2}{l}{ms, $n=1000$} & 4 & -- & 2 & 2 & 5,570 & 1 & -- & 9 & 5 \\
-\multicolumn{2}{l}{ms, $n=5000$} & 14 & -- & 7 & 7 & 1,267,530 & 2 & -- & 33 & 19 \\
+\multicolumn{2}{l}{ms, $n=1000$} & 2 & -- & 2 & 2 & 5,570 & 1 & -- & 9 & 5 \\
+\multicolumn{2}{l}{ms, $n=5000$} & 4 & -- & 7 & 7 & 1,267,530 & 2 & -- & 33 & 19 \\
 \hline\end{tabular}}\end{table}

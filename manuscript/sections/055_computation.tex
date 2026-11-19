@@ -1,0 +1,153 @@
+\section{Computation and implementation}\label{sec:computation}
+
+Throughout this section $n$ is the number of records, $p$ the number of columns of the model matrix
+$X$, intercept included, $G$ the number of groups and $d$ the number of basis columns. In the designs of
+this paper $p$ and $d$ are small: $d$ is $1$ or $3$, or one more in the external mode.
+
+\subsection{The algorithm and its cost}\label{sec:algorithm}
+
+We take as given the fitted logistic model, that is, the fitted risks $\hat\pi_i$, the model
+matrix $X$ and the fitted weights $W$. Every test of the fitted model needs this fit, and EDGE needs it
+only once. Given the fit, EDGE is computed in seven steps.
+
+\begin{enumerate}
+\item \textbf{Sort and group.} Rank the records by fitted risk, ties in the order of the records, and
+assign the record of rank $R_i$ to group $\lceil R_iG/n\rceil$. A stable sort costs $O(n\log n)$
+operations. This is the only step whose cost grows faster than linearly in $n$.
+\item \textbf{Group sums and grouped residuals.} In one pass over the records, accumulate for each
+group the observed events $O_g$, the expected events $E_g$, the binomial variance $V_g$ and the count
+of records, and from them $\pibar_g$ and the residual $r_g$ of \eqref{eq:resid}, at a cost of $O(n)$.
+\item \textbf{Estimation adjustment.} In the same pass, accumulate the $G\times p$ matrix $U$ of
+\eqref{eq:omega}, at a cost of $O(np)$. Form the information matrix $X^\top WX$, at a cost of $O(np^2)$,
+and factor it, at a cost of $O(p^3)$. The $G\times G$ covariance $\Omega$ is not formed, because the
+test needs only its products with the $d$ basis columns (step~6). In the external mode this step is
+skipped, because $\Omega=I_G$.
+\item \textbf{Basis.} Evaluate the $d$ shape functions of Section~\ref{sec:bases} at the $G$ group
+means $\pibar_g$, and orthogonalise the columns of $Z$, at a cost of $O(Gd^2)$.
+\item \textbf{Projection.} Compute $Z^\top r$, at a cost of $O(Gd)$, and the statistic $S$ of
+\eqref{eq:stat} by solving a $d\times d$ system, at a cost of $O(d^3)$.
+\item \textbf{Eigenvalues.} Compute the $d\times d$ matrix $(Z^\top Z)^{-1}Z^\top\Omega Z$ of
+Theorem~\ref{thm:null} as $Z^\top\Omega Z=Z^\top Z-(Z^\top U)(X^\top WX)^{-1}(U^\top Z)$, which costs
+$O(Gdp+dp^2+d^2p)$ and never forms $\Omega$, and its eigenvalues, at a cost of $O(d^3)$. Forming $\Omega$
+first would cost $O(G^2(p+d))$ operations and $O(G^2)$ memory.
+\item \textbf{Reference distribution.} Match the first two moments of the weighted sum in
+\eqref{eq:wchi2} by a scaled chi-squared variable $c\,\chi^2_\nu$, with
+$\nu=(\sum_j\lambda_j)^2/\sum_j\lambda_j^2$ and $c=\sum_j\lambda_j^2/\sum_j\lambda_j$, and report
+$p=\Pr(\chi^2_\nu>S/c)$ \citep{satterthwaite1946}. This costs $O(d)$ operations and one evaluation of
+the chi-squared distribution function.
+\end{enumerate}
+
+The total cost, given the fit, is therefore
+\[
+O\bigl(n\log n+np^2+p^3+Gd(d+p)+dp^2+d^3\bigr)=O\bigl(n\log n+np^2\bigr),
+\]
+because $G\le n$, $p\le n$ and $d$ is bounded. The sort dominates only when $p^2$ is small next to
+$\log n$; otherwise forming the information matrix dominates, as it does in the fit itself. The memory
+needed beyond the data is $O(Gp)$.
+
+The avoided $G\times G$ term matters at the default partition, $G=\max(10,\lceil n/25\rceil)$, where it
+grows with the square of $n$; at $n=100{,}000$ there are $4000$ groups. The timed implementation of
+EDGE forms no $G\times G$ matrix and is in the reproducibility archive; the CRAN release of the package
+forms $\Omega$. The two return identical results up to rounding: over $250$ data sets and $6600$ settings, covering
+the three bases, both weightings, both partitions and both modes, the largest differences were
+$9.3\times10^{-10}$ in the statistic and $1.4\times10^{-11}$ in the $p$-value. Forming $\Omega$ made
+EDGE $1.6$ times slower at $n=500$ and $11$ times slower at $n=100{,}000$, where it took $0.47$ seconds
+against $43$ milliseconds.
+
+\subsection{A reference distribution without resampling or refitting}\label{sec:noresampling}
+
+The weights of the reference distribution of Theorem~\ref{thm:null} are the eigenvalues of a $d\times
+d$ matrix built from quantities that the fit has already produced. No second model fit, no bootstrap
+sample and no random split is needed. Three consequences follow.
+
+First, the test costs about as much as the other tests that need no resampling. Every timing was taken on one
+core of an AMD Ryzen 9 3900X processor with $32$ gigabytes of memory, in R 4.4, with the linear-algebra
+library held to one thread and nothing else running. At $n=1000$, EDGE takes $2$ milliseconds, Stukel's joint
+score test $1$, the Hosmer--Lemeshow statistic $2$, the cubic calibration test $5$ and the GiViTI belt
+$9$ (Figure~\ref{fig:cost}). At $n=100{,}000$ EDGE takes $43$ milliseconds, Stukel's score $18$ and the
+Hosmer--Lemeshow statistic $120$. The Liu projection test draws $B=250$ bootstrap samples and takes
+$35$ seconds at $n=1000$. BAGofT refits the model $(1+\textit{nsim})\times\textit{nsplits}$ times,
+$10{,}100$ model fits at its defaults; it takes $392$ seconds at $n=1000$ and ten minutes at $n=2000$.
+Le Cessie's smoothed test needs no resampling, but in its published form it multiplies $n\times n$
+matrices, so its cost grows with the cube of $n$: $5.6$ seconds at $n=1000$, $74$ seconds at $n=2000$
+and $21$ minutes at $n=5000$, where EDGE takes $4$ milliseconds. Its $n\times n$ kernel would need about
+$10$ gigabytes on the $35{,}000$ patients of each half of the cohort of Section~\ref{sec:realdata}, so
+it was not run there.
+
+Second, the $p$-value is a deterministic function of the data. It carries no Monte Carlo error and
+does not depend on a random seed, whereas the two resampling tests return $p$-values on grids of
+$1/100$ and $1/250$.
+
+Third, the test can be run wherever it is needed: on every replicate of every scenario of this paper,
+where the three slow rivals were run only on subsets, and across partitions. Because its degrees of
+freedom do not depend on $G$ (Theorem~\ref{thm:growingG}), a sweep over partitions costs one sort in
+all and one pass for each partition (Section~\ref{sec:realpartition}).
+
+\subsection{The external mode and the streaming form}\label{sec:streamcomp}
+
+In the external mode $\Omega=I_G$ and a constant column is added to the basis
+(Section~\ref{sec:null}). Step~3 of the algorithm disappears, and the model matrix is not needed. All
+$d+1$ eigenvalues of step~6 equal one, so the Satterthwaite approximation of step~7 returns the
+chi-squared distribution on $d+1$ degrees of freedom exactly. The cost is $O(n\log n+Gd^2)$. On one
+core, the external mode at ten groups took about $0.3$ milliseconds at $n=1000$ and $12$ milliseconds at
+$n=100{,}000$. The test of \citet{sadatsafavi2024nonparametric}, from the R package \texttt{cumulcalib},
+took about $0.25$ and $14$ milliseconds on the same data sets.
+
+The external mode can also be computed as a stream, which suits the monitoring of a deployed model.
+The equal-frequency groups of step~1 are replaced by cut points $0<c_1<\dots<c_{G-1}<1$ fixed in
+advance from reference predictions, without any outcome. The monitor holds four sums for each group:
+the observed events $O_g$, the expected events $E_g$, the binomial variance $V_g$ and the count $m_g$.
+These are all the statistic needs, because $r_g=(O_g-E_g)/\sqrt{V_g}$ and $\pibar_g=E_g/m_g$.
+
+\begin{enumerate}
+\item \textbf{Update.} When a patient with prediction $p_i$ and outcome $y_i$ arrives, find the
+patient's group by a binary search among the $G-1$ cut points, at a cost of $O(\log G)$, and add $y_i$,
+$p_i$, $p_i(1-p_i)$ and $1$ to the four sums of that group. No earlier record is kept or revisited.
+\item \textbf{Test.} At any time, compute the residuals and the group means from the $G$ summaries,
+evaluate the basis with its constant column over the non-empty groups, and compute $S_n=r^\top P_Zr$
+through a QR decomposition of a $G\times k$ matrix, where $k$ is the rank of the basis ($d+1$ once
+$d+1$ groups with distinct mean risks are non-empty), at a cost of $O(Gk^2)$.
+\end{enumerate}
+
+The memory needed is $O(G)$, whatever the length of the stream. Each of the four sums is a sum of terms
+that depend on one patient alone, so the streamed statistic is the same for every order and every
+division into batches, and equals the external-mode statistic computed in one pass with the same cut
+points. Under a calibrated model the statistic has a chi-squared reference on $k$ degrees of freedom
+asymptotically, as every non-empty group grows, however unequal the groups become (Online Resource~1,
+Section~S8, proves these three properties). The price of fixed cut points is that the groups drift
+away from equal size when the risk mix of the monitored patients changes, and small groups give weaker
+protection against corrupted records (Proposition~\ref{prop:bounded}). On one core, after a million
+patients had been added, adding a hundred more took about half a millisecond and computing the test
+about $1.5$ milliseconds.
+
+In a simulation of the streaming form fixed before it was run, at ten groups and with $2000$
+replicates, the level was $0.047$ and $0.054$ after $10{,}000$ and $100{,}000$ patients, and $0.050$ and
+$0.052$ when every monitored patient came from a risk distribution different from the reference. The
+test detected an overfitted model, calibration slope $0.8$, in $0.99$ of replicates after $2000$
+patients (Online Resource~1, Section~S8). The statistic accumulates since deployment; to follow drift,
+the summaries are restarted each period and each period is tested on its own. One test at any time is
+valid, but acting on the first rejection over repeated looks is not: ten looks at $5\%$ raised the
+false-alarm rate to $0.21$, and splitting the level over ten looks fixed in advance, $0.5\%$ each,
+brought it to $0.030$.
+
+\subsection{Software}\label{sec:software}
+
+The test and its comparators are implemented in the R package \texttt{ebrahim.gof}
+\citep{ebrahim2025gof}, available from CRAN (Section~\ref{sec:algorithm} compares its timing with the
+implementation timed here).
+
+\begin{itemize}
+\item \texttt{edge.gof(fit)} runs EDGE on a fitted binomial \texttt{glm} and reports the verdict at the
+default partition and, as a robustness check, at ten groups; the degrees of freedom reported are the
+effective $\nu$ of step~7. The argument \texttt{G = 10} gives the ten-group partition, \texttt{basis =
+"sym"} or \texttt{"stukel"} the other bases, and \texttt{weights = "score"} the score form.
+\item \texttt{edge.gof(y, predicted\_probs = p, external = TRUE, G = 10)} runs the external mode on
+outcomes \texttt{y} and frozen predictions \texttt{p}; with \texttt{G} set accordingly it reproduces
+every statistic of Section~\ref{sec:realdata}.
+\item \texttt{run.all.gof()} fits the model once and returns every comparator of
+Section~\ref{sec:comparators} except the cubic calibration test.
+\item \texttt{run.all.external(y, p)} runs the external mode beside the other external-validation
+tests, Cox's recalibration test and the calibration intercept and slope among them.
+\item \texttt{edge.stream()} creates the monitor of Section~\ref{sec:streamcomp}; \texttt{update()} adds
+a batch of outcomes and predictions and \texttt{summary()} returns the test at any time.
+\end{itemize}

@@ -1,0 +1,158 @@
+\begin{thebibliography}{20}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Austin and Steyerberg(2019)]{austin2019ici}
+Peter~C. Austin and Ewout~W. Steyerberg.
+\newblock The {Integrated Calibration Index} ({ICI}) and related metrics for
+  quantifying the calibration of logistic regression models.
+\newblock \emph{Statistics in Medicine}, 38\penalty0 (21):\penalty0 4051--4065,
+  2019.
+\newblock \doi{10.1002/sim.8281}.
+
+\bibitem[Bianco and Yohai(1996)]{bianco1996robust}
+Ana~M. Bianco and Victor~J. Yohai.
+\newblock Robust estimation in the logistic regression model.
+\newblock In Helmut Rieder, editor, \emph{Robust Statistics, Data Analysis, and
+  Computer Intensive Methods}, volume 109 of \emph{Lecture Notes in
+  Statistics}, pages 17--34. Springer, New York, 1996.
+\newblock \doi{10.1007/978-1-4612-2380-1_2}.
+
+\bibitem[Cantoni and Ronchetti(2001)]{cantoni2001robust}
+Eva Cantoni and Elvezio Ronchetti.
+\newblock Robust inference for generalized linear models.
+\newblock \emph{Journal of the American Statistical Association}, 96\penalty0
+  (455):\penalty0 1022--1030, 2001.
+\newblock \doi{10.1198/016214501753209004}.
+
+\bibitem[Cover(1965)]{cover1965geometrical}
+Thomas~M. Cover.
+\newblock Geometrical and statistical properties of systems of linear
+  inequalities with applications in pattern recognition.
+\newblock \emph{IEEE Transactions on Electronic Computers}, EC-14\penalty0
+  (3):\penalty0 326--334, 1965.
+\newblock \doi{10.1109/PGEC.1965.264137}.
+
+\bibitem[Croux and Haesbroeck(2003)]{croux2003implementing}
+Christophe Croux and Gentiane Haesbroeck.
+\newblock Implementing the {B}ianco and {Y}ohai estimator for logistic
+  regression.
+\newblock \emph{Computational Statistics \& Data Analysis}, 44\penalty0
+  (1--2):\penalty0 273--295, 2003.
+\newblock \doi{10.1016/S0167-9473(03)00042-2}.
+
+\bibitem[Dardis(2022)]{LogisticDx}
+C.~Dardis.
+\newblock Logisticdx: Diagnostic tests and plots for logistic regression
+  models.
+\newblock CRAN package archive,
+  \url{https://cran.r-project.org/src/contrib/Archive/LogisticDx/}, 2022.
+\newblock R package version 0.3.
+
+\bibitem[Ebrahim and El-Kotory(2026)]{ebrahim2026benchmark}
+Ebrahim~Khaled Ebrahim and Ahmed El-Kotory.
+\newblock Benchmarking goodness-of-fit and calibration algorithms for logistic
+  regression classifiers: A large-scale simulation study under sparse data.
+\newblock \emph{Journal of Intelligent Computing and Data Science}, 2\penalty0
+  (2):\penalty0 97--128, 2026.
+\newblock \doi{10.21608/jicds.2026.505341.1048}.
+
+\bibitem[Hampel et~al.(1986)Hampel, Ronchetti, Rousseeuw, and
+  Stahel]{hampel1986robust}
+Frank~R. Hampel, Elvezio~M. Ronchetti, Peter~J. Rousseeuw, and Werner~A.
+  Stahel.
+\newblock \emph{Robust Statistics: The Approach Based on Influence Functions}.
+\newblock Wiley, New York, 1986.
+
+\bibitem[Heritier and Ronchetti(1994)]{heritier1994robust}
+Stephane Heritier and Elvezio Ronchetti.
+\newblock Robust bounded-influence tests in general parametric models.
+\newblock \emph{Journal of the American Statistical Association}, 89\penalty0
+  (427):\penalty0 897--904, 1994.
+\newblock \doi{10.1080/01621459.1994.10476822}.
+
+\bibitem[Hosmer et~al.(2013)Hosmer, Lemeshow, and
+  Sturdivant]{hosmer2013applied}
+David~W. Hosmer, Stanley Lemeshow, and Rodney~X. Sturdivant.
+\newblock \emph{Applied Logistic Regression}.
+\newblock John Wiley \& Sons, Hoboken, NJ, 3 edition, 2013.
+\newblock \doi{10.1002/9781118548387}.
+
+\bibitem[Jennison and Turnbull(2000)]{jennison2000group}
+Christopher Jennison and Bruce~W. Turnbull.
+\newblock \emph{Group Sequential Methods with Applications to Clinical Trials}.
+\newblock Chapman and Hall/CRC, Boca Raton, 2000.
+\newblock \doi{10.1201/9780367805326}.
+
+\bibitem[{le Cessie} and {van Houwelingen}(1991)]{le1991goodness}
+S.~{le Cessie} and J.~C. {van Houwelingen}.
+\newblock A goodness-of-fit test for binary regression models, based on
+  smoothing methods.
+\newblock \emph{Biometrics}, 47\penalty0 (4):\penalty0 1267--1282, 1991.
+\newblock \doi{10.2307/2532385}.
+
+\bibitem[Liu et~al.(2024)Liu, Li, Chen, H{\"a}rdle, and
+  Liang]{liu2024comprehensive}
+H.~Liu, X.~Li, F.~Chen, W.~H{\"a}rdle, and H.~Liang.
+\newblock A comprehensive comparison of goodness-of-fit tests for logistic
+  regression models.
+\newblock \emph{Statistics and Computing}, 34\penalty0 (5):\penalty0 175, 2024.
+\newblock \doi{10.1007/s11222-024-10487-5}.
+
+\bibitem[Moore and Spruill(1975)]{Moore1975}
+D.~S. Moore and M.~C. Spruill.
+\newblock Unified large-sample theory of general chi-squared statistics for
+  tests of fit.
+\newblock \emph{The Annals of Statistics}, 3\penalty0 (3):\penalty0 599--616,
+  1975.
+\newblock \doi{10.1214/aos/1176343125}.
+
+\bibitem[Pulkstenis and Robinson(2002)]{pulkstenis2002two}
+E.~Pulkstenis and T.~J. Robinson.
+\newblock Two goodness-of-fit tests for logistic regression models with
+  continuous covariates.
+\newblock \emph{Statistics in Medicine}, 21:\penalty0 79--93, 2002.
+\newblock \doi{10.1002/sim.943}.
+
+\bibitem[Sadatsafavi and Petkau(2024)]{sadatsafavi2024nonparametric}
+Mohsen Sadatsafavi and John Petkau.
+\newblock Non-parametric inference on calibration of predicted risks.
+\newblock \emph{Statistics in Medicine}, 43\penalty0 (18):\penalty0 3524--3538,
+  2024.
+\newblock \doi{10.1002/sim.10138}.
+
+\bibitem[Van~Calster et~al.(2016)Van~Calster, Nieboer, Vergouwe, De~Cock,
+  Pencina, and Steyerberg]{vancalster2016hierarchy}
+Ben Van~Calster, Daan Nieboer, Yvonne Vergouwe, Bavo De~Cock, Michael~J.
+  Pencina, and Ewout~W. Steyerberg.
+\newblock A calibration hierarchy for risk models was defined: from utopia to
+  empirical data.
+\newblock \emph{Journal of Clinical Epidemiology}, 74:\penalty0 167--176, 2016.
+\newblock \doi{10.1016/j.jclinepi.2015.12.005}.
+
+\bibitem[Van~Calster et~al.(2019)Van~Calster, McLernon, van Smeden, Wynants,
+  and Steyerberg]{vancalster2019}
+Ben Van~Calster, David~J. McLernon, Maarten van Smeden, Laure Wynants, and
+  Ewout~W. Steyerberg.
+\newblock Calibration: the {Achilles} heel of predictive analytics.
+\newblock \emph{BMC Medicine}, 17\penalty0 (1):\penalty0 230, 2019.
+\newblock \doi{10.1186/s12916-019-1466-7}.
+
+\bibitem[van~der Vaart and Wellner(1996)]{vandervaartwellner1996}
+Aad~W. van~der Vaart and Jon~A. Wellner.
+\newblock \emph{Weak Convergence and Empirical Processes}.
+\newblock Springer, New York, 1996.
+\newblock \doi{10.1007/978-1-4757-2545-2}.
+
+\bibitem[Zhang et~al.(2023)Zhang, Ding, and Yang]{BAGofT2019}
+Jiawei Zhang, Jie Ding, and Yuhong Yang.
+\newblock Is a classification procedure good enough? {A} goodness-of-fit
+  assessment tool for classification learning.
+\newblock \emph{Journal of the American Statistical Association}, 118\penalty0
+  (542):\penalty0 1115--1125, 2023.
+\newblock \doi{10.1080/01621459.2021.1979010}.
+
+\end{thebibliography}

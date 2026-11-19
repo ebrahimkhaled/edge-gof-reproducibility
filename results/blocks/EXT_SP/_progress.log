@@ -1,0 +1,23 @@
+2026-11-19 07:57:15  block EXT_SP: 21 cells x 1000 replicates, chunks of 100, 14 workers 
+2026-11-19 07:57:17  cell  1 null   C=0    n= 250 k= 0 | SP_BB 0.047  SP_BM 0.053  (EXT EDGE_G10 0.051) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:18  cell  2 null   C=0    n= 500 k= 0 | SP_BB 0.048  SP_BM 0.042  (EXT EDGE_G10 0.051) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:19  cell  3 null   C=0    n=1000 k= 0 | SP_BB 0.046  SP_BM 0.057  (EXT EDGE_G10 0.061) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:20  cell  4 large  C=0.2  n= 500 k= 0 | SP_BB 0.392  SP_BM 0.456  (EXT EDGE_G10 0.315) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:21  cell  5 large  C=0.4  n= 500 k= 0 | SP_BB 0.953  SP_BM 0.970  (EXT EDGE_G10 0.917) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:22  cell  6 slope  C=0.8  n= 500 k= 0 | SP_BB 0.362  SP_BM 0.252  (EXT EDGE_G10 0.399) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:23  cell  7 slope  C=0.6  n= 500 k= 0 | SP_BB 0.956  SP_BM 0.839  (EXT EDGE_G10 0.973) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:24  cell  8 ushape C=0.4  n= 500 k= 0 | SP_BB 0.075  SP_BM 0.063  (EXT EDGE_G10 0.126) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:25  cell  9 ushape C=0.8  n= 500 k= 0 | SP_BB 0.270  SP_BM 0.099  (EXT EDGE_G10 0.468) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:26  cell 10 thresh C=2    n= 500 k= 0 | SP_BB 0.185  SP_BM 0.142  (EXT EDGE_G10 0.142) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:27  cell 11 thresh C=4    n= 500 k= 0 | SP_BB 0.352  SP_BM 0.258  (EXT EDGE_G10 0.282) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:29  cell 12 inter  C=0.6  n= 500 k= 0 | SP_BB 0.077  SP_BM 0.063  (EXT EDGE_G10 0.149) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:29  cell 13 inter  C=1    n= 500 k= 0 | SP_BB 0.157  SP_BM 0.074  (EXT EDGE_G10 0.426) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:30  cell 14 exag   C=4    n=1000 k= 1 | SP_BB 0.048  SP_BM 0.054  (EXT EDGE_G10 0.044) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:31  cell 15 exag   C=4    n=1000 k= 2 | SP_BB 0.043  SP_BM 0.050  (EXT EDGE_G10 0.034) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:32  cell 16 exag   C=4    n=1000 k= 5 | SP_BB 0.046  SP_BM 0.054  (EXT EDGE_G10 0.059) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:33  cell 17 exag   C=4    n=1000 k=10 | SP_BB 0.053  SP_BM 0.052  (EXT EDGE_G10 0.055) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:34  cell 18 sign   C=-4   n=1000 k= 1 | SP_BB 0.043  SP_BM 0.038  (EXT EDGE_G10 0.045) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:35  cell 19 sign   C=-4   n=1000 k= 2 | SP_BB 0.035  SP_BM 0.039  (EXT EDGE_G10 0.044) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:37  cell 20 sign   C=-4   n=1000 k= 5 | SP_BB 0.055  SP_BM 0.051  (EXT EDGE_G10 0.065) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:38  cell 21 sign   C=-4   n=1000 k=10 | SP_BB 0.052  SP_BM 0.045  (EXT EDGE_G10 0.082) | notes 0 | data checked | 0.0 min 
+2026-11-19 07:57:38  block EXT_SP: run finished 
